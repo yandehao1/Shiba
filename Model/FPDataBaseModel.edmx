@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FpExtendModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="ImportSampleSourceLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sampleSourceName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="sampleSourceType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="sampleSourceDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="patientId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="patientName" Type="nvarchar" MaxLength="50" />
+          <Property Name="patientSex" Type="nvarchar" MaxLength="50" />
+          <Property Name="importStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="hidden" Type="nvarchar(max)" />
+          <Property Name="ResultStatus" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImportDate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="SpecimenRt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PatientId" Type="nvarchar" MaxLength="50" />
+          <Property Name="PatientName" Type="nvarchar" MaxLength="50" />
+          <Property Name="VisitId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SampleId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SampleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OtherInfo" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SpecimenRtLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="PatiendId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SampleId" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostBackStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostBackDate" Type="smalldatetime" />
+        </EntityType>
+        <EntityContainer Name="FpExtendModelStoreContainer">
+          <EntitySet Name="ImportSampleSourceLog" EntityType="Self.ImportSampleSourceLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SpecimenRt" EntityType="Self.SpecimenRt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SpecimenRtLog" EntityType="Self.SpecimenRtLog" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FpExtendModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="ImportSampleSourceLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sampleSourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sampleSourceType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sampleSourceDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="patientId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="patientName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="patientSex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="importStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hidden" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ResultStatus" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImportDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="SpecimenRt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatientId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PatientName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VisitId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SampleId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SampleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OtherInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SpecimenRtLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PatiendId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SampleId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostBackStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostBackDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="FpExtendEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ImportSampleSourceLog" EntityType="Self.ImportSampleSourceLog" />
+          <EntitySet Name="SpecimenRt" EntityType="Self.SpecimenRt" />
+          <EntitySet Name="SpecimenRtLog" EntityType="Self.SpecimenRtLog" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FpExtendModelStoreContainer" CdmEntityContainer="FpExtendEntities">
+          <EntitySetMapping Name="ImportSampleSourceLog">
+            <EntityTypeMapping TypeName="FpExtendModel.ImportSampleSourceLog">
+              <MappingFragment StoreEntitySet="ImportSampleSourceLog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sampleSourceName" ColumnName="sampleSourceName" />
+                <ScalarProperty Name="sampleSourceType" ColumnName="sampleSourceType" />
+                <ScalarProperty Name="sampleSourceDescription" ColumnName="sampleSourceDescription" />
+                <ScalarProperty Name="patientId" ColumnName="patientId" />
+                <ScalarProperty Name="patientName" ColumnName="patientName" />
+                <ScalarProperty Name="patientSex" ColumnName="patientSex" />
+                <ScalarProperty Name="importStatus" ColumnName="importStatus" />
+                <ScalarProperty Name="hidden" ColumnName="hidden" />
+                <ScalarProperty Name="ResultStatus" ColumnName="ResultStatus" />
+                <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpecimenRt">
+            <EntityTypeMapping TypeName="FpExtendModel.SpecimenRt">
+              <MappingFragment StoreEntitySet="SpecimenRt">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+                <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+                <ScalarProperty Name="VisitId" ColumnName="VisitId" />
+                <ScalarProperty Name="SampleId" ColumnName="SampleId" />
+                <ScalarProperty Name="SampleName" ColumnName="SampleName" />
+                <ScalarProperty Name="OtherInfo" ColumnName="OtherInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpecimenRtLog">
+            <EntityTypeMapping TypeName="FpExtendModel.SpecimenRtLog">
+              <MappingFragment StoreEntitySet="SpecimenRtLog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="PatiendId" ColumnName="PatiendId" />
+                <ScalarProperty Name="SampleId" ColumnName="SampleId" />
+                <ScalarProperty Name="PostBackStatus" ColumnName="PostBackStatus" />
+                <ScalarProperty Name="PostBackDate" ColumnName="PostBackDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

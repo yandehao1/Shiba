@@ -1,0 +1,6 @@
+F:\Repositories\ZSSY\Common\bin\Release\Common.dll
+F:\Repositories\ZSSY\Common\bin\Release\Common.pdb
+F:\Repositories\ZSSY\Common\bin\Release\Newtonsoft.Json.6.0.0.0.Fakes.fakesconfig
+F:\Repositories\ZSSY\Common\bin\Release\Newtonsoft.Json.dll
+F:\Repositories\ZSSY\Common\obj\Release\Common.dll
+F:\Repositories\ZSSY\Common\obj\Release\Common.pdb

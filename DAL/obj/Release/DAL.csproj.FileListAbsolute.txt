@@ -1,0 +1,15 @@
+F:\Repositories\ZSSY\DAL\bin\Release\DAL.dll
+F:\Repositories\ZSSY\DAL\bin\Release\DAL.pdb
+F:\Repositories\ZSSY\DAL\bin\Release\Common.dll
+F:\Repositories\ZSSY\DAL\bin\Release\EntityFramework.dll
+F:\Repositories\ZSSY\DAL\bin\Release\FreezerProUtility.dll
+F:\Repositories\ZSSY\DAL\bin\Release\Model.dll
+F:\Repositories\ZSSY\DAL\bin\Release\Newtonsoft.Json.dll
+F:\Repositories\ZSSY\DAL\bin\Release\Common.pdb
+F:\Repositories\ZSSY\DAL\bin\Release\FreezerProUtility.pdb
+F:\Repositories\ZSSY\DAL\bin\Release\Model.pdb
+F:\Repositories\ZSSY\DAL\bin\Release\EntityFramework.xml
+F:\Repositories\ZSSY\DAL\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\Repositories\ZSSY\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+F:\Repositories\ZSSY\DAL\obj\Release\DAL.dll
+F:\Repositories\ZSSY\DAL\obj\Release\DAL.pdb

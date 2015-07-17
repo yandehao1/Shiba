@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s0="http://tempuri.org" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
+      <s:element name="GetOPInfoListForSpecimen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="datebegin" type="s:string" />
+            <s:element minOccurs="0" name="dateend" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOPInfoListForSpecimenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetOPInfoListForSpecimenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoSpecimen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Admno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoSpecimenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetPatientInfoSpecimenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientLabMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="PatientId" type="s:string" />
+            <s:element minOccurs="0" name="VisitId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientLabMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetPatientLabMasterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientLabResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="OeordID" type="s:string" />
+            <s:element minOccurs="0" name="TestNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientLabResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetPatientLabResultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreSpecimenInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="SpecimenRt" type="s0:SpecimenRt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SpecimenRt">
+        <s:sequence>
+          <s:element minOccurs="0" name="PatientId" type="s:string" />
+          <s:element minOccurs="0" name="VisitId" type="s:string" />
+          <s:element minOccurs="0" name="PatientName" type="s:string" />
+          <s:element minOccurs="0" name="Specimens" type="s0:ArrayOfSpecimenSpecimen" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSpecimenSpecimen">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Specimen" nillable="true" type="s0:Specimen" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Specimen">
+        <s:sequence>
+          <s:element minOccurs="0" name="Id" type="s:string" />
+          <s:element minOccurs="0" name="Name" type="s:string" />
+          <s:element minOccurs="0" name="Status" type="s:string" />
+          <s:element minOccurs="0" name="DeptCode" type="s:string" />
+          <s:element minOccurs="0" name="DateTime" type="s:string" />
+          <s:element minOccurs="0" name="OtherInfo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="32767" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="StoreSpecimenInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="StoreSpecimenInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetOPInfoListForSpecimenSoapIn">
+    <wsdl:part name="parameters" element="s0:GetOPInfoListForSpecimen" />
+  </wsdl:message>
+  <wsdl:message name="GetOPInfoListForSpecimenSoapOut">
+    <wsdl:part name="parameters" element="s0:GetOPInfoListForSpecimenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSpecimenSoapIn">
+    <wsdl:part name="parameters" element="s0:GetPatientInfoSpecimen" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSpecimenSoapOut">
+    <wsdl:part name="parameters" element="s0:GetPatientInfoSpecimenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientLabMasterSoapIn">
+    <wsdl:part name="parameters" element="s0:GetPatientLabMaster" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientLabMasterSoapOut">
+    <wsdl:part name="parameters" element="s0:GetPatientLabMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientLabResultSoapIn">
+    <wsdl:part name="parameters" element="s0:GetPatientLabResult" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientLabResultSoapOut">
+    <wsdl:part name="parameters" element="s0:GetPatientLabResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreSpecimenInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:StoreSpecimenInfo" />
+  </wsdl:message>
+  <wsdl:message name="StoreSpecimenInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:StoreSpecimenInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ForCenterLabServiceSoap">
+    <wsdl:operation name="GetOPInfoListForSpecimen">
+      <wsdl:input message="s0:GetOPInfoListForSpecimenSoapIn" />
+      <wsdl:output message="s0:GetOPInfoListForSpecimenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoSpecimen">
+      <wsdl:input message="s0:GetPatientInfoSpecimenSoapIn" />
+      <wsdl:output message="s0:GetPatientInfoSpecimenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientLabMaster">
+      <wsdl:input message="s0:GetPatientLabMasterSoapIn" />
+      <wsdl:output message="s0:GetPatientLabMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientLabResult">
+      <wsdl:input message="s0:GetPatientLabResultSoapIn" />
+      <wsdl:output message="s0:GetPatientLabResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreSpecimenInfo">
+      <wsdl:input message="s0:StoreSpecimenInfoSoapIn" />
+      <wsdl:output message="s0:StoreSpecimenInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ForCenterLabServiceSoap" type="s0:ForCenterLabServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOPInfoListForSpecimen">
+      <soap:operation soapAction="http://tempuri.org/WS.ForCenterLabService.GetOPInfoListForSpecimen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoSpecimen">
+      <soap:operation soapAction="http://tempuri.org/WS.ForCenterLabService.GetPatientInfoSpecimen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientLabMaster">
+      <soap:operation soapAction="http://tempuri.org/WS.ForCenterLabService.GetPatientLabMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientLabResult">
+      <soap:operation soapAction="http://tempuri.org/WS.ForCenterLabService.GetPatientLabResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreSpecimenInfo">
+      <soap:operation soapAction="http://tempuri.org/WS.ForCenterLabService.StoreSpecimenInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ForCenterLabService">
+    <wsdl:port name="ForCenterLabServiceSoap" binding="s0:ForCenterLabServiceSoap">
+      <soap:address location="http://10.21.15.143:57772/csp/ensdemo/WS.ForCenterLabService.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
