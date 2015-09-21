@@ -1,0 +1,36 @@
+﻿#MenuBar {
+    position: absolute;
+    width: 200px;
+    height: 27px;
+    top: 50px;
+    right: 10px;
+    font-size: 11px;
+    color: white;
+    text-align: right;
+}
+
+    #MenuBar button {
+        font-size: 12px;
+        overflow: hidden;
+    }
+    #messager{
+        text-align:center;
+        
+    }
+
+    #ffff {
+    position: absolute;
+    width: 200px;
+    height: 27px;
+    top: 26px;
+    right: 40px;
+    font-size: 11px;
+    color: white;
+    text-align: right;
+}
+    #fp{
+        font-size: 11px;
+        margin-left: 6px;
+        font-weight:bold;
+        color:white;
+    }
