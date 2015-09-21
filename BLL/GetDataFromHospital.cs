@@ -103,7 +103,7 @@ namespace BLL
         {
             StringBuilder result = new StringBuilder();
             //01.根据条码号调用webservice获取数据
-            WebService.ForCenterLabService centerLabServiceSoapClient = new WebService.ForCenterLabService();
+            RuRo.BLL.WebService.ForCenterLabService centerLabServiceSoapClient = new RuRo.BLL.WebService.ForCenterLabService();
             try
             {
                 string getDataFromHospitalStr = centerLabServiceSoapClient.GetPatientInfoSpecimen(barcode);//(调用webservice时取消注释)
@@ -363,7 +363,7 @@ namespace BLL
             //01.创建字典
             Dictionary<string, string> hospitalDic = new Dictionary<string, string>();
             //02.创建webservice获取数据
-            WebService.ForCenterLabService centerLabServiceSoapClient = new WebService.ForCenterLabService();
+            RuRo.BLL.WebService.ForCenterLabService centerLabServiceSoapClient = new RuRo.BLL.WebService.ForCenterLabService();
             try
             {
                 //02.1 根据条码号调用GetPatientInfoSpecimen方法获取单个人的数据
@@ -416,7 +416,7 @@ namespace BLL
             //创建病人字典集合。
             List<Dictionary<string, string>> oPListForSpecimensDicList = new List<Dictionary<string, string>>();
 
-            WebService.ForCenterLabService centerLabServiceSoapClient = new WebService.ForCenterLabService();
+            RuRo.BLL.WebService.ForCenterLabService centerLabServiceSoapClient = new RuRo.BLL.WebService.ForCenterLabService();
 
             try
             {

@@ -7,8 +7,8 @@
     <ProjectGuid>{8F8A2679-A4E7-4F84-8306-74C7BC8CD24C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FreezerProUtility</RootNamespace>
-    <AssemblyName>FreezerProUtility</AssemblyName>
+    <RootNamespace>RuRo.FreezerProUtility</RootNamespace>
+    <AssemblyName>RuRo.FreezerProUtility</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

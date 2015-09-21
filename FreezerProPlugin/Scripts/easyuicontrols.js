@@ -1,7 +1,0 @@
-﻿function showbarcodedialog() {
-
-}
-
-function showdateinportdialog() {
-
-}

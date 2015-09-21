@@ -7,8 +7,8 @@
     <ProjectGuid>{9C2B9672-85B8-453B-9E5D-49CC6DD8C8A9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLL</RootNamespace>
-    <AssemblyName>BLL</AssemblyName>
+    <RootNamespace>RuRo.BLL</RootNamespace>
+    <AssemblyName>RuRo.BLL</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace BLL.WebService {
+namespace RuRo.BLL.WebService {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -43,7 +43,7 @@ namespace BLL.WebService {
         
         /// <remarks/>
         public ForCenterLabService() {
-            this.Url = global::BLL.Properties.Settings.Default.BLL_WebReference_ForCenterLabService;
+            this.Url = global::RuRo.BLL.Properties.Settings.Default.BLL_WebReference_ForCenterLabService;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

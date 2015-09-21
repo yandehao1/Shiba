@@ -7,8 +7,8 @@
     <ProjectGuid>{B2640B6A-73A0-48F0-86E4-9D0D50E58467}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common</RootNamespace>
-    <AssemblyName>Common</AssemblyName>
+    <RootNamespace>RuRo.Common</RootNamespace>
+    <AssemblyName>RuRo.Common</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

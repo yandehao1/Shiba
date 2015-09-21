@@ -7,8 +7,8 @@
     <ProjectGuid>{306F6F45-4DF3-468F-8C3A-2E172E132265}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DAL</RootNamespace>
-    <AssemblyName>DAL</AssemblyName>
+    <RootNamespace>RuRo.DAL</RootNamespace>
+    <AssemblyName>RuRo.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

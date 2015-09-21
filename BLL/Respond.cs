@@ -10,12 +10,11 @@ namespace BLL
     public class Respond
     {
         //01.创建相应对象
-        
-        WebService.Specimen specimen = new WebService.Specimen();
+        RuRo.BLL.WebService.Specimen specimen = new RuRo.BLL.WebService.Specimen();
         Samples sample = new Samples();
         SampleSocrce samplesource = new SampleSocrce();
         DAL.FpExtendDatabaseHelper fpExtendDatabase = new DAL.FpExtendDatabaseHelper();//数据库操作对象——数据层
-        public void HF(WebService.SpecimenRt specimenRt)
+        public void HF(RuRo.BLL.WebService.SpecimenRt specimenRt)
         {
             #region 正式代码
             Thread.Sleep(100);//休眠1秒钟
@@ -32,7 +31,7 @@ namespace BLL
                 //数据库中不存在当前样本Id的数据
                 try
                 {
-                    WebService.ForCenterLabService CenterLab = new WebService.ForCenterLabService();
+                    RuRo.BLL.WebService.ForCenterLabService CenterLab = new RuRo.BLL.WebService.ForCenterLabService();
                     result = CenterLab.StoreSpecimenInfo(specimenRt);
                 }
                 catch (Exception ex)
@@ -55,7 +54,7 @@ namespace BLL
                     string result = "";
                     try
                     {
-                        WebService.ForCenterLabService CenterLab = new WebService.ForCenterLabService();
+                        RuRo.BLL.WebService.ForCenterLabService CenterLab = new RuRo.BLL.WebService.ForCenterLabService();
                         result = CenterLab.StoreSpecimenInfo(specimenRt);//回发数据
                     }
                     catch (Exception ex)
@@ -123,7 +122,7 @@ namespace BLL
         }
         private void HFWithSamples_Out()
         {
-            List<WebService.SpecimenRt> specimenRtList = new List<WebService.SpecimenRt>();
+            List<RuRo.BLL.WebService.SpecimenRt> specimenRtList = new List<RuRo.BLL.WebService.SpecimenRt>();
             List<Model.Sample_Out> sample_by_dateList = sample.GetSamples_Out("5000");//获取出库的样本
             if (sample_by_dateList.Count > 0)
             {
@@ -186,15 +185,15 @@ namespace BLL
             return dic;
         }
         #endregion
-        #region 创建回发数据中患者信息部分 + private WebService.SpecimenRt Get_SpecimenRt(string source_id)
+        #region 创建回发数据中患者信息部分 + private RuRo.BLL.WebService.SpecimenRt Get_SpecimenRt(string source_id)
         /// <summary>
         /// 创建回发数据中患者信息部分
         /// </summary>
         /// <param name="source_id">样本源id</param>
-        /// <returns>WebService.SpecimenRt 对象</returns>
-        private void Get_SpecimenRt(string source_id, WebService.Specimen specimen)
+        /// <returns>RuRo.BLL.WebService.SpecimenRt 对象</returns>
+        private void Get_SpecimenRt(string source_id, RuRo.BLL.WebService.Specimen specimen)
         {
-            WebService.SpecimenRt specimenRt = new WebService.SpecimenRt();
+            RuRo.BLL.WebService.SpecimenRt specimenRt = new RuRo.BLL.WebService.SpecimenRt();
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic = samplesource.Get_Sample_Source_Userfields(source_id);//根据id获取样本源信息
             if (dic.Count > 0)
@@ -216,22 +215,22 @@ namespace BLL
                     specimen.DeptCode = dic["当前科室代码@名称"];
                 }
             }
-            specimenRt.Specimens = new WebService.Specimen[] { specimen };
+            specimenRt.Specimens = new RuRo.BLL.WebService.Specimen[] { specimen };
             HF(specimenRt);
         }
         #endregion
 
-        #region 判断当前的样本数据是否在数据库中存在，并判断数据是否是一样的 + private bool CheckSpecimenRt(WebService.SpecimenRt item, ref bool exist)
+        #region 判断当前的样本数据是否在数据库中存在，并判断数据是否是一样的 + private bool CheckSpecimenRt(RuRo.BLL.WebService.SpecimenRt item, ref bool exist)
         /// <summary>
         /// 判断当前的样本数据是否在数据库中存在，并判断数据是否是一样的
         /// </summary>
         /// <param name="item">当前的样本数据（从Fp中获取的数据）</param>
         /// <param name="exist">数据库中存在的数据是否和当前数据一样（true不一样）</param>
         /// <returns>数据库中是否存在数据</returns>
-        private bool CheckSpecimenRt(WebService.SpecimenRt item, ref bool exist)
+        private bool CheckSpecimenRt(RuRo.BLL.WebService.SpecimenRt item, ref bool exist)
         {
-            //检查当前的数据(WebService.SpecimenRt)在数据库中是否存在
-            SpecimenRt specimenRt = fpExtendDatabase.SelectSpecimenRtBySampleId(item.Specimens[0].Id);
+            //检查当前的数据(RuRo.BLL.WebService.SpecimenRt)在数据库中是否存在
+           RuRo.Model.SpecimenRt specimenRt = fpExtendDatabase.SelectSpecimenRtBySampleId(item.Specimens[0].Id);
             if (specimenRt != null)//根据样本ID查询到了数据
             {
                 //判断当前传入的item是否和数据中保存的数据一样
@@ -246,17 +245,17 @@ namespace BLL
             return false;
         }
         #endregion
-        #region 添加当前样本回发日志到数据库 + private bool AddToSpecimenRtLog(WebService.SpecimenRt item, string result)
+        #region 添加当前样本回发日志到数据库 + private bool AddToSpecimenRtLog(RuRo.BLL.WebService.SpecimenRt item, string result)
         /// <summary>
         /// 添加当前样本回发日志到数据库
         /// </summary>
         /// <param name="item">当前的样本数据</param>
         /// <param name="result">回发后的状态</param>
         /// <returns>保存是否成功</returns>
-        private bool AddToSpecimenRtLog(WebService.SpecimenRt item, string result)
+        private bool AddToSpecimenRtLog(RuRo.BLL.WebService.SpecimenRt item, string result)
         {
             //保存日志：a、直接保存SpecimenRtLog
-            SpecimenRtLog specimenRtLog = new SpecimenRtLog();
+            RuRo.Model.SpecimenRtLog specimenRtLog = new RuRo.Model.SpecimenRtLog();
             specimenRtLog.PatiendId = item.PatientId;//提交的患者唯一标识
             specimenRtLog.PostBackDate = DateTime.Now;//提交日期
             specimenRtLog.PostBackStatus = result;//保存提交的结果
@@ -274,16 +273,16 @@ namespace BLL
         }
         #endregion
 
-        #region 将当前的样本数据添加到数据库保存 + private bool AddToSpecimenRt(WebService.SpecimenRt item)
+        #region 将当前的样本数据添加到数据库保存 + private bool AddToSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         /// <summary>
         /// 将当前的样本数据添加到数据库保存
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        private bool AddToSpecimenRt(WebService.SpecimenRt item)
+        private bool AddToSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         {
             //保存当前记录到数据库——b、成功之后保存详细的SpecimenRt
-            Model.SpecimenRt specimenRt = WebSpecimenRtToDataBaseSpecimenRt(item);
+            RuRo.Model.SpecimenRt specimenRt =WebSpecimenRtToDataBaseSpecimenRt(item);
             if (specimenRt!=null)
             {
                 return fpExtendDatabase.AddToSpecimenRt(specimenRt);
@@ -291,16 +290,16 @@ namespace BLL
             return false;
         }
         #endregion
-        #region 将当前的样本数据更新到数据库 + private bool UpdateSpecimenRt(WebService.SpecimenRt item)
+        #region 将当前的样本数据更新到数据库 + private bool UpdateSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         /// <summary>
         /// 将当前的样本数据更新到数据库
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        private bool UpdateSpecimenRt(WebService.SpecimenRt item)
+        private bool UpdateSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         {
             //更新SpecimenRt
-            Model.SpecimenRt specimenRt = WebSpecimenRtToDataBaseSpecimenRt(item);
+            RuRo.Model.SpecimenRt specimenRt = WebSpecimenRtToDataBaseSpecimenRt(item);
             if (specimenRt != null)
             {
                 return fpExtendDatabase.UpdateToSpecimenRt(specimenRt);
@@ -308,16 +307,16 @@ namespace BLL
             return false;
         }
         #endregion
-        #region 将WebService.SpecimenRt 对象转换成数据库SpecimenRt中保存的对象  private SpecimenRt WebSpecimenRtToDataBaseSpecimenRt(WebService.SpecimenRt item)
+        #region 将RuRo.BLL.WebService.SpecimenRt 对象转换成数据库SpecimenRt中保存的对象  private SpecimenRt WebSpecimenRtToDataBaseSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         /// <summary>
-        /// 将WebService.SpecimenRt 对象转换成数据库SpecimenRt中保存的对象
+        /// 将RuRo.BLL.WebService.SpecimenRt 对象转换成数据库SpecimenRt中保存的对象
         /// </summary>
-        /// <param name="item">WebService.SpecimenRt</param>
+        /// <param name="item">RuRo.BLL.WebService.SpecimenRt</param>
         /// <returns>SpecimenRt</returns>
-        private SpecimenRt WebSpecimenRtToDataBaseSpecimenRt(WebService.SpecimenRt item)
+        private RuRo.Model.SpecimenRt WebSpecimenRtToDataBaseSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         {
             //将当前需要回传的样本数据转换成数据库里保存的格式
-            SpecimenRt specimenRt = new SpecimenRt();
+            RuRo.Model.SpecimenRt specimenRt = new RuRo.Model.SpecimenRt();
             if (!string.IsNullOrEmpty(item.PatientId))
             {
                 specimenRt.PatientId = item.PatientId;

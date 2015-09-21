@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Data.Entity;
 using Model;
+using RuRo.Model;
 namespace DAL
 {
     /// <summary>
