@@ -35,7 +35,7 @@
             </tr>
         </table>
     </div>
-    <uc1:copyright ID="copyright1" runat="server" />
+    <%--<uc1:copyright ID="copyright1" runat="server" />--%>
     </form>
 </body>
 </html>
