@@ -63,6 +63,8 @@
     </Content>
     <Content Include="configXML\WS.ForCenterLabServiceByBarcode.xml" />
     <Content Include="configXML\WS.ForCenterLabServiceByDate.xml" />
+    <Content Include="default-old.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Error\AppError\150823.txt" />
     <Content Include="Error\AppError\150824.txt" />
     <Content Include="Error\AppError\150825.txt" />
@@ -269,6 +271,7 @@
     <Content Include="Images\szy_Logo.jpg" />
     <Content Include="include\css\base.css" />
     <Content Include="include\css\default.css" />
+    <Content Include="include\css\defaultOLD.css" />
     <Content Include="include\jquery-easyui-1.4.1\changelog.txt" />
     <Content Include="include\jquery-easyui-1.4.1\easyloader.js" />
     <Content Include="include\jquery-easyui-1.4.1\jquery.easyui.min.js" />
@@ -677,6 +680,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="default-old.aspx.cs">
+      <DependentUpon>default-old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default-old.aspx.designer.cs">
+      <DependentUpon>default-old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Fp_Ajax\getjson.aspx.cs">
       <DependentUpon>getjson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
