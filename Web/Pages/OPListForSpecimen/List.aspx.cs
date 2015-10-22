@@ -12,9 +12,6 @@ namespace RuRo.Web.OPListForSpecimen
 {
     public partial class List : Page
     {
-
-
-
         RuRo.BLL.ZSSY.OPListForSpecimen bll = new BLL.ZSSY.OPListForSpecimen();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -30,11 +27,26 @@ namespace RuRo.Web.OPListForSpecimen
 
         protected void btnCode_Click(object sender, EventArgs e)
         {
-            BindData();
+            string strcode = txtKeyword.Text;
+            GetCode(strcode);
+            //BindData();
+        }
+
+        private string GetCode(string code)
+        {
+            throw new NotImplementedException();
         }
         protected void btnSelDate_Click(object sender, EventArgs e)
         {
+            string strkarq = ksrq.Value;
+            string strjsrq = jsrq.Value;
+            GetDate(strkarq, strjsrq);
             BindData();
+        }
+
+        private void GetDate(string strkarq, string strjsrq)
+        {
+            throw new NotImplementedException();
         }
         
         protected void btnDelete_Click(object sender, EventArgs e)

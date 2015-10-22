@@ -6,7 +6,7 @@
     function getQuery(sel)
     {
         var change = sel.value;
-        if (change == 1) {
+        if (change == 2) {
             document.getElementById("getcode").style.visibility = "hidden";
             document.getElementById("getdate").style.visibility = "visible";
         }
@@ -41,12 +41,12 @@
                             <asp:TextBox ID="txtKeyword" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
                              <asp:Button ID="btnSearch" runat="server" Text="条码查询"  OnClick="btnCode_Click" ></asp:Button> 
                         </div>
-                        <div id="getdate">
+                        <div id="getdate" style="visibility:hidden">
                             <div>
-                                开始日期：<input class="Wdate" type="text" runat="server" id="ksrq"  onClick="WdatePicker()">
+                                开始日期：<input class="Wdate" type="text" runat="server" id="ksrq" name="ksrq"  onClick="WdatePicker()">
                             </div> 
                             <div>
-                                结束日期：<input class="Wdate" type="text" runat="server" id="jsrq"  onClick="WdatePicker()">
+                                结束日期：<input class="Wdate" type="text" runat="server" id="jsrq" name="jsrq"  onClick="WdatePicker()">
                             </div> 
                             <asp:Button ID="Button1" runat="server" Text="日期查询"  OnClick="btnSelDate_Click" ></asp:Button>  
                         </div>                       
@@ -57,7 +57,7 @@
             </table>
             <!--Search end-->
             <br />
-           <%-- <asp:GridView ID="gridView" runat="server" AllowPaging="True" Width="100%" CellPadding="3"  OnPageIndexChanging ="gridView_PageIndexChanging"
+            <asp:GridView ID="gridView" runat="server" AllowPaging="True" Width="100%" CellPadding="3"  OnPageIndexChanging ="gridView_PageIndexChanging"
                     BorderWidth="1px" DataKeyNames="Id" OnRowDataBound="gridView_RowDataBound"
                     AutoGenerateColumns="false" PageSize="10"  RowStyle-HorizontalAlign="Center" OnRowCreated="gridView_OnRowCreated">
                     <Columns>
@@ -115,7 +115,7 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
-                </asp:GridView>--%>
+                </asp:GridView>
                <table border="0" cellpadding="0" cellspacing="1" style="width: 100%;">
                 <tr>
                     <td style="width: 1px;">                        
