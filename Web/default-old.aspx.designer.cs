@@ -7,10 +7,19 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace RuRo.Web {
+namespace FreezerProPlugin {
     
     
-    public partial class Default {
+    public partial class index {
+        
+        /// <summary>
+        /// body 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl body;
         
         /// <summary>
         /// FreezerPro 控件。
@@ -22,12 +31,21 @@ namespace RuRo.Web {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FreezerPro;
         
         /// <summary>
-        /// from 控件。
+        /// MenuBar 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm from;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MenuBar;
+        
+        /// <summary>
+        /// ffff 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ffff;
     }
 }

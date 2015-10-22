@@ -38,9 +38,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LTP.Accounts">
-      <HintPath>..\..\SZY\Lib\LTP.Accounts.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -66,8 +63,8 @@
     </Content>
     <Content Include="configXML\WS.ForCenterLabServiceByBarcode.xml" />
     <Content Include="configXML\WS.ForCenterLabServiceByDate.xml" />
-    <Content Include="Controls\checkright.ascx" />
-    <Content Include="Controls\copyright.ascx" />
+    <Content Include="default-old.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Error\AppError\150823.txt" />
     <Content Include="Error\AppError\150824.txt" />
     <Content Include="Error\AppError\150825.txt" />
@@ -91,7 +88,6 @@
     <Content Include="Fp_Ajax\Fp_Ajax.txt" />
     <Content Include="Fp_Ajax\getjson.aspx" />
     <Content Include="Fp_Ajax\PageConData.aspx" />
-    <Content Include="Global.asax" />
     <Content Include="Images\Images\about16.gif" />
     <Content Include="Images\Images\add16.gif" />
     <Content Include="Images\Images\ant.png" />
@@ -275,6 +271,7 @@
     <Content Include="Images\szy_Logo.jpg" />
     <Content Include="include\css\base.css" />
     <Content Include="include\css\default.css" />
+    <Content Include="include\css\defaultOLD.css" />
     <Content Include="include\jquery-easyui-1.4.1\changelog.txt" />
     <Content Include="include\jquery-easyui-1.4.1\easyloader.js" />
     <Content Include="include\jquery-easyui-1.4.1\jquery.easyui.min.js" />
@@ -645,8 +642,6 @@
     <Content Include="js\CheckBox.js" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\easyuicontrols.js" />
-    <Content Include="Style.css" />
-    <Content Include="ValidateCode.aspx" />
     <Content Include="ZSSY\ImportSampleSourceLog\Add.aspx" />
     <Content Include="ZSSY\ImportSampleSourceLog\List.aspx" />
     <Content Include="ZSSY\ImportSampleSourceLog\Modify.aspx" />
@@ -674,7 +669,6 @@
     <Content Include="Images\Images\MenuImg\Thumbs.db" />
     <Content Include="Images\Images\Thumbs.db" />
     <Content Include="Images\Thumbs.db" />
-    <Content Include="MasterPage.master" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -686,19 +680,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\checkright.ascx.cs">
-      <DependentUpon>checkright.ascx</DependentUpon>
+    <Compile Include="default-old.aspx.cs">
+      <DependentUpon>default-old.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\checkright.ascx.designer.cs">
-      <DependentUpon>checkright.ascx</DependentUpon>
+    <Compile Include="default-old.aspx.designer.cs">
+      <DependentUpon>default-old.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CopyRight.ascx.cs">
-      <DependentUpon>copyright.ascx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\CopyRight.ascx.designer.cs">
-      <DependentUpon>copyright.ascx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Fp_Ajax\getjson.aspx.cs">
       <DependentUpon>getjson.aspx</DependentUpon>
@@ -717,9 +711,6 @@
     <Compile Include="GetData.ashx.cs">
       <DependentUpon>GetData.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="ImportData.ashx.cs">
       <DependentUpon>ImportData.ashx</DependentUpon>
     </Compile>
@@ -737,13 +728,6 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage.master.cs">
-      <DependentUpon>MasterPage.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage.master.designer.cs">
-      <DependentUpon>MasterPage.master</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespondHis.ashx.cs">
       <DependentUpon>RespondHis.ashx</DependentUpon>
@@ -754,12 +738,6 @@
     </Compile>
     <Compile Include="TestPage.aspx.designer.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ValidateCode.aspx.cs">
-      <DependentUpon>ValidateCode.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ValidateCode.aspx.designer.cs">
-      <DependentUpon>ValidateCode.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZSSY\ImportSampleSourceLog\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
@@ -960,11 +938,11 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Global.asax.resx">
-      <DependentUpon>Global.asax.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
