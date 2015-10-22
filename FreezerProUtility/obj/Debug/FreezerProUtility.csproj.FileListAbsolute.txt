@@ -1,6 +1,0 @@
-F:\Repositories\SY\SY_FpExtend\FreezerProUtility\bin\Debug\FreezerProUtility.dll
-F:\Repositories\SY\SY_FpExtend\FreezerProUtility\bin\Debug\FreezerProUtility.pdb
-F:\Repositories\SY\SY_FpExtend\FreezerProUtility\bin\Debug\Newtonsoft.Json.dll
-F:\Repositories\SY\SY_FpExtend\FreezerProUtility\obj\Debug\FreezerProUtility.csprojResolveAssemblyReference.cache
-F:\Repositories\SY\SY_FpExtend\FreezerProUtility\obj\Debug\FreezerProUtility.dll
-F:\Repositories\SY\SY_FpExtend\FreezerProUtility\obj\Debug\FreezerProUtility.pdb
