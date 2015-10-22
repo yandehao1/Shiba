@@ -3,8 +3,7 @@
 <script language="javascript" src="/js/CheckBox.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../include/My97DatePicker/WdatePicker.js"></script>
 <script type="text/javascript">
-    function getQuery(sel)
-    {
+    function getQuery(sel) {
         var change = sel.value;
         if (change == 2) {
             document.getElementById("getcode").style.visibility = "hidden";

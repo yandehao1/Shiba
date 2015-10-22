@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
 using System.IO;
-
 using IBatisNet.Common;
 using IBatisNet.Common.Pagination;
 using IBatisNet.DataMapper;
