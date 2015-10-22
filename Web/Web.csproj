@@ -637,10 +637,40 @@
     <Content Include="include\js\page.js" />
     <Content Include="include\js\samplepage.js" />
     <Content Include="include\js\sy_func.js" />
+    <Content Include="include\My97DatePicker\calendar.js" />
+    <Content Include="include\My97DatePicker\config.js" />
+    <Content Include="include\My97DatePicker\lang\en.js" />
+    <Content Include="include\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="include\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="include\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="include\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="include\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="include\My97DatePicker\skin\default\img.gif" />
+    <Content Include="include\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="include\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="include\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="include\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="include\My97DatePicker\WdatePicker.js" />
+    <Content Include="include\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="include\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="include\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="include\My97DatePicker\开发包\readme.txt" />
+    <Content Include="include\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="include\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="include\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="include\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="include\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="include\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="include\My97DatePicker\开发包\skin\whyGreen\img.gif" />
     <Content Include="index.aspx" />
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\OPListForSpecimen\Add.aspx" />
+    <Content Include="Pages\OPListForSpecimen\delete.aspx" />
+    <Content Include="Pages\OPListForSpecimen\List.aspx" />
+    <Content Include="Pages\OPListForSpecimen\Modify.aspx" />
+    <Content Include="Pages\OPListForSpecimen\Show.aspx" />
     <Content Include="Scripts\easyuicontrols.js" />
     <Content Include="Style.css" />
     <Content Include="ValidateCode.aspx" />
@@ -754,6 +784,41 @@
     </Compile>
     <Compile Include="MasterPage.master.designer.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespondHis.ashx.cs">
@@ -974,7 +1039,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Pages\" />
     <Folder Include="Sever\" />
   </ItemGroup>
   <ItemGroup>
