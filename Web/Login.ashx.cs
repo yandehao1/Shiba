@@ -21,9 +21,7 @@ namespace FreezerProPlugin
             }
             if (context.Request.Params["type"] == "logout")
             {
-                RuRo.Common.CookieHelper.ClearCookie("loginCookie");
-                RuRo.Common.CookieHelper.ClearCookie("username");
-                RuRo.Common.CookieHelper.ClearCookie("password");
+                context.Response.Cookies["loginCookie"].Expires.AddDays(0);
                 context.Response.Write("<button style=\"width:50px;\" onclick=\"dologin()\">登录</button>使用FreezerPro协同助手");
             }
             else if (context.Request.Params["type"] == "login")
@@ -38,8 +36,6 @@ namespace FreezerProPlugin
                     loginCookie.Values.Add("Password", password);
                     loginCookie.Expires = DateTime.Now.AddDays(1);
                     context.Response.Cookies.Add(loginCookie);
-                    RuRo.Common.CookieHelper.SetCookie("username", username);
-                    RuRo.Common.CookieHelper.SetCookie("password", password);
                     context.Response.Write("恭喜你,登录成功,欢迎使用FreezerPro协同助手！");
                 }
                 else
@@ -53,11 +49,11 @@ namespace FreezerProPlugin
             context.Response.ContentType = "text/html";
             if (context.Request.Cookies["loginCookie"] == null)
             {
-                return ("<button id='dologin' style=\"width:40px;\" onclick=\"dologin()\">登录</button>FreezerPro协同助手");
+                return ("<button id='dologin' style=\"width:40px;\" onclick=\"dologin()\">登录</button>使用FreezerPro协同助手");
             }
             else
             {
-                return ("<button style=\"width:40px;\" onclick=\"doimport()\">导入</button><button style=\"width:40px;\" onclick=\"logout()\">注销</button>");
+                return ("[" + context.Request.Cookies["loginCookie"].Values["Username"].ToString() + "] 您好,请点击<button style=\"width:40px;\" onclick=\"doimport()\">导入</button><button style=\"width:40px;\" onclick=\"logout()\">注销</button>");
             }
         }
 
@@ -74,7 +70,7 @@ namespace FreezerProPlugin
             if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {
                 BLL.Token token = new BLL.Token(username, password);
-                return token.CkeckRes;
+                return token.checkAuth_Token();
             }
             return false;
         }

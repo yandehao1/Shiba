@@ -26,7 +26,7 @@ namespace FreezerProPlugin
             string sampleSourceDescription = context.Request["sampleSourceDescription"];
             string hiddenEncodeStr = context.Request["hidden"];//(*前台页面上存储的加密字符串，提交到导入数据时需要解密处理)
 
-            if (string.IsNullOrEmpty(sampleSourceTypeName))
+            if (sampleSourceTypeName == null || sampleSourceTypeName == null)
             {
                 context.Response.Write("{\"result\":\"失败\",\"patientId\":" + "\"" + patientId + "\"}");
                 context.Response.End();
@@ -57,13 +57,7 @@ namespace FreezerProPlugin
                     if (FpJsonHelper.GetStrFromJsonStr("status", result) == "ERROR")//导入失败
                     {
                         string reason = FpJsonHelper.GetStrFromJsonStr("message", result);
-                        context.Response.Write("{\"success\":\"失败\",\"patientId\":" + "\"" + patientId + "\",\"Reason\":\""+reason.Replace(":","-").Replace("\"","")+"\"}");
-                        context.Response.End();
-                    }
-                    if (FpJsonHelper.GetStrFromJsonStr("error", result) == "True")//导入失败
-                    {
-                        string reason = FpJsonHelper.GetStrFromJsonStr("message", result);
-                        context.Response.Write("{\"success\":\"失败\",\"patientId\":" + "\"" + patientId + "\",\"Reason\":\"" + reason.Replace(":", "-").Replace("\"", "") + "\"}");
+                        context.Response.Write("{\"success\":\"失败\",\"patientId\":" + "\"" + patientId + "\",\"Reason\":\""+reason+"\"}");
                         context.Response.End();
                     }
                 }

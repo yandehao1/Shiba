@@ -1,57 +1,35 @@
-﻿$(document).ready(function () {
-    displayToolbar();
+﻿//$(document).ready(function () {
+//    displayToolbar();
+//});
+
+$.fn.extend({
+    resizeDataGrid: function (heightMargin, widthMargin, minHeight, minWidth) {
+        var height = $(document.body).height() - heightMargin;
+        var width = $(document.body).width() - widthMargin;
+        height = height < minHeight ? minHeight : height;
+        width = width < minWidth ? minWidth : width;
+        $(this).datagrid('resize', {
+            height: height,
+            width: width
+        });
+    }
 });
 
-//$.fn.extend({
-//    resizeDataGrid: function (heightMargin, widthMargin, minHeight, minWidth) {
-//        var height = $(document.body).height() - heightMargin;
-//        var width = $(document.body).width() - widthMargin;
-//        height = height < minHeight ? minHeight : height;
-//        width = width < minWidth ? minWidth : width;
-//        $(this).datagrid('resize', {
-//            height: height,
-//            width: width
-//        });
-//    }
-//});
+var heightMargin = $("#menu").height() + 60;
+var widthMargin = $(document.body).width() - $("#tb").width();
+// 第一次加载时和当窗口大小发生变化时，自动变化大小
+$('#sampleSourceDataGrid').resizeDataGrid(heightMargin, widthMargin, 0, 0);
+$(window).resize(function () {
+    $('#sampleSourceDataGrid').resizeDataGrid(heightMargin, widthMargin, 0, 0);
+});
+$('#sampleSourceDataGrid').resizeDataGrid(heightMargin, widthMargin, 0, 0);
+$(window).resize(function () {
+    $('#sampleSourceDataGrid').resizeDataGrid(heightMargin, widthMargin, 0, 0);
+});
 
-//var heightMargin = $("#menu").height() + 60;
-//var widthMargin = $(document.body).width() - $("#tb").width();
-//// 第一次加载时和当窗口大小发生变化时，自动变化大小
-//$('#sampleSourceDataGrid').resizeDataGrid(heightMargin, widthMargin, 0, 0);
-//$(window).resize(function () {
-//    $('#sampleSourceDataGrid').resizeDataGrid(heightMargin, widthMargin, 0, 0);
-//});
-//$('#sampleSourceDataGrid').resizeDataGrid(heightMargin, widthMargin, 0, 0);
-//$(window).resize(function () {
-//    $('#sampleSourceDataGrid').resizeDataGrid(heightMargin, widthMargin, 0, 0);
-//});
-
-function showmessager(title, message) {
-        $.messager.show({
-            title: title,
-            msg: message,
-            showType: 'show'
-        });
-}
 
 function reshis() {
-    //if (confirm("确定要清空数据吗？")) {
-    //    return true;
-    //}
-    //if (true) {
-    showmessager('回发数据', '已经开始回发数据')
-    $.ajax({
-        type: 'POST',
-        url: 'RespondHis.ashx',
-        data: { action: 'respondhis' },
-        success: function (data) {
-            alert(data);
-        },
-        dataType: "text"
-    });
-    //}
-
+    $.post('RespondHis.ashx',{action:respondhis})
 }
 ////页面加载时访问
 function displayToolbar() {
@@ -70,7 +48,6 @@ function dologin() {
     $('#frmLogin').form("clear");
     $('#Login').dialog('open');
 }
-
 $(function () {
     $("input", $("#password").next("span")).keydown(function (e) {
         if (e.keyCode == 13) {
@@ -109,7 +86,7 @@ function logout() {
                 success: function (data) {
                     $('#MenuBar').html(data);
                 },
-                dataType: "text"
+                dataType: "text",
             });
         }
     });
@@ -301,11 +278,10 @@ function barcode(code) {
             if (data != "") {
                 var dataStr = eval("(" + data + ")")
                 if (dataStr.success) {
-                    //$('#sampleSourceDataGrid').datagrid('insertRow', {
-                    //    index: 0,
-                    //    row: dataStr['result']
-                    //});
-                    insertRowData(dataStr['result']);
+                    $('#sampleSourceDataGrid').datagrid('insertRow', {
+                        index: 0,
+                        row: dataStr['result']
+                    });
                 }
                 else if (!dataStr.success) {
                     alert(dataStr['result']);
@@ -318,8 +294,6 @@ function barcode(code) {
         }
     });
 }
-
-
 //打开时间选择框
 function doquerydatabytime() {
     $('#dodatesearch').dialog('open');
@@ -364,6 +338,7 @@ function dateSearch() {
 }
 //提交日期查询
 function querydatabydate(begindate, enddate) {
+    accept();
     $.ajax({
         url: "GetData.ashx",
         type: "post",
@@ -380,11 +355,10 @@ function querydatabydate(begindate, enddate) {
                     for (var a in arr) {
                         //alert(a);
                         //alert(arr[a]['patientName']);
-                        //$('#sampleSourceDataGrid').datagrid('insertRow', {
-                        //    index: 0,
-                        //    row: arr[a]
-                        //});
-                        insertRowData(arr[a]);
+                        $('#sampleSourceDataGrid').datagrid('insertRow', {
+                            index: 0,
+                            row: arr[a]
+                        });
                     }
                 }
                 else if (!dataStr.success) {
@@ -402,9 +376,6 @@ function querydatabydate(begindate, enddate) {
 function batchImport() {
     accept();
     var rows = $('#sampleSourceDataGrid').datagrid('getSelections');
-    if (rows) {
-        showmessager('导入数据', '已经开始导入数据');
-    }
     for (var i = 0; i < rows.length; i++) {
         if (rows[i].sampleSourceType != "") {
             if (rows[i].importStatus != "成功") {
@@ -424,14 +395,13 @@ function batchImport() {
             }
         }
     }
-
 }
 //导入样本源已存在，或者成功
 function changeState(result) {
     var rows = $('#sampleSourceDataGrid').datagrid('getRows');
     for (var i = 0; i < rows.length; i++) {
         if (rows[i].patientId == result['patientId']) {
-            if (result['success'] == "成功") {
+            if (result['Reason'] == "成功") {
                 $('#sampleSourceDataGrid').datagrid('updateRow', {
                     index: i,
                     row: {
@@ -459,31 +429,6 @@ function removeSelections() {
     for (var i = 0; i < copyRows.length; i++) {
         var index = $('#sampleSourceDataGrid').datagrid('getRowIndex', copyRows[i]);
         $('#sampleSourceDataGrid').datagrid('deleteRow', index);
-    }
-}
-
-function insertRowData(data) {
-    //判断是否有标识
-    var k = true;
-    var rows = $('#sampleSourceDataGrid').datagrid('getRows');
-    for (var i = 0; i < rows.length; i++) {
-        if (rows[i].patientId == data['patientId']) {
-            k = false;
-            break;
-        }
-    }
-    //列表中无数据
-    if (k) {
-        if (data['KeepSpecimenSign'] == "Y") {
-            $('#sampleSourceDataGrid').datagrid('insertRow', {
-                index: 0,
-                row: data
-            });
-        }
-        else {
-            data['KeepSpecimenSign'] = "";
-            $('#sampleSourceDataGrid').datagrid('appendRow', data);
-        }
     }
 }
 

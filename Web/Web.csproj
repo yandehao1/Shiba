@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RuRo.Web</RootNamespace>
-    <AssemblyName>RuRo.Web</AssemblyName>
+    <RootNamespace>FreezerProPlugin</RootNamespace>
+    <AssemblyName>FreezerProPlugin</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -63,8 +63,8 @@
     </Content>
     <Content Include="configXML\WS.ForCenterLabServiceByBarcode.xml" />
     <Content Include="configXML\WS.ForCenterLabServiceByDate.xml" />
-    <Content Include="default.aspx" />
-    <Content Include="Global.asax" />
+    <Content Include="FpExtendPage.aspx" />
+    <Content Include="HtmlPage2.html" />
     <Content Include="include\css\base.css" />
     <Content Include="include\css\default.css" />
     <Content Include="include\jquery-easyui-1.4.1\changelog.txt" />
@@ -426,42 +426,84 @@
     <Content Include="include\jquery-easyui-1.4.1\themes\metro\validatebox.css" />
     <Content Include="include\jquery-easyui-1.4.1\themes\metro\window.css" />
     <Content Include="include\js\default.js" />
+    <Content Include="index - 复制.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\easyuicontrols.js" />
+    <Content Include="BaseFp.Master" />
+    <Content Include="WebForm.aspx" />
+    <Content Include="FpExtendMaster.Master" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
-    <Content Include="test.aspx" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
+    <Content Include="TestPage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="BaseFp.Master.cs">
+      <DependentUpon>BaseFp.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="BaseFp.Master.designer.cs">
+      <DependentUpon>BaseFp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FpExtendMaster.Master.cs">
+      <DependentUpon>FpExtendMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FpExtendMaster.Master.designer.cs">
+      <DependentUpon>FpExtendMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FpExtendPage.aspx.cs">
+      <DependentUpon>FpExtendPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FpExtendPage.aspx.designer.cs">
+      <DependentUpon>FpExtendPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="GetData.ashx.cs">
       <DependentUpon>GetData.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="ImportData.ashx.cs">
       <DependentUpon>ImportData.ashx</DependentUpon>
     </Compile>
+    <Compile Include="index - 复制.aspx.cs">
+      <DependentUpon>index - 复制.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index - 复制.aspx.designer.cs">
+      <DependentUpon>index - 复制.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.ashx.cs">
       <DependentUpon>Login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespondHis.ashx.cs">
       <DependentUpon>RespondHis.ashx</DependentUpon>
     </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm.aspx.cs">
+      <DependentUpon>WebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm.aspx.designer.cs">
+      <DependentUpon>WebForm.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -469,16 +511,13 @@
     <Content Include="ImportData.ashx" />
     <Content Include="Login.ashx" />
     <Content Include="RespondHis.ashx" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Error\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -493,6 +532,9 @@
       <Project>{a661a86f-a5c9-4b35-b0d7-d16af1d13c8d}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

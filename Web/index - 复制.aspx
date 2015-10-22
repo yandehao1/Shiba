@@ -58,7 +58,7 @@
         <!--显示面板-->
         <div id="dgcontent" style="width: 100%;">
             <table id="sampleSourceDataGrid" class="easyui-datagrid" title="样品源信息" style="width: 100%"
-                data-options="onClickRow: onClickRow,singleSelect: false,checkOnSelect:true,rownumbers:true" runat="server">
+                data-options="onClickRow: onClickRow,singleSelect: false,checkOnSelect:true,rownumbers:true" >
                 <thead>
                     <tr>
                         <th data-options="field:'ck',checkbox:true" width="5%"></th>
