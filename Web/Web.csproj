@@ -278,6 +278,7 @@
     <Content Include="include\css\base.css" />
     <Content Include="include\css\default.css" />
     <Content Include="include\css\defaultOLD.css" />
+    <Content Include="include\css\index.css" />
     <Content Include="include\jquery-easyui-1.4.1\changelog.txt" />
     <Content Include="include\jquery-easyui-1.4.1\easyloader.js" />
     <Content Include="include\jquery-easyui-1.4.1\jquery.easyui.min.js" />
@@ -306,6 +307,7 @@
     <Content Include="include\jquery-easyui-1.4.1\locale\easyui-lang-tr.js" />
     <Content Include="include\jquery-easyui-1.4.1\locale\easyui-lang-zh_CN.js" />
     <Content Include="include\jquery-easyui-1.4.1\locale\easyui-lang-zh_TW.js" />
+    <Content Include="include\jquery-easyui-1.4.1\outlook2.js" />
     <Content Include="include\jquery-easyui-1.4.1\plugins\jquery.accordion.js" />
     <Content Include="include\jquery-easyui-1.4.1\plugins\jquery.calendar.js" />
     <Content Include="include\jquery-easyui-1.4.1\plugins\jquery.combo.js" />
