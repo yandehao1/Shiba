@@ -63,8 +63,210 @@
     </Content>
     <Content Include="configXML\WS.ForCenterLabServiceByBarcode.xml" />
     <Content Include="configXML\WS.ForCenterLabServiceByDate.xml" />
-    <Content Include="FpExtendPage.aspx" />
-    <Content Include="HtmlPage2.html" />
+    <Content Include="Error\AppError\150823.txt" />
+    <Content Include="Error\AppError\150824.txt" />
+    <Content Include="Error\AppError\150825.txt" />
+    <Content Include="Error\AppError\150826.txt" />
+    <Content Include="Error\AppError\150828.txt" />
+    <Content Include="Error\AppError\150830.txt" />
+    <Content Include="Error\AppError\150901.txt" />
+    <Content Include="Error\AppError\150905.txt" />
+    <Content Include="Error\AppError\150906.txt" />
+    <Content Include="Error\AppError\150915.txt" />
+    <Content Include="Error\AppError\150916.txt" />
+    <Content Include="Error\AppError\150917.txt" />
+    <Content Include="Error\AppExError\150823.txt" />
+    <Content Include="Error\AppExError\150824.txt" />
+    <Content Include="Error\AppExError\150830.txt" />
+    <Content Include="Error\AppExError\150901.txt" />
+    <Content Include="Error\AppExError\150906.txt" />
+    <Content Include="Error\AppExError\150915.txt" />
+    <Content Include="Error\AppExError\150916.txt" />
+    <Content Include="Error\AppExError\150917.txt" />
+    <Content Include="Fp_Ajax\Fp_Ajax.txt" />
+    <Content Include="Fp_Ajax\getjson.aspx" />
+    <Content Include="Fp_Ajax\PageConData.aspx" />
+    <Content Include="Images\Images\about16.gif" />
+    <Content Include="Images\Images\add16.gif" />
+    <Content Include="Images\Images\ant.png" />
+    <Content Include="Images\Images\a_te01.gif" />
+    <Content Include="Images\Images\a_te02.gif" />
+    <Content Include="Images\Images\b1.gif" />
+    <Content Include="Images\Images\b11-1.gif" />
+    <Content Include="Images\Images\b11-2.gif" />
+    <Content Include="Images\Images\b11.gif" />
+    <Content Include="Images\Images\b12.gif" />
+    <Content Include="Images\Images\b13-1.gif" />
+    <Content Include="Images\Images\b13-2.gif" />
+    <Content Include="Images\Images\b13.gif" />
+    <Content Include="Images\Images\b3.gif" />
+    <Content Include="Images\Images\b4.gif" />
+    <Content Include="Images\Images\b5.gif" />
+    <Content Include="Images\Images\bar_00.gif" />
+    <Content Include="Images\Images\bar_01.gif" />
+    <Content Include="Images\Images\bar_02.gif" />
+    <Content Include="Images\Images\bar_03.gif" />
+    <Content Include="Images\Images\bar_04.gif" />
+    <Content Include="Images\Images\bar_05.gif" />
+    <Content Include="Images\Images\bar_06.gif" />
+    <Content Include="Images\Images\bar_07.gif" />
+    <Content Include="Images\Images\bar_08.gif" />
+    <Content Include="Images\Images\bar_10.gif" />
+    <Content Include="Images\Images\bg.gif" />
+    <Content Include="Images\Images\bgx.GIF" />
+    <Content Include="Images\Images\bg_01.gif" />
+    <Content Include="Images\Images\bg_02.gif" />
+    <Content Include="Images\Images\bg_03.gif" />
+    <Content Include="Images\Images\blank.gif" />
+    <Content Include="Images\Images\bottom_01.gif" />
+    <Content Include="Images\Images\bottom_02.gif" />
+    <Content Include="Images\Images\bottom_03.gif" />
+    <Content Include="Images\Images\Briefcase16.gif" />
+    <Content Include="Images\Images\Briefcase32.gif" />
+    <Content Include="Images\Images\button_edit.gif" />
+    <Content Include="Images\Images\button_search.GIF" />
+    <Content Include="Images\Images\c6.gif" />
+    <Content Include="Images\Images\card16.gif" />
+    <Content Include="Images\Images\card32.gif" />
+    <Content Include="Images\Images\company16.gif" />
+    <Content Include="Images\Images\css.css" />
+    <Content Include="Images\Images\d2.gif" />
+    <Content Include="Images\Images\d3.gif" />
+    <Content Include="Images\Images\desktop16.gif" />
+    <Content Include="Images\Images\desktop32.gif" />
+    <Content Include="Images\Images\desktop_01.gif" />
+    <Content Include="Images\Images\desktop_02.gif" />
+    <Content Include="Images\Images\desktop_03.gif" />
+    <Content Include="Images\Images\dsj16.gif" />
+    <Content Include="Images\Images\dsj32.gif" />
+    <Content Include="Images\Images\f3.gif" />
+    <Content Include="Images\Images\f4.gif" />
+    <Content Include="Images\Images\find16.gif" />
+    <Content Include="Images\Images\find32.gif" />
+    <Content Include="Images\Images\folder16.gif" />
+    <Content Include="Images\Images\folder32.gif" />
+    <Content Include="Images\Images\foldergreen_16.gif" />
+    <Content Include="Images\Images\ger16.gif" />
+    <Content Include="Images\Images\ger32.gif" />
+    <Content Include="Images\Images\gongg16.gif" />
+    <Content Include="Images\Images\gongg32.gif" />
+    <Content Include="Images\Images\gongzkp16.gif" />
+    <Content Include="Images\Images\gongzkp32.gif" />
+    <Content Include="Images\Images\help16.gif" />
+    <Content Include="Images\Images\help32.gif" />
+    <Content Include="Images\Images\image.gif" />
+    <Content Include="Images\Images\in_bg.gif" />
+    <Content Include="Images\Images\left-1-1.gif" />
+    <Content Include="Images\Images\left-1-2.gif" />
+    <Content Include="Images\Images\left-1-3.gif" />
+    <Content Include="Images\Images\left-1.gif" />
+    <Content Include="Images\Images\left-2-1.gif" />
+    <Content Include="Images\Images\left-2-2.gif" />
+    <Content Include="Images\Images\left-2-3.gif" />
+    <Content Include="Images\Images\left-2.gif" />
+    <Content Include="Images\Images\left-3-1.gif" />
+    <Content Include="Images\Images\left-3-2.gif" />
+    <Content Include="Images\Images\left-3-3.gif" />
+    <Content Include="Images\Images\left-3.gif" />
+    <Content Include="Images\Images\left-bj-1.gif" />
+    <Content Include="Images\Images\left-bj-2.gif" />
+    <Content Include="Images\Images\left-bj-3.gif" />
+    <Content Include="Images\Images\left-bj.gif" />
+    <Content Include="Images\Images\Loading.gif" />
+    <Content Include="Images\Images\login.css" />
+    <Content Include="Images\Images\login_p_img02.gif" />
+    <Content Include="Images\Images\login_p_img03.gif" />
+    <Content Include="Images\Images\login_p_img04.gif" />
+    <Content Include="Images\Images\login_p_img05.gif" />
+    <Content Include="Images\Images\login_p_img11.gif" />
+    <Content Include="Images\Images\mag16.gif" />
+    <Content Include="Images\Images\mail16.gif" />
+    <Content Include="Images\Images\main_01.gif" />
+    <Content Include="Images\Images\main_04.gif" />
+    <Content Include="Images\Images\main_05.gif" />
+    <Content Include="Images\Images\main_06.gif" />
+    <Content Include="Images\Images\main_08.gif" />
+    <Content Include="Images\Images\main_09.gif" />
+    <Content Include="Images\Images\member_t04.png" />
+    <Content Include="Images\Images\MenuImg\288.GIF" />
+    <Content Include="Images\Images\MenuImg\about16.gif" />
+    <Content Include="Images\Images\MenuImg\bbs16.gif" />
+    <Content Include="Images\Images\MenuImg\find16.gif" />
+    <Content Include="Images\Images\MenuImg\folder16.gif" />
+    <Content Include="Images\Images\MenuImg\foldergreen_16.gif" />
+    <Content Include="Images\Images\MenuImg\ger16.gif" />
+    <Content Include="Images\Images\MenuImg\help16.gif" />
+    <Content Include="Images\Images\MenuImg\news16.gif" />
+    <Content Include="Images\Images\MenuImg\out16.gif" />
+    <Content Include="Images\Images\MenuImg\Programs16.gif" />
+    <Content Include="Images\Images\MenuImg\quanx16.gif" />
+    <Content Include="Images\Images\MenuImg\thumbnails.gif" />
+    <Content Include="Images\Images\MenuImg\times.gif" />
+    <Content Include="Images\Images\MenuImg\ts16.gif" />
+    <Content Include="Images\Images\MenuImg\user16.gif" />
+    <Content Include="Images\Images\MenuImg\xinx16.gif" />
+    <Content Include="Images\Images\MenuImg\zhut16.gif" />
+    <Content Include="Images\Images\MenuImg\zjsp16.gif" />
+    <Content Include="Images\Images\message16.gif" />
+    <Content Include="Images\Images\module16.gif" />
+    <Content Include="Images\Images\module32.gif" />
+    <Content Include="Images\Images\more1.gif" />
+    <Content Include="Images\Images\myfile16.gif" />
+    <Content Include="Images\Images\myfile32.gif" />
+    <Content Include="Images\Images\news16.gif" />
+    <Content Include="Images\Images\onecard16.gif" />
+    <Content Include="Images\Images\onecard32.gif" />
+    <Content Include="Images\Images\out16.gif" />
+    <Content Include="Images\Images\out32.gif" />
+    <Content Include="Images\Images\plan16.gif" />
+    <Content Include="Images\Images\plan32.gif" />
+    <Content Include="Images\Images\point07.gif" />
+    <Content Include="Images\Images\quanx16.gif" />
+    <Content Include="Images\Images\quanx32.gif" />
+    <Content Include="Images\Images\right-bj-1.gif" />
+    <Content Include="Images\Images\right-bj-2.gif" />
+    <Content Include="Images\Images\right-bj-3.gif" />
+    <Content Include="Images\Images\right-bj.gif" />
+    <Content Include="Images\Images\spacer.gif" />
+    <Content Include="Images\Images\style.css" />
+    <Content Include="Images\Images\top-1-1.gif" />
+    <Content Include="Images\Images\top-1-2.gif" />
+    <Content Include="Images\Images\top-1-3.gif" />
+    <Content Include="Images\Images\top-1.gif" />
+    <Content Include="Images\Images\top-2-1.gif" />
+    <Content Include="Images\Images\top-2-2.gif" />
+    <Content Include="Images\Images\top-2-3.gif" />
+    <Content Include="Images\Images\top-2.gif" />
+    <Content Include="Images\Images\top-3-1.gif" />
+    <Content Include="Images\Images\top-3-2.gif" />
+    <Content Include="Images\Images\top-3-3.gif" />
+    <Content Include="Images\Images\top-3.gif" />
+    <Content Include="Images\Images\top-4-1.gif" />
+    <Content Include="Images\Images\top-4-2.gif" />
+    <Content Include="Images\Images\top-4-3.gif" />
+    <Content Include="Images\Images\top-4.gif" />
+    <Content Include="Images\Images\top-5-1.gif" />
+    <Content Include="Images\Images\top-5-2.gif" />
+    <Content Include="Images\Images\top-5-3.gif" />
+    <Content Include="Images\Images\top-5.gif" />
+    <Content Include="Images\Images\top-bj-1.gif" />
+    <Content Include="Images\Images\top-bj-2.gif" />
+    <Content Include="Images\Images\top-bj-3.gif" />
+    <Content Include="Images\Images\top-bj.gif" />
+    <Content Include="Images\Images\topbar_01.jpg" />
+    <Content Include="Images\Images\topbar_02.jpg" />
+    <Content Include="Images\Images\topbar_03.jpg" />
+    <Content Include="Images\Images\tubiao_01.GIF" />
+    <Content Include="Images\Images\tubiao_02.gif" />
+    <Content Include="Images\Images\user16.gif" />
+    <Content Include="Images\Images\vote16.gif" />
+    <Content Include="Images\Images\x16.gif" />
+    <Content Include="Images\Images\xinx16.gif" />
+    <Content Include="Images\Images\xinx32.gif" />
+    <Content Include="Images\Images\yw16.gif" />
+    <Content Include="Images\Images\zhut16.gif" />
+    <Content Include="Images\Images\zjsp16.gif" />
+    <Content Include="Images\szy_Logo.jpg" />
     <Content Include="include\css\base.css" />
     <Content Include="include\css\default.css" />
     <Content Include="include\jquery-easyui-1.4.1\changelog.txt" />
@@ -425,13 +627,18 @@
     <Content Include="include\jquery-easyui-1.4.1\themes\metro\tree.css" />
     <Content Include="include\jquery-easyui-1.4.1\themes\metro\validatebox.css" />
     <Content Include="include\jquery-easyui-1.4.1\themes\metro\window.css" />
+    <Content Include="include\js\BindFuncToId.js" />
     <Content Include="include\js\default.js" />
-    <Content Include="index - 复制.aspx" />
+    <Content Include="include\js\DgGRUD.js" />
+    <Content Include="include\js\jquery.cookie.js" />
+    <Content Include="include\js\page.js" />
+    <Content Include="include\js\samplepage.js" />
+    <Content Include="include\js\sy_func.js" />
+    <Content Include="index.aspx" />
+    <Content Include="js\calendar1.js" />
+    <Content Include="js\CheckBox.js" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\easyuicontrols.js" />
-    <Content Include="BaseFp.Master" />
-    <Content Include="WebForm.aspx" />
-    <Content Include="FpExtendMaster.Master" />
     <Content Include="ZSSY\ImportSampleSourceLog\Add.aspx" />
     <Content Include="ZSSY\ImportSampleSourceLog\List.aspx" />
     <Content Include="ZSSY\ImportSampleSourceLog\Modify.aspx" />
@@ -456,6 +663,9 @@
     <Content Include="ZSSY\SpecimenRt\List.aspx" />
     <Content Include="ZSSY\SpecimenRt\Modify.aspx" />
     <Content Include="ZSSY\SpecimenRt\Show.aspx" />
+    <Content Include="Images\Images\MenuImg\Thumbs.db" />
+    <Content Include="Images\Images\Thumbs.db" />
+    <Content Include="Images\Thumbs.db" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -467,26 +677,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseFp.Master.cs">
-      <DependentUpon>BaseFp.Master</DependentUpon>
+    <Compile Include="Fp_Ajax\getjson.aspx.cs">
+      <DependentUpon>getjson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BaseFp.Master.designer.cs">
-      <DependentUpon>BaseFp.Master</DependentUpon>
+    <Compile Include="Fp_Ajax\getjson.aspx.designer.cs">
+      <DependentUpon>getjson.aspx</DependentUpon>
     </Compile>
-    <Compile Include="FpExtendMaster.Master.cs">
-      <DependentUpon>FpExtendMaster.Master</DependentUpon>
+    <Compile Include="Fp_Ajax\PageConData.aspx.cs">
+      <DependentUpon>PageConData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FpExtendMaster.Master.designer.cs">
-      <DependentUpon>FpExtendMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="FpExtendPage.aspx.cs">
-      <DependentUpon>FpExtendPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FpExtendPage.aspx.designer.cs">
-      <DependentUpon>FpExtendPage.aspx</DependentUpon>
+    <Compile Include="Fp_Ajax\PageConData.aspx.designer.cs">
+      <DependentUpon>PageConData.aspx</DependentUpon>
     </Compile>
     <Compile Include="GetData.ashx.cs">
       <DependentUpon>GetData.ashx</DependentUpon>
@@ -494,15 +697,12 @@
     <Compile Include="ImportData.ashx.cs">
       <DependentUpon>ImportData.ashx</DependentUpon>
     </Compile>
-    <Compile Include="index - 复制.aspx.cs">
-      <DependentUpon>index - 复制.aspx</DependentUpon>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index - 复制.aspx.designer.cs">
-      <DependentUpon>index - 复制.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.ashx.cs">
-      <DependentUpon>Login.ashx</DependentUpon>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -521,13 +721,6 @@
     </Compile>
     <Compile Include="TestPage.aspx.designer.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm.aspx.cs">
-      <DependentUpon>WebForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm.aspx.designer.cs">
-      <DependentUpon>WebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZSSY\ImportSampleSourceLog\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
@@ -701,7 +894,6 @@
   <ItemGroup>
     <Content Include="GetData.ashx" />
     <Content Include="ImportData.ashx" />
-    <Content Include="Login.ashx" />
     <Content Include="RespondHis.ashx" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <None Include="Web.Debug.config">
@@ -720,6 +912,10 @@
       <Project>{b2640b6a-73a0-48f0-86e4-9d0d50e58467}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FreezerProUtility\FreezerProUtility.csproj">
+      <Project>{8f8a2679-a4e7-4f84-8306-74c7bc8cd24c}</Project>
+      <Name>FreezerProUtility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{a661a86f-a5c9-4b35-b0d7-d16af1d13c8d}</Project>
       <Name>Model</Name>
@@ -727,6 +923,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Sever\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
