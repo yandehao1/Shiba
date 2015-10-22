@@ -278,6 +278,7 @@
     <Content Include="include\css\base.css" />
     <Content Include="include\css\default.css" />
     <Content Include="include\css\defaultOLD.css" />
+    <Content Include="include\css\kfmis.css" />
     <Content Include="include\jquery-easyui-1.4.3\easyloader.js" />
     <Content Include="include\jquery-easyui-1.4.3\jquery.easyui.min.js" />
     <Content Include="include\jquery-easyui-1.4.3\jquery.easyui.mobile.js" />
@@ -972,6 +973,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Sever\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

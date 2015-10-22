@@ -9,7 +9,7 @@
     <script src="../include/jquery-easyui-1.4.3/jquery.min.js"></script>
     <script src="../include/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
     <script src="include/js/jquery.cookie.js"></script>
-    <link href="../include/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet" />
+     //Common.js.SetNoCache();
     <link href="../include/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" />
     <link href="include/css/index.css" rel="stylesheet" />
     <script src="include/jquery-easyui-1.4.3/outlook2.js"></script>
@@ -40,7 +40,7 @@
             <div title="插件管理" data-options="iconCls:'icon-sys'" style="overflow: auto; padding: 0px;">
                 <ul>
                     <li>
-                        <div><a target="mainFrame" rel="Pages/EmpiInfo_info_F.aspx"><span></span>按号码查询</a></div>
+                        <div><a target="mainFrame" rel="ZSSY/OPListForSpecimen/Add.aspx"><span></span>按号码查询</a></div>
                     </li>
                     <li>
                         <div><a target="mainFrame" rel="Pages/PatientDiagnose_list_F.aspx"><span></span>按日期查询</a></div>
