@@ -9,7 +9,7 @@
     <script src="../include/jquery-easyui-1.4.3/jquery.min.js"></script>
     <script src="../include/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
     <script src="include/js/jquery.cookie.js"></script>
-     //Common.js.SetNoCache();
+    <link href="../include/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet" />
     <link href="../include/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" />
     <link href="include/css/index.css" rel="stylesheet" />
     <script src="include/jquery-easyui-1.4.3/outlook2.js"></script>
@@ -21,11 +21,7 @@
             <img src="Images/IndexImg/noscript.gif" alt='抱歉，请开启脚本支持！' />
         </div>
     </noscript>
-    <!-- url(Images/IndexImg/layout-browser-hd-bg.gif)-->
     <div region="north" split="true" border="false" style="overflow: hidden; height: 30px; background: #fff repeat-x center 50%; color: #fff; font-family: Verdana, 微软雅黑,黑体">
-        <%--<span style="padding-left: 0px;">
-            <img src="Images/szy_Logo.jpg" width="460px" height="100%" align="absmiddle" />
-        </span>--%>
         <span style="float: right; padding-right: 20px;" class="head" index="100">
             <asp:Label ID="laName" Text="" runat="server"></asp:Label>&nbsp;
             <a href="#" id="loginOut">安全退出</a>
@@ -40,7 +36,7 @@
             <div title="插件管理" data-options="iconCls:'icon-sys'" style="overflow: auto; padding: 0px;">
                 <ul>
                     <li>
-                        <div><a target="mainFrame" rel="ZSSY/OPListForSpecimen/Add.aspx"><span></span>按号码查询</a></div>
+                        <div><a target="mainFrame" rel="Pages/OPListForSpecimen_info.aspx"><span></span>按号码查询</a></div>
                     </li>
                     <li>
                         <div><a target="mainFrame" rel="Pages/PatientDiagnose_list_F.aspx"><span></span>按日期查询</a></div>
@@ -57,9 +53,9 @@
     </div>
     <div id="mainPanle" region="center" style="background: #eee;">
         <div id="tabs" class="easyui-tabs" fit="true" border="false">
-            <div title="欢迎使用" style="padding: 20px; overflow: hidden;" id="home">
+<%--            <div title="欢迎使用" style="padding: 20px; overflow: hidden;" id="home">
                 <h1>欢迎进入</h1>
-            </div>
+            </div>--%>
         </div>
     </div>
     <div id="mm" class="easyui-menu" style="width: 150px;">

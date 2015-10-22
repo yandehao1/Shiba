@@ -142,7 +142,7 @@ namespace RuRo.Web
             passwordcookie.Value = DEnPassword;
             Response.Cookies.Add(passwordcookie);
             Common.CookieHelper.SetCookie("username", username);
-            //Common.CookieHelper.SetCookie("password", DEnPassword);
+            Common.CookieHelper.SetCookie("password", DEnPassword);
         }
 
         protected void txtUsername_TextChanged(object sender, EventArgs e)

@@ -275,9 +275,11 @@
     <Content Include="Images\Images\zhut16.gif" />
     <Content Include="Images\Images\zjsp16.gif" />
     <Content Include="Images\szy_Logo.jpg" />
+    <Content Include="include\css\kfmis.css" />
     <Content Include="include\css\base.css" />
     <Content Include="include\css\default.css" />
     <Content Include="include\css\defaultOLD.css" />
+    <Content Include="include\css\index.css" />
     <Content Include="include\jquery-easyui-1.4.3\easyloader.js" />
     <Content Include="include\jquery-easyui-1.4.3\jquery.easyui.min.js" />
     <Content Include="include\jquery-easyui-1.4.3\jquery.easyui.mobile.js" />
@@ -639,6 +641,7 @@
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\OPListForSpecimen_info.aspx" />
     <Content Include="Scripts\easyuicontrols.js" />
     <Content Include="Style.css" />
     <Content Include="ValidateCode.aspx" />
@@ -752,6 +755,13 @@
     </Compile>
     <Compile Include="MasterPage.master.designer.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen_info.aspx.cs">
+      <DependentUpon>OPListForSpecimen_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen_info.aspx.designer.cs">
+      <DependentUpon>OPListForSpecimen_info.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespondHis.ashx.cs">
@@ -972,7 +982,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Pages\" />
     <Folder Include="Sever\" />
   </ItemGroup>
   <ItemGroup>

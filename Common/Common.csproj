@@ -38,7 +38,9 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -63,7 +65,7 @@
     <Compile Include="HttpProc.cs" />
     <Compile Include="INIFile.cs" />
     <Compile Include="JavaScriptPlus.cs" />
-    <Compile Include="JsonHelper.cs" />
+    <Compile Include="JSONHelper.cs" />
     <Compile Include="LogHelper.cs" />
     <Compile Include="MessageBox.cs" />
     <Compile Include="PageValidate.cs" />

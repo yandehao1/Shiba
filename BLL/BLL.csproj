@@ -63,6 +63,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Respond.cs" />
+    <Compile Include="UnameAndPwd.cs" />
     <Compile Include="ValidationData.cs" />
     <Compile Include="Web References\WebService\Reference.cs">
       <AutoGen>True</AutoGen>

@@ -12,9 +12,6 @@ namespace RuRo.Web.ZSSY.OPListForSpecimen
 {
     public partial class List : Page
     {
-        
-        
-        
 		RuRo.BLL.ZSSY.OPListForSpecimen bll = new RuRo.BLL.ZSSY.OPListForSpecimen();
 
         protected void Page_Load(object sender, EventArgs e)

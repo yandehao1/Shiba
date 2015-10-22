@@ -31,17 +31,13 @@
                     t.focus();
                     return false;
                 }
-                //if (num == 3 && isEmptyStr(t.value) && t.value == "--请选择--") {
-                //    alert("请选择科室！");
-                //    t.focus();
-                //    return false;
-                //}
+
                 nextobj.focus();
                 return false;
             }
             return true;
         }
-        $(function () {
+      $(function () {
             $("#btnLogin").click(function () {
                 var txtU = $("#<%=txtUsername.ClientID%>").val();
                 if (isEmptyStr(txtU)) {
@@ -55,11 +51,6 @@
                     $("#<%=txtPass.ClientID%>").focus();
                     return false;
                 }
-                //var department = $('select#department option:selected').text();
-                //if (isEmptyStr(department) || department == "--请选择--") {
-                //    alert("请选择科室！");
-                //    return false;
-                //}
             });
         })
     </script>
@@ -123,11 +114,6 @@
                                                             id="txtPass" runat="server" onkeypress="return focusNext('btnLogin', event,2,this)">
                                                         </td>
                                                     </tr>
-                                                    <%-- <tr>
-                                                        <td valign="bottom" height="12">科&nbsp;&nbsp;&nbsp;室：
-                                                            <asp:DropDownList ID="department" Style="margin-top: 8px" runat="server" class="nemo01" TabIndex="1" Font-Size="Small"></asp:DropDownList>
-                                                        </td>
-                                                    </tr>--%>
                                                 </table>
                                                 <br />
                                                 <asp:Label ID="lblMsg" runat="server" BackColor="Transparent" ForeColor="Red"></asp:Label>
@@ -143,7 +129,7 @@
                                 <td>
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tr>
-                                            <td height="80" align="center">广东省中医院</td>
+                                            <td height="80" align="center">广东省中山三院</td>
                                         </tr>
                                     </table>
                                 </td>
