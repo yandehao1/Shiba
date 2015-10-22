@@ -982,6 +982,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Sever\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
