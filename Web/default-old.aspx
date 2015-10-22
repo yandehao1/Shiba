@@ -6,12 +6,12 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>FreezerPro Enterprise</title>
-    <link href="include/jquery-easyui-1.4.1/themes/default/easyui.css" rel="stylesheet" />
-    <link href="include/jquery-easyui-1.4.1/themes/icon.css" rel="stylesheet" />
+    <link href="include/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet" />
+    <link href="include/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" />
     <link href="include/css/base.css" rel="stylesheet" />
     <link href="include/css/default.css" rel="stylesheet" />
-    <script src="include/jquery-easyui-1.4.1/jquery.min.js"></script>
-    <script src="include/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="include/jquery-easyui-1.4.3/jquery.min.js"></script>
+    <script src="include/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
     <script src="include/js/default.js"></script>
 </head>
 <body id="body" runat="server">
