@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="Images/Images/login.css" rel="stylesheet" />
-    <script src="include/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="include/jquery-easyui-1.4.3/jquery.min.js"></script>
     <title>系统登录</title>
     <script type="text/javascript">
         function isEmptyStr(str) {

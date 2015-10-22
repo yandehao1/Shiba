@@ -6,13 +6,13 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>RuRo样本信息管理系统插件</title>
-    <script src="../include/jquery-easyui-1.4.1/jquery.min.js"></script>
-    <script src="../include/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="../include/jquery-easyui-1.4.3/jquery.min.js"></script>
+    <script src="../include/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
     <script src="include/js/jquery.cookie.js"></script>
-    <link href="../include/jquery-easyui-1.4.1/themes/default/easyui.css" rel="stylesheet" />
-    <link href="../include/jquery-easyui-1.4.1/themes/icon.css" rel="stylesheet" />
+    <link href="../include/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../include/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" />
     <link href="include/css/index.css" rel="stylesheet" />
-    <script src="include/jquery-easyui-1.4.1/outlook2.js"></script>
+    <script src="include/jquery-easyui-1.4.3/outlook2.js"></script>
     <script src="include/js/jquery.cookie.js"></script>
 </head>
 <body class="easyui-layout" style="overflow-y: hidden" scrolling="no">
