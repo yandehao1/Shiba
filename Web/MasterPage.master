@@ -21,7 +21,7 @@
                         <tr bgcolor="#e4e4e4">
                             <td bgcolor='<%=Application[Session["Style"].ToString()+"xtable_titlebgcolor"]%>'
                                 height="22" align="left">
-                                <%--<%=TabTitle%>--%>
+                                <%=TabTitle%>
                             </td>
                         </tr>
                         <tr>

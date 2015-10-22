@@ -44,7 +44,7 @@ namespace FreezerProPlugin
         {
             MenuBar.InnerHtml = "";
             Login checkLogin = new Login();
-            MenuBar.InnerHtml = checkLogin.checklogin(Context);
+          //  MenuBar.InnerHtml = checkLogin.checklogin(Context);
         }
     }
 }
