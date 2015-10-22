@@ -88,6 +88,7 @@
     <Content Include="Fp_Ajax\Fp_Ajax.txt" />
     <Content Include="Fp_Ajax\getjson.aspx" />
     <Content Include="Fp_Ajax\PageConData.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Images\Images\about16.gif" />
     <Content Include="Images\Images\add16.gif" />
     <Content Include="Images\Images\ant.png" />
@@ -711,6 +712,9 @@
     <Compile Include="GetData.ashx.cs">
       <DependentUpon>GetData.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="ImportData.ashx.cs">
       <DependentUpon>ImportData.ashx</DependentUpon>
     </Compile>
@@ -943,6 +947,11 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
