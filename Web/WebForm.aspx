@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BaseFp.Master" AutoEventWireup="true" CodeBehind="WebForm.aspx.cs" Inherits="FreezerProPlugin.WebForm" EnableViewState="false" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BaseFp.Master" AutoEventWireup="true" CodeBehind="WebForm.aspx.cs" Inherits="RuRo.Web.WebForm" EnableViewState="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">

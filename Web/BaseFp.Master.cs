@@ -15,7 +15,7 @@ namespace FreezerProPlugin
             if (!IsPostBack)
             {
                 url = Common.XmlHelper.Read("configXML\\UriConfigXml.xml", "Uri");
-                FreezerPro.Attributes.Add("src", url);
+               // FreezerPro.Attributes.Add("src", url);
             }
 
         }

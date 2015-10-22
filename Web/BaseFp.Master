@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseFp.master.cs" Inherits="FreezerProPlugin.BaseFp"  EnableViewState="false"%>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseFp.master.cs" Inherits="RuRo.Web.BaseFp"  EnableViewState="false"%>
 
 <!DOCTYPE html>
 

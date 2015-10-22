@@ -25,13 +25,13 @@ namespace FreezerProPlugin
         private void AddUrlToiframe()
         {
             url = XmlHelper.Read("configXML\\UriConfigXml.xml", "Uri");
-            FreezerPro.Attributes.Add("src", url);
+           // FreezerPro.Attributes.Add("src", url);
         }
         private void CheckLogin()
         {
-            MenuBar.InnerHtml = "";
+           // MenuBar.InnerHtml = "";
             Login checkLogin = new Login();
-            MenuBar.InnerHtml = checkLogin.checklogin(Context);
+           // MenuBar.InnerHtml = checkLogin.checklogin(Context);
         }
 
         private void sampleSourceDataGridP()

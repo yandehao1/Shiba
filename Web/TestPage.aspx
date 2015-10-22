@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestPage.aspx.cs" Inherits="FreezerProPlugin.TestPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestPage.aspx.cs" Inherits="RuRo.Web.TestPage" %>
 
 <!DOCTYPE html>
 

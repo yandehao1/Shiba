@@ -24,9 +24,9 @@ namespace FreezerProPlugin
             }
             else
             {
-                loginhiddendate.Attributes.Remove("hidden");
-                loginhiddendate.InnerText = "登陆失败，请检查账号密码";
-                password.Value = "";
+               // loginhiddendate.Attributes.Remove("hidden");
+             //   loginhiddendate.InnerText = "登陆失败，请检查账号密码";
+              //  password.Value = "";
             }
         }
     }

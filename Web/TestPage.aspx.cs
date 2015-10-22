@@ -63,7 +63,7 @@ namespace FreezerProPlugin
             //dic.Add("password", "admin");
             //dic.Add("method", "samples_by_date"); 
             #endregion
-            BLL.Test t = new Test();
+           // BLL.Test t = new Test();
            // string result=  t.reshis();
             //Response.Write(result);
         }

@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace FreezerProPlugin {
+namespace RuRo.Web {
     
     
     public partial class Login1 {

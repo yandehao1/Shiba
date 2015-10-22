@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FreezerProPlugin</RootNamespace>
-    <AssemblyName>FreezerProPlugin</AssemblyName>
+    <RootNamespace>RuRo.Web</RootNamespace>
+    <AssemblyName>RuRo.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -432,6 +432,30 @@
     <Content Include="BaseFp.Master" />
     <Content Include="WebForm.aspx" />
     <Content Include="FpExtendMaster.Master" />
+    <Content Include="ZSSY\ImportSampleSourceLog\Add.aspx" />
+    <Content Include="ZSSY\ImportSampleSourceLog\List.aspx" />
+    <Content Include="ZSSY\ImportSampleSourceLog\Modify.aspx" />
+    <Content Include="ZSSY\ImportSampleSourceLog\Show.aspx" />
+    <Content Include="ZSSY\LabTestMaster\Add.aspx" />
+    <Content Include="ZSSY\LabTestMaster\List.aspx" />
+    <Content Include="ZSSY\LabTestMaster\Modify.aspx" />
+    <Content Include="ZSSY\LabTestMaster\Show.aspx" />
+    <Content Include="ZSSY\LabTestResult\Add.aspx" />
+    <Content Include="ZSSY\LabTestResult\List.aspx" />
+    <Content Include="ZSSY\LabTestResult\Modify.aspx" />
+    <Content Include="ZSSY\LabTestResult\Show.aspx" />
+    <Content Include="ZSSY\OPListForSpecimen\Add.aspx" />
+    <Content Include="ZSSY\OPListForSpecimen\List.aspx" />
+    <Content Include="ZSSY\OPListForSpecimen\Modify.aspx" />
+    <Content Include="ZSSY\OPListForSpecimen\Show.aspx" />
+    <Content Include="ZSSY\SpecimenRtLog\Add.aspx" />
+    <Content Include="ZSSY\SpecimenRtLog\List.aspx" />
+    <Content Include="ZSSY\SpecimenRtLog\Modify.aspx" />
+    <Content Include="ZSSY\SpecimenRtLog\Show.aspx" />
+    <Content Include="ZSSY\SpecimenRt\Add.aspx" />
+    <Content Include="ZSSY\SpecimenRt\List.aspx" />
+    <Content Include="ZSSY\SpecimenRt\Modify.aspx" />
+    <Content Include="ZSSY\SpecimenRt\Show.aspx" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -504,6 +528,174 @@
     </Compile>
     <Compile Include="WebForm.aspx.designer.cs">
       <DependentUpon>WebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\LabTestMaster\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\LabTestMaster\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\LabTestMaster\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\LabTestMaster\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\LabTestMaster\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\LabTestMaster\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\LabTestMaster\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\LabTestMaster\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\LabTestResult\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\LabTestResult\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\LabTestResult\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\LabTestResult\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\LabTestResult\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\LabTestResult\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\LabTestResult\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\LabTestResult\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\OPListForSpecimen\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\OPListForSpecimen\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\OPListForSpecimen\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\OPListForSpecimen\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\OPListForSpecimen\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\OPListForSpecimen\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\OPListForSpecimen\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\OPListForSpecimen\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRtLog\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRtLog\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRtLog\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRtLog\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRtLog\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRtLog\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRtLog\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRtLog\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRt\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRt\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRt\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRt\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRt\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRt\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRt\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSSY\SpecimenRt\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

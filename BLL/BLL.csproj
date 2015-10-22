@@ -69,6 +69,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog.cs" />
+    <Compile Include="ZSSY\LabTestMaster.cs" />
+    <Compile Include="ZSSY\LabTestResult.cs" />
+    <Compile Include="ZSSY\OPListForSpecimen.cs" />
+    <Compile Include="ZSSY\SpecimenRt.cs" />
+    <Compile Include="ZSSY\SpecimenRtLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

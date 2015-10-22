@@ -93,6 +93,12 @@
     <Compile Include="SpecimenRtLog.cs">
       <DependentUpon>FPDataBaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ZSSY\ImportSampleSourceLog.cs" />
+    <Compile Include="ZSSY\LabTestMaster.cs" />
+    <Compile Include="ZSSY\LabTestResult.cs" />
+    <Compile Include="ZSSY\OPListForSpecimen.cs" />
+    <Compile Include="ZSSY\SpecimenRt.cs" />
+    <Compile Include="ZSSY\SpecimenRtLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="FPDataBaseModel.edmx">

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FpExtendMaster.master.cs" Inherits="FreezerProPlugin.FpExtendMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FpExtendMaster.master.cs" Inherits="RuRo.Web.FpExtendMaster" %>
 
 <!DOCTYPE html>
 

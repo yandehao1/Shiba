@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FpExtendMaster.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="FreezerProPlugin.Login1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FpExtendMaster.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="RuRo.Web.Login1" %>
 
 <asp:Content ID="FpExtendPageLoginHeld" ContentPlaceHolderID="head" runat="server">
     <title>登陆FreezerPro扩展系统</title>
