@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseFp.master.cs" Inherits="FreezerProPlugin.BaseFp"  EnableViewState="false"%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="include/jquery-easyui-1.4.1/themes/default/easyui.css" rel="stylesheet" />
+    <link href="include/jquery-easyui-1.4.1/themes/icon.css" rel="stylesheet" />
+    <link href="include/css/base.css" rel="stylesheet" />
+    <link href="include/css/default.css" rel="stylesheet" />
+    <script src="include/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="include/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="include/js/default.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <iframe runat="server" id="FreezerPro" name="FreezerPro" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+    <form id="BasePageForm" runat="server" style="width: 100%; height: 100%;">
+        <asp:ContentPlaceHolder ID="FpExtend" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
