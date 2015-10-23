@@ -666,7 +666,14 @@
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\OPListForSpecimen\Add.aspx" />
+    <Content Include="Pages\OPListForSpecimen\delete.aspx" />
+    <Content Include="Pages\OPListForSpecimen\List.aspx" />
+    <Content Include="Pages\OPListForSpecimen\Modify.aspx" />
+    <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_chart.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx" />
+    <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx" />
+    <Content Include="Pages\OPListForSpecimen\Show.aspx" />
     <Content Include="Scripts\easyuicontrols.js" />
     <Content Include="Style.css" />
     <Content Include="ValidateCode.aspx" />
@@ -698,6 +705,7 @@
     <Content Include="Images\Images\Thumbs.db" />
     <Content Include="Images\Thumbs.db" />
     <Content Include="MasterPage.master" />
+    <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_handler.ashx" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -787,6 +795,58 @@
     </Compile>
     <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx.designer.cs">
       <DependentUpon>OPListForSpecimen_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_chart.aspx.cs">
+      <DependentUpon>OPListForSpecimen_chart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_chart.aspx.designer.cs">
+      <DependentUpon>OPListForSpecimen_chart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_handler.ashx.cs">
+      <DependentUpon>OPListForSpecimen_handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx.cs">
+      <DependentUpon>OPListForSpecimen_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx.designer.cs">
+      <DependentUpon>OPListForSpecimen_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx.cs">
+      <DependentUpon>OPListForSpecimen_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx.designer.cs">
+      <DependentUpon>OPListForSpecimen_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OPListForSpecimen\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespondHis.ashx.cs">

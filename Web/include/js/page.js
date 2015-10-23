@@ -56,6 +56,24 @@ $(function () {
     });
 })
 
+//
+$(function () {
+    $('#cc').combobox({
+        onChange: function (newValue)
+        {
+            if (newValue == 2)
+            {
+                document.getElementById("getcode").style.visibility = "hidden";
+                document.getElementById("getdate").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("getdate").style.visibility = "hidden";
+                document.getElementById("getcode").style.visibility = "visible";
+            }
+        }
+    });
+})
+
 //采用jquery easyui loading css效果
 function ajaxLoading() {
     $("<div class=\"datagrid-mask\"></div>").css({ display: "block", width: "100%", height: $(window).height() }).appendTo("body");
