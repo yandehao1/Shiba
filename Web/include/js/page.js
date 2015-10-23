@@ -1,7 +1,7 @@
 ﻿//给In_CodeType下拉框绑定值
 $(function () {
-    var username = $.cookie('username');
-    var codeType = $.cookie(username + 'codeType');
+    //var username = $.cookie('username');
+    //var codeType = $.cookie(username + 'codeType');
     $('#codeType').combobox({
         editable: false,
         method: 'get',
@@ -64,4 +64,21 @@ function ajaxLoading() {
 function ajaxLoadEnd() {
     $(".datagrid-mask").remove();
     $(".datagrid-mask-msg").remove();
+}
+
+function isEmptyStr(str) {
+    if (str == '' || str == null) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function ShowMsg(msg) {
+    $.messager.show({
+        title: "提示",
+        msg: msg,
+        timeout: 2000,
+        showType: 'fade'
+    });
 }

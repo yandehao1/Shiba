@@ -15,6 +15,7 @@
     <script src="../include/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
     <script src="../include/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js"></script>
     <link href="../include/css/kfmis.css" rel="stylesheet" />
+    <script src="../include/js/page.js"></script>
 </head>
 <body>
     <!--存储参数属性input控件，判断是新增还是修改-->
@@ -25,206 +26,245 @@
     <div class="easyui-layout" data-options="fit:true">
         <div data-options="region:'center',split:true" style="width: 100px; padding: 10px">
             <div id="printBody">
-                <div class="ftitle">OPListForSpecimen</div>
+                <%--<div class="ftitle">OPListForSpecimen</div>--%>
                 <form id="frmAjax" method="post" novalidate>
                     <!--如需控制表单控件为必填项，请增加class="easyui-validatebox" required="true" -->
                     <div class="fitem" style="display: none">
                         <div class="label">id:</div>
                         <div class="control">
-                            <input id="id" name="id" disabled="disabled" /></div>
+                            <input id="id" name="id" disabled="disabled" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">病人唯一标识号:</div>
                         <div class="control">
-                            <input id="patientid" name="patientid" /></div>
+                            <input id="PatientId" name="PatientId" data-options="required:true" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">住院号:</div>
                         <div class="control">
-                            <input id="inpno" name="inpno" /></div>
+                            <input id="InpNO" name="InpNO" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">就诊号:</div>
                         <div class="control">
-                            <input id="visitid" name="visitid" /></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">姓名:</div>
-                        <div class="control">
-                            <input id="name" name="name" /></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">姓名拼音:</div>
-                        <div class="control">
-                            <input id="namephonetic" name="namephonetic" /></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">性别:</div>
-                        <div class="control">
-                            <input id="sex" name="sex" /></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">出生日期:</div>
-                        <div class="control">
-                            <input id="dateofbirth" name="dateofbirth" /></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">行政区名称:</div>
-                        <div class="control">
-                            <input id="birthplace" name="birthplace" /></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">国家简称:</div>
-                        <div class="control">
-                            <input id="citizenship" name="citizenship" /></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">民族:</div>
-                        <div class="control">
-                            <input id="nation" name="nation" /></div>
+                            <input id="VisitId" name="VisitId" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">身份证号:</div>
                         <div class="control">
-                            <input id="idno" name="idno" /></div>
+                            <input id="IDNO" name="IDNO" />
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">姓名:</div>
+                        <div class="control">
+                            <input id="Name" name="Name" />
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">姓名拼音:</div>
+                        <div class="control">
+                            <input id="NamePhonetic" name="NamePhonetic" />
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">性别:</div>
+                        <div class="control">
+                            <input id="Sex" name="Sex" />
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">出生日期:</div>
+                        <div class="control">
+                            <input id="DateOfBirth" name="DateOfBirth" />
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">行政区名称:</div>
+                        <div class="control">
+                            <input id="BirthPlace" name="BirthPlace" />
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">国家简称:</div>
+                        <div class="control">
+                            <input id="Citizenship" name="Citizenship" />
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">民族:</div>
+                        <div class="control">
+                            <input id="Nation" name="Nation" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">患者工作身份:</div>
                         <div class="control">
-                            <input id="identity" name="identity" /></div>
+                            <input id="Identity" name="Identity" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">病人收费类别:</div>
                         <div class="control">
-                            <input id="chargetype" name="chargetype" /></div>
+                            <input id="ChargeType" name="ChargeType" />
+                        </div>
                     </div>
 
                     <div class="fitem">
                         <div class="label">邮政编码:</div>
                         <div class="control">
-                            <input id="zipcode" name="zipcode" /></div>
+                            <input id="ZipCode" name="ZipCode" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">家庭电话号码:</div>
                         <div class="control">
-                            <input id="phonenumberhome" name="phonenumberhome" /></div>
+                            <input id="PhoneNumberHome" name="PhoneNumberHome" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">单位电话号码:</div>
                         <div class="control">
-                            <input id="phonenumbebusiness" name="phonenumbebusiness" /></div>
+                            <input id="PhoneNumbeBusiness" name="PhoneNumbeBusiness" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">亲属姓名:</div>
                         <div class="control">
-                            <input id="nextofkin" name="nextofkin" /></div>
+                            <input id="NextOfKin" name="NextOfKin" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">亲属关系:</div>
                         <div class="control">
-                            <input id="relationship" name="relationship" /></div>
+                            <input id="RelationShip" name="RelationShip" />
+                        </div>
                     </div>
 
                     <div class="fitem">
                         <div class="label">联系人邮政编码:</div>
                         <div class="control">
-                            <input id="nextofkinzipcode" name="nextofkinzipcode" /></div>
+                            <input id="NextOfKinZipCode" name="NextOfKinZipCode" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">联系人电话号码:</div>
                         <div class="control">
-                            <input id="nextofkinphome" name="nextofkinphome" /></div>
+                            <input id="NextOfKinPhome" name="NextOfKinPhome" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">当前科室代码@名称:</div>
                         <div class="control">
-                            <input id="deptcode" name="deptcode" /></div>
+                            <input id="DeptCode" name="DeptCode" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">病人所住床号:</div>
                         <div class="control">
-                            <input id="bedno" name="bedno" /></div>
+                            <input id="BedNO" name="BedNO" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">入院日期及时间:</div>
                         <div class="control">
-                            <input id="admissiondatetime" name="admissiondatetime" /></div>
+                            <input id="AdmissionDateTime" name="AdmissionDateTime" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">主治医生工号@姓名:</div>
                         <div class="control">
-                            <input id="doctorincharge" name="doctorincharge" /></div>
+                            <input id="DoctorInCharge" name="DoctorInCharge" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">手术id号:</div>
                         <div class="control">
-                            <input id="scheduleid" name="scheduleid" /></div>
+                            <input id="ScheduleId" name="ScheduleId" />
+                        </div>
                     </div>
 
                     <div class="fitem">
-                        <div class="label">预约进行该次手术的日期及时间:</div>
+                        <div class="label">手术的日期及时间:</div>
                         <div class="control">
-                            <input id="scheduleddatetime" name="scheduleddatetime" /></div>
+                            <input id="ScheduledDateTime" name="ScheduledDateTime" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">是否留标本:</div>
                         <div class="control">
-                            <input id="keepspecimensign" name="keepspecimensign" /></div>
+                            <input id="KeepSpecimenSign" name="KeepSpecimenSign" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">手术室代码@名称:</div>
                         <div class="control">
-                            <input id="operatingroom" name="operatingroom" /></div>
+                            <input id="OperatingRoom" name="OperatingRoom" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">手术医师工号@姓名:</div>
                         <div class="control">
-                            <input id="surgeon" name="surgeon" /></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">主要诊断:</div>
-                        <div class="control">
-                            <textarea id="diagbeforeoperation" name="diagbeforeoperation"></textarea></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">联系人地址:</div>
-                        <div class="control">
-                            <textarea id="nextofkinaddr" name="nextofkinaddr"></textarea></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">永久通信地址:</div>
-                        <div class="control">
-                            <textarea id="mailingaddress" name="mailingaddress"></textarea></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">现病史:</div>
-                        <div class="control">
-                            <textarea id="inpatpreillness" name="inpatpreillness"></textarea></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">既往史:</div>
-                        <div class="control">
-                            <textarea id="inpatpastillness" name="inpatpastillness"></textarea></div>
-                    </div>
-                    <div class="fitem">
-                        <div class="label">家族史:</div>
-                        <div class="control">
-                            <textarea id="inpatfamillness" name="inpatfamillness"></textarea></div>
+                            <input id="Surgeon" name="Surgeon" />
+                        </div>
                     </div>
                     <div class="fitem">
                         <div class="label">乙肝梅毒等阳性结果:</div>
                         <div class="control">
-                            <textarea id="labinfo" name="labinfo"></textarea></div>
+                            <textarea id="LabInfo" name="LabInfo"></textarea>
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">主要诊断:</div>
+                        <div class="control">
+                            <textarea id="DiagBeforeOperation" name="DiagBeforeOperation"></textarea>
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">现病史:</div>
+                        <div class="control">
+                            <textarea id="InPatPreillness" name="InPatPreillness"></textarea>
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">既往史:</div>
+                        <div class="control">
+                            <textarea id="InPatPastillness" name="InPatPastillness"></textarea>
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">家族史:</div>
+                        <div class="control">
+                            <textarea id="InPatFamillness" name="InPatFamillness"></textarea>
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">联系人地址:</div>
+                        <div class="control">
+                            <textarea id="NextOfKinAddr" name="NextOfKinAddr"></textarea>
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">永久通信地址:</div>
+                        <div class="control">
+                            <textarea id="MailingAddress" name="MailingAddress"></textarea>
+                        </div>
                     </div>
                 </form>
                 <div class="ftitle"></div>
             </div>
         </div>
-
         <div data-options="region:'south'" style="height: 40px; background: #f2f2f2;">
             <!--按钮-->
             <div class="fsubmit">
-                <a href="javascript:void(0)" id="linkbuttonSave" class="easyui-linkbutton" iconcls="icon-ok" onclick="saveForm()">保存</a>
+                <%--样品源类型选择--%>
+                <td style="width: 100px;">样品源类型:</td>
+                <input class="easyui-combobox" name="sampleSourceType" id="sampleSourceType" data-options="required:true,multiple:false,prompt:'请选择样品源类型'" />
+                <a href="javascript:void(0)" id="linkbuttonSave" class="easyui-linkbutton" iconcls="icon-ok" onclick="saveForm()">导入</a>
                 <a href="javascript:void(0)" id="linkbuttonClear" class="easyui-linkbutton" iconcls="icon-back" onclick="clearForm();">清空</a>
                 <a href="javascript:void(0)" id="linkbuttonColse" class="easyui-linkbutton" iconcls="icon-cancel" onclick="$('#dlg').dialog('close');">关闭</a>
             </div>
@@ -232,128 +272,49 @@
     </div>
 
     <script type="text/javascript">
-        var mode = $('#mode').val();
-        var pk = $('#pk').val();
-
-        /*编辑或查看状态下控件赋值*/
-        if (mode == 'upd' || mode == 'inf') {
-            url = 'OPListForSpecimen_handler.ashx?mode=inf&pk=' + pk;
-            $.post(url, function (data) {
-                $('#frmAjax').form('load', data);
-            }, 'json');
-            $('#linkbuttonClear').linkbutton({ disabled: true });
-        }
-
-        /*查看状态下disabled控件*/
-        if (mode == 'inf') {
-            $('#linkbuttonSave').linkbutton({ disabled: true });
-            $('input').attr('disabled', 'disabled');
-            $('textarea').attr('disabled', 'disabled');
-        }
-
-        if (mode == 'ins') url = 'OPListForSpecimen_handler.ashx?mode=ins';
-        if (mode == 'upd') url = 'OPListForSpecimen_handler.ashx?mode=upd&pk=' + pk;
-
         /*清空充填*/
         function clearForm() {
             $('#frmAjax').form('clear');
         }
-
         /*保存表单数据*/
         function saveForm() {
-            var validate = true;
-            /*验证validatebox必填项*/
-            try {
-                if ($('#frmAjax').find('.easyui-validatebox').val() == '') {
-                    validate = false;
-                    $.messager.alert('警告', '请检查必填项是否正确填写！', 'warning');   //错误消息
-                    return;
-                }
-            } catch (exption) { }
-
-            /*验证datebox日期*/
-            try {
-                if ($('#frmAjax').find('.easyui-datebox').datebox('getValue') == '') {
-                    validate = false;
-                    $.messager.alert('警告', '请检查日期是否正确选择！', 'warning');   //错误消息
-                    return;
-                }
-            } catch (exption) { }
-
-            /*验证datetimebox日期*/
-            try {
-                if ($('#frmAjax').find('.easyui-datetimebox').datetimebox('getValue') == '') {
-                    validate = false;
-                    $.messager.alert('警告', '请检查日期是否正确选择！', 'warning');   //错误消息
-                    return;
-                }
-            } catch (exption) { }
-
-            /*验证numberbox数字*/
-            try {
-                if ($('#frmAjax').find('.easyui-numberbox').numberbox('getValue') == '') {
-                    validate = false;
-                    $.messager.alert('警告', '请检查必填数字项是否正确填写！', 'warning');   //错误消息
-                    return;
-                }
-            } catch (exption) { }
-
-            /*验证combobox必选项*/
-            try {
-                if ($('#frmAjax').find('.easyui-combobox').combobox('getValue') == '') {
-                    validate = false;
-                    $.messager.alert('警告', '请检查必选项是否正确选择！', 'warning');   //错误消息
-                    return;
-                }
-            } catch (exption) { }
-
-            /*验证combogrid必选项*/
-            try {
-                if ($('#frmAjax').find('.easyui-combogrid').combogrid('getValue') == '') {
-                    validate = false;
-                    $.messager.alert('警告', '请检查必选项是否正确选择！', 'warning');   //错误消息
-                    return;
-                }
-            } catch (exption) { }
-            /*URL支持参数受限制，小字段表使用
-            if (validate==true){
-                var Parm = $('#frmAjax').serialize();
-                var saveUrl = url + '&' + Parm; 
-                $.post(saveUrl, function (result) {
-                    if (result.success) {
-                        $('#dlg').dialog('close');
-                        $.messager.alert('提示',result.msg, 'info',function(){
-                            $('#datagrid').datagrid('reload'); // 重新加载数据
-                        });
-                    } else {
-                        $.messager.alert('警告', result.msg, 'warning');   //错误消息
-                    }
-                }, 'json');
+            var frmAjax = $("#frmAjax").serializeArray();
+            var Tem;
+            if (frmAjax) { Tem = JSON.stringify(frmAjax); } else {
+                return;
             }
-            */
-
-
-
-            /*URL支持参数受限制，可采用submit,post提交Ajax表单*/
-            if (validate == true) {
-                $('#frmAjax').form('submit', {
-                    url: url,
-                    success: function (result) {
-                        resultJSON = $.parseJSON(result);
-                        if (resultJSON.success) {
-                            $('#dlg').dialog('close');
-                            $.messager.alert('提示', resultJSON.msg, 'info', function () {
-                                $('#datagrid').datagrid('reload'); // 重新加载数据
-                            });
-                        } else {
-                            $.messager.alert('警告', resultJSON.msg, 'warning');   //错误消息
+            var PatientId = $('#PatientId').textbox('getValue');
+            var sampleSourceType = $('#sampleSourceType').combobox('getValue');
+            if (isEmptyStr(PatientId)) {
+                ShowMsg("患者唯一号为空"); return;
+            }
+            if (isEmptyStr(sampleSourceType)) {
+                ShowMsg("请选择样品源类型"); return;
+            }
+            var count = Math.random();
+            ajaxLoading();
+            $.ajax({
+                type: "POST",
+                url: "/Sever/OPListForSpecimen_handler.ashx" + "?count" + count,
+                data: {
+                    "mode": "ins",
+                    "frmAjax": Tem,
+                    "PatientId": PatientId,
+                    "sampleSourceType": sampleSourceType
+                },
+                success: function (response) {
+                    ajaxLoadEnd();
+                    if (response) {
+                        var res = JSON.parse(response);
+                        if (res.success || res.message.indexOf('should be unique.') > -1) {
+                            ShowMsg("患者信息：" + "导入成功" + res.message);
                         }
                     }
-                });
-            }
-
+                    else { $.messager.alert('提示', '查询不到样品源', 'error'); }
+                }
+            });
+            ajaxLoadEnd();
         }
-
     </script>
 
 </body>

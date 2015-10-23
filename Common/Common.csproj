@@ -68,6 +68,7 @@
     <Compile Include="JSONHelper.cs" />
     <Compile Include="LogHelper.cs" />
     <Compile Include="MessageBox.cs" />
+    <Compile Include="ObjAndDic.cs" />
     <Compile Include="PageValidate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectHelper.cs" />

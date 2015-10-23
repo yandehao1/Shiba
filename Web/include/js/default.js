@@ -86,7 +86,7 @@ function logout() {
                 success: function (data) {
                     $('#MenuBar').html(data);
                 },
-                dataType: "text",
+                dataType: "text"
             });
         }
     });

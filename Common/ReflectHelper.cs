@@ -124,7 +124,6 @@ namespace RuRo.Common
                 value = propertyInfo.GetValue(entity, null).ToString();
             }
             return value;
-
         }
 
     }

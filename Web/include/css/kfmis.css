@@ -25,6 +25,7 @@ form {
     display:inline;
     float:left;
     margin:3px;
+    text-align:center;
 }
 .fitem div{
     display:inline;
@@ -32,7 +33,7 @@ form {
 }
 
 .label {
-    width:120px;
+    width:150px;
     text-align:right;
 }
 .control {
@@ -40,13 +41,13 @@ form {
 }
 .control input{
 
-    width:250px;
+    width:200px;
 }
 
 .fitem textarea {
     display:block;
     float:none;
-    width:500px;
+    width:558px;
 }
 
 .fsubmit {
