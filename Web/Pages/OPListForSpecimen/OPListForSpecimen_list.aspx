@@ -27,7 +27,7 @@
             <td class="tdbg">
                 <div id="getcode">
                     <input id="code" class="easyui-textbox" name="code" data-options="prompt:'请输入条码',required:true" />
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="querybycode()">查询患者信息</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="querybycode()">条码查询患者信息</a>
                 </div>
                 <div id="getdate" style="visibility: hidden">
                     <div>
@@ -36,7 +36,7 @@
                     <div>
                         结束日期：<input id="jsrq" class="easyui-datebox" name="jsrq" data-options="required:false" />
                     </div>
-                     <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="">查询患者信息</a>
+                     <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="">日期查询信息</a>
                 </div>
             </td>
             <td class="tdbg"></td>
@@ -149,9 +149,57 @@
             });
         }
 
-        function querybycode()
-        {
+        //绑定数据 条码
+        function querybycode() {
+            var code = $('#code').textbox('getValue');//获取数据源
+            if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#code').textbox('clear'); return; }
+            if (code.length > 14) { $.messager.alert('错误', '条码最高不能超过15位', 'error'); $('#code').textbox('clear'); return; }
+            if (isEmptyStr(code)) { $.messager.alert('提示', '请检查条码号', 'error'); }
+            else {
+                ajaxLoading();
+                $.ajax({
+                    type: 'GET',
+                    url: '/Sever/OPListForSpecimen_handler.ashx?mode=qrycode&code=' + code,
+                    onSubmit: function () { },
+                    success: function (data) {
+                        alert(data);
+                        ajaxLoadEnd();
+                        $('#code').textbox('setValue', '');
+                        if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
+                        else {
+                            //测试代码
+                        }
+                    }
+                });
+                ajaxLoadEnd();
+            }
+        }
 
+        //绑定数据 日期
+        function querybydate() {
+            var ksdate = $('#ksrq').textbox('getValue');
+            var jsdate = $('#jsrq').textbox('getValue');
+            if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#ksrq').textbox('clear'); return; }
+            if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '请检查条码类型和条码号', 'error'); }
+            else {
+                ajaxLoading();
+                $.ajax({
+                    type: 'GET',
+                    url: '/Sever/OPListForSpecimen_handler.ashx?mode=qrydate&ksdate='+ksdate+'&jsdate='+jsdate,
+                    onSubmit: function () { },
+                    success: function (data) {
+                        ajaxLoadEnd();
+                        $('#ksrq').textbox('setValue', '');
+                        $('#jsrq').textbox('setValue', '');
+                        clearForm();
+                        if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
+                        else {
+                            //测试代码
+                        }
+                    }
+                });
+                ajaxLoadEnd();
+            }
         }
 
         /*查看数据*/
