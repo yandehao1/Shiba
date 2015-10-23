@@ -26,17 +26,17 @@
             </td>
             <td class="tdbg">
                 <div id="getcode">
-                    <%--<asp:TextBox ID="txtKeyword" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnSearch" runat="server" Text="条码查询" OnClick="btnCode_Click"></asp:Butto--%>
+                    <input id="code" class="easyui-textbox" name="code" data-options="prompt:'请输入条码',required:true" />
+                    <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="querybycode()">查询患者信息</a>
                 </div>
                 <div id="getdate" style="visibility: hidden">
-<%--                    <div>
-                        开始日期：<input class="Wdate" type="text" runat="server" id="ksrq" name="ksrq" onclick="WdatePicker()">
+                    <div>
+                        开始日期：<input id="ksrq" class="easyui-datebox" name="ksrq" data-options="required:false" />
                     </div>
                     <div>
-                        结束日期：<input class="Wdate" type="text" runat="server" id="jsrq" name="jsrq" onclick="WdatePicker()">
+                        结束日期：<input id="jsrq" class="easyui-datebox" name="jsrq" data-options="required:false" />
                     </div>
-                    <asp:Button ID="Button1" runat="server" Text="日期查询" OnClick="btnSelDate_Click"></asp:Button>--%>
+                     <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="">查询患者信息</a>
                 </div>
             </td>
             <td class="tdbg"></td>
@@ -54,42 +54,42 @@
         <thead>
             <tr>
                 <th field="ck" checkbox="true"></th>
-                <th field="id" width="100" sortable="true">id</th>
+                <th field="id" width="100" sortable="true" hidden="true" >id</th>
                 <th field="patientid" width="100" sortable="true">病人唯一标识号</th>
                 <th field="inpno" width="100" sortable="true">住院号</th>
                 <th field="visitid" width="100" sortable="true">就诊号</th>
                 <th field="name" width="100" sortable="true">姓名</th>
-                <th field="namephonetic" width="100" sortable="true">姓名拼音</th>
+                <th field="namephonetic" width="100" sortable="true" hidden="true">姓名拼音</th>
                 <th field="sex" width="100" sortable="true">性别</th>
-                <th field="dateofbirth" width="100" sortable="true">出生日期</th>
-                <th field="birthplace" width="100" sortable="true">行政区名称</th>
-                <th field="citizenship" width="100" sortable="true">国家简称</th>
-                <th field="nation" width="100" sortable="true">民族</th>
-                <th field="idno" width="100" sortable="true">身份证号</th>
-                <th field="identity" width="100" sortable="true">患者工作身份</th>
-                <th field="chargetype" width="100" sortable="true">病人收费类别</th>
-                <th field="mailingaddress" width="100" sortable="true">永久通信地址</th>
-                <th field="zipcode" width="100" sortable="true">邮政编码</th>
-                <th field="phonenumberhome" width="100" sortable="true">家庭电话号码</th>
-                <th field="phonenumbebusiness" width="100" sortable="true">单位电话号码</th>
-                <th field="nextofkin" width="100" sortable="true">亲属姓名</th>
-                <th field="relationship" width="100" sortable="true">亲属关系</th>
-                <th field="nextofkinaddr" width="100" sortable="true">联系人地址</th>
-                <th field="nextofkinzipcode" width="100" sortable="true">联系人邮政编码</th>
-                <th field="nextofkinphome" width="100" sortable="true">联系人电话号码</th>
+                <th field="dateofbirth" width="100" sortable="true" hidden="true">出生日期</th>
+                <th field="birthplace" width="100" sortable="true" hidden="true">行政区名称</th>
+                <th field="citizenship" width="100" sortable="true" hidden="true">国家简称</th>
+                <th field="nation" width="100" sortable="true" hidden="true">民族</th>
+                <th field="idno" width="100" sortable="true" hidden="true" >身份证号</th>
+                <th field="identity" width="100" sortable="true" hidden="true">患者工作身份</th>
+                <th field="chargetype" width="100" sortable="true" hidden="true">病人收费类别</th>
+                <th field="mailingaddress" width="100" sortable="true" hidden="true">永久通信地址</th>
+                <th field="zipcode" width="100" sortable="true" hidden="true">邮政编码</th>
+                <th field="phonenumberhome" width="100" sortable="true" hidden="true">家庭电话号码</th>
+                <th field="phonenumbebusiness" width="100" sortable="true" hidden="true">单位电话号码</th>
+                <th field="nextofkin" width="100" sortable="true"hidden="true">亲属姓名</th>
+                <th field="relationship" width="100" sortable="true" hidden="true">亲属关系</th>
+                <th field="nextofkinaddr" width="100" sortable="true"hidden="true">联系人地址</th>
+                <th field="nextofkinzipcode" width="100" sortable="true"hidden="true">联系人邮政编码</th>
+                <th field="nextofkinphome" width="100" sortable="true"hidden="true">联系人电话号码</th>
                 <th field="deptcode" width="100" sortable="true">当前科室代码@名称</th>
-                <th field="bedno" width="100" sortable="true">病人所住床号</th>
-                <th field="admissiondatetime" width="100" sortable="true">入院日期及时间</th>
-                <th field="doctorincharge" width="100" sortable="true">主治医生工号@姓名</th>
-                <th field="scheduleid" width="100" sortable="true">手术id号</th>
+                <th field="bedno" width="100" sortable="true"hidden="true">病人所住床号</th>
+                <th field="admissiondatetime" width="100" sortable="true"hidden="true">入院日期及时间</th>
+                <th field="doctorincharge" width="100" sortable="true"hidden="true">主治医生工号@姓名</th>
+                <th field="scheduleid" width="100" sortable="true" hidden="true">手术id号</th>
                 <th field="diagbeforeoperation" width="100" sortable="true">主要诊断</th>
-                <th field="scheduleddatetime" width="100" sortable="true">预约进行该次手术的日期及时间</th>
+                <th field="scheduleddatetime" width="100" sortable="true"hidden="true">预约进行该次手术的日期及时间</th>
                 <th field="keepspecimensign" width="100" sortable="true">是否留标本</th>
-                <th field="operatingroom" width="100" sortable="true">手术室代码@名称</th>
-                <th field="surgeon" width="100" sortable="true">手术医师工号@姓名</th>
-                <th field="inpatpreillness" width="100" sortable="true">现病史</th>
-                <th field="inpatpastillness" width="100" sortable="true">既往史</th>
-                <th field="inpatfamillness" width="100" sortable="true">家族史</th>
+                <th field="operatingroom" width="100" sortable="true"hidden="true">手术室代码@名称</th>
+                <th field="surgeon" width="100" sortable="true"hidden="true">手术医师工号@姓名</th>
+                <th field="inpatpreillness" width="100" sortable="true"hidden="true">现病史</th>
+                <th field="inpatpastillness" width="100" sortable="true"hidden="true">既往史</th>
+                <th field="inpatfamillness" width="100" sortable="true"hidden="true">家族史</th>
                 <th field="labinfo" width="100" sortable="true">乙肝梅毒等阳性结果</th>
             </tr>
         </thead>
@@ -105,10 +105,7 @@
                         <tr>
                             <!--Page数据选择模式-->
                             <td>
-                                <select onchange="$('#datagrid').datagrid({singleSelect:(this.value==0)})">
-                                    <option value="0">单选模式</option>
-                                    <option value="1">多选模式</option>
-                                </select></td>
+                            </td>
 
                             <!--查询控件-->
                             <td>
@@ -119,18 +116,17 @@
                             </td>
                             <!--检索关键字-->
                             <td>
-                                <input id="so_keywords" class="easyui-searchbox" data-options="prompt:'请输入查询关键字',searcher:searchData"></input></td>
+                               <%-- <input id="so_keywords" class="easyui-searchbox" data-options="prompt:'请输入查询关键字',searcher:searchData"></input></td>--%>
                         </tr>
                     </table>
                 </td>
                 <!--button按钮工具栏-->
                 <td style="text-align: right;">
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonInfo" iconcls="icon-search" plain="false" onclick="infoForm();">查看</a>
+<%--                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonInfo" iconcls="icon-search" plain="false" onclick="infoForm();">查看</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonAdd" iconcls="icon-add" plain="false" onclick="newForm();">添加</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonEdit" iconcls="icon-edit" plain="false" onclick="editForm();">编辑</a>
                     <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonDel" iconcls="icon-cancel" plain="false" onclick="destroy();">删除</a>
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonExport" iconcls="icon-save" plain="false" onclick="exportData();">导出</a>
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonPrint" iconcls="icon-print" plain="false" onclick="CreateFormPage('OPListForSpecimen', $('#datagrid'));">打印</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonExport" iconcls="icon-save" plain="false" onclick="exportData();">导出</a>--%>
                 </td>
             </tr>
         </table>
@@ -151,6 +147,11 @@
                 cache: false,
                 href: 'OPListForSpecimen_info.aspx?mode=ins'
             });
+        }
+
+        function querybycode()
+        {
+
         }
 
         /*查看数据*/
@@ -266,17 +267,6 @@
                 $('#datagrid').datagrid('reload'); //重新加载载数据
             }
         });
-        function getQuery(sel) {
-            var change = sel.value;
-            if (change == 2) {
-                document.getElementById("getcode").style.visibility = "hidden";
-                document.getElementById("getdate").style.visibility = "visible";
-            }
-            else {
-                document.getElementById("getdate").style.visibility = "hidden";
-                document.getElementById("getcode").style.visibility = "visible";
-            }
-        }
     </script>
 
 </body>

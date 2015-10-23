@@ -61,7 +61,7 @@ $(function () {
     $('#cc').combobox({
         onChange: function (newValue)
         {
-            if (newValue == 1)
+            if (newValue == 2)
             {
                 document.getElementById("getcode").style.visibility = "hidden";
                 document.getElementById("getdate").style.visibility = "visible";
