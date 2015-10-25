@@ -9,19 +9,27 @@ namespace RuRo.BLL
 {
     public class ImpSampleSource
     {
-        public string Import(object obj, string sampleSourceTypeName)
+        public string Import(object obj, string sampleSourceTypeName, string ssName, string ssDescription)
         {
             UnameAndPwd up = new UnameAndPwd();
+            Dictionary<string, string> dic = new Dictionary<string, string>();
             //将前台传入的对象转换成字典
-            Dictionary<string, string> data = Common.ObjAndDic.ObjectToDic(obj);
+            Dictionary<string, string> dataDic = Common.ObjAndDic.ObjectToDic(obj);
             //获取医院字段匹配字典
             Dictionary<string, string> matchField = GetMatchFieldsXmlToDic("configXML\\MatchFields.xml", "/Matchings/*");
             //过滤字段
             //根据样品源类型过滤字段
-            List<string> ssTypeList = FreezerProUtility.Fp_BLL.SampleSocrce.GetSampleSourceTypeFieldByTypeName(up.GetUp(),sampleSourceTypeName);
-
-            FreezerProUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up.GetUp(), sampleSourceTypeName, data);
-            return "";
+            List<string> list = FreezerProUtility.Fp_BLL.SampleSocrce.GetSampleSourceTypeFieldByTypeName(up.GetUp(), sampleSourceTypeName);
+            //匹配字段并转换成
+            dataDic = MatchDic(list, dic, matchField);
+            Dictionary<string, string> nameAndDescDic = new Dictionary<string, string>() { { "Name", ssName }, { "Description", ssDescription } };
+            Dictionary<string, string> temDic = new Dictionary<string, string>();
+            if (dataDic != null)
+            {
+                temDic = nameAndDescDic.Concat(dataDic) as Dictionary<string, string>;
+            }
+            string result = FreezerProUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up.GetUp(), sampleSourceTypeName, temDic);
+            return result;
         }
         private Dictionary<string, string> GetMatchFieldsXmlToDic(string xmlPath, string xPath)
         {
@@ -63,21 +71,38 @@ namespace RuRo.BLL
             return MatchFieldDic;
         }
 
-        private Dictionary<string, string> MatchDic(List<object> list, Dictionary<string, string> dic, Dictionary<string, string> matchDic)
+        private Dictionary<string, string> MatchDic(List<string> list, Dictionary<string, string> dic, Dictionary<string, string> matchDic)
         {
             Dictionary<string, string> dataDic = new Dictionary<string, string>();
-            foreach (KeyValuePair<string,string> item in matchDic)
+            //循环样品源类型字典
+            foreach (var item in list)
             {
-                if (item.Key=="Name")
+                //匹配字典中包含这个中文字段
+                if (matchDic.ContainsValue(item))
                 {
-                    dataDic.Add("Name", dic[item.Value]);
-                }
-                if (list.Contains(item.Value))
-                {
-                    
+                    //获取当前value的键值对 matchDic ==> "PatientId：唯一标识号"
+                    KeyValuePair<string, string> k = matchDic.Where(a => a.Value == item).FirstOrDefault();
+
+                    //dic ==>"PatientId：0000000"
+                    if (dic.ContainsKey(k.Key))
+                    {
+                        //dataDic==> "唯一标识号 :0000000"
+                        if (dataDic.ContainsKey(item))
+                        {
+                            if (!string.IsNullOrEmpty(dic[k.Key]) && string.IsNullOrEmpty(dataDic[item]))
+                            {
+                                dataDic[item] = dic[k.Key];
+                            }
+                        }
+                        else
+                        {
+                            dataDic.Add(item, dic[k.Key]);
+                        }
+                    }
                 }
             }
-            return new Dictionary<string, string>();
+
+            return dataDic;
         }
 
     }

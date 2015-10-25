@@ -16,7 +16,8 @@ namespace BLL
         /// <returns>转换好的Json格式的字符串</returns>
         public string GetOPListForSpecimenByLocalBracodeFileToJsonStr()
         {
-            return ConvertDicToJsonStr(GetOPListForSpecimenByLocalBarcodeFileToDic());
+            //return ConvertDicToJsonStr(GetOPListForSpecimenByLocalBarcodeFileToDic());
+            return FreezerProUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(GetOPListForSpecimenByLocalBarcodeFileToDic());
         }
         #endregion
 
@@ -368,6 +369,7 @@ namespace BLL
             {
                 //02.1 根据条码号调用GetPatientInfoSpecimen方法获取单个人的数据
                 string getDataFromHospitalStr = centerLabServiceSoapClient.GetPatientInfoSpecimen(barcode);
+               // string getDataFromHospitalStr = GetOPListForSpecimenByLocalBracodeFileToJsonStr();//调用本地数据
                 if (getDataFromHospitalStr != null && getDataFromHospitalStr != "")//有数据并且不为null
                 {
                     //03.将数据转换成xml数据有数据并且能转换成xml文档
