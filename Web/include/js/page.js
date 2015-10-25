@@ -1,33 +1,33 @@
-﻿//给In_CodeType下拉框绑定值
-$(function () {
-    //var username = $.cookie('username');
-    //var codeType = $.cookie(username + 'codeType');
-    $('#codeType').combobox({
-        editable: false,
-        method: 'get',
-        valueField: 'value',
-        textField: 'text',
-        url: '../Fp_Ajax/PageConData.aspx?conMarc=Mzzybz',
-        panelHeight: 'auto',
-        onChange: In_CodeTypeChange,
-        //selectOnNavigation:$(this).is(':checked'),
-        onLoadSuccess: function () { //数据加载完毕事件
-            if (codeType) {
-                $('#codeType').combobox('setValue', codeType);
-                //绑定数据到页面
-            }
-        }
-    })
-})
+﻿////给In_CodeType下拉框绑定值
+//$(function () {
+//    //var username = $.cookie('username');
+//    //var codeType = $.cookie(username + 'codeType');
+//    $('#codeType').combobox({
+//        editable: false,
+//        method: 'get',
+//        valueField: 'value',
+//        textField: 'text',
+//        url: '../Fp_Ajax/PageConData.aspx?conMarc=Mzzybz',
+//        panelHeight: 'auto',
+//        onChange: In_CodeTypeChange,
+//        //selectOnNavigation:$(this).is(':checked'),
+//        onLoadSuccess: function () { //数据加载完毕事件
+//            if (codeType) {
+//                $('#codeType').combobox('setValue', codeType);
+//                //绑定数据到页面
+//            }
+//        }
+//    })
+//})
 
-function In_CodeTypeChange() {
-    var username = $.cookie('username');
-    var codeType = $('#codeType').combobox('getValue');
-    //清除cookie
-    $.cookie(username + "codeType", null);
-    //重写cookie
-    $.cookie(username + 'codeType', codeType, { expires: 7 });
-}
+//function In_CodeTypeChange() {
+//    var username = $.cookie('username');
+//    var codeType = $('#codeType').combobox('getValue');
+//    //清除cookie
+//    $.cookie(username + "codeType", null);
+//    //重写cookie
+//    $.cookie(username + 'codeType', codeType, { expires: 7 });
+//}
 
 //给departments下拉框绑定值
 $(function () {
@@ -44,17 +44,17 @@ $(function () {
     })
 })
 
-//给性别下拉框绑定值
-$(function () {
-    $('#Sex').combobox({
-        editable: false,
-        method: 'get',
-        valueField: 'SexFlag',
-        textField: 'text',
-        url: '../Fp_Ajax/PageConData.aspx?conMarc=SexFlag',
-        panelHeight: 'auto'
-    });
-})
+////给性别下拉框绑定值
+//$(function () {
+//    $('#Sex').combobox({
+//        editable: false,
+//        method: 'get',
+//        valueField: 'SexFlag',
+//        textField: 'text',
+//        url: '../Fp_Ajax/PageConData.aspx?conMarc=SexFlag',
+//        panelHeight: 'auto'
+//    });
+//})
 
 //
 $(function () {

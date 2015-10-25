@@ -20,7 +20,7 @@ namespace RuRo
             {
                 string mode = context.Request["mode"].ToString();
                 switch (mode)
-                { 
+                {
                     case "inf":/*查询实体类*/
                         InfoData(context);
                         break;
@@ -31,7 +31,7 @@ namespace RuRo
                         SaveData(context);
                         break;
                     case "del":/*删除*/
-                        DeleteData(context);  
+                        DeleteData(context);
                         break;
                     case "qrycode":/*按照条码查询*/
                         QueryDataCode(context, false);
@@ -62,9 +62,9 @@ namespace RuRo
             {
                 BLL.ZSSY.OPListForSpecimen bll_OPListForSpecimen = new BLL.ZSSY.OPListForSpecimen();
                 Model.ZSSY.OPListForSpecimen model_OPListForSpecimen = new Model.ZSSY.OPListForSpecimen();
-                string ssName = string.Empty;
-                string ssDecription = string.Empty;
-                string ssType = string.Empty;
+                string  ssType = string.Empty,
+                        ssName = string.Empty,
+                        ssDecription = string.Empty;
                 #region 实体类赋值
                 if (context.Request["PatientId"] != null)
                     model_OPListForSpecimen.PatientId = context.Request["PatientId"];
@@ -175,13 +175,20 @@ namespace RuRo
                     model_OPListForSpecimen.LabInfo = context.Request["LabInfo"];
                 #endregion
                 //数据转换
-                if (context.Request["PatientId"] != null)
-                    model_OPListForSpecimen.PatientId = context.Request["PatientId"];
+                if (context.Request["ssType"] != null)
+                    ssType = context.Request["ssType"];
+                if (context.Request["pId"] != null)
+                    ssName = context.Request["pId"];
+                if (context.Request["ssType"] != null)
+                    ssDecription = context.Request["ssType"] + "病区";
                 //数据匹配
+                BLL.ImpSampleSource imp = new BLL.ImpSampleSource();
+               string result = imp.Import(model_OPListForSpecimen, ssType, ssName, ssDecription);
+               context.Response.Write(result);
                 //数据提交
                 //结果返回
 
-                
+
             }
             catch (Exception exception)
             {
@@ -394,35 +401,35 @@ namespace RuRo
 
 
 
-//            string swf = "Column3D";
-//            if (context.Request["swf"] != null)
-//                swf = context.Request["swf"];
-//            string strSql = @"select 字段名,count(*) records from oplistforspecimen group by 字段名";
-//            DataTable dt = new DataTable();
-//            DbHelper.GetTable(strSql, ref dt);
+            //            string swf = "Column3D";
+            //            if (context.Request["swf"] != null)
+            //                swf = context.Request["swf"];
+            //            string strSql = @"select 字段名,count(*) records from oplistforspecimen group by 字段名";
+            //            DataTable dt = new DataTable();
+            //            DbHelper.GetTable(strSql, ref dt);
 
-//            StringBuilder xmlData = new StringBuilder();
-//            xmlData.AppendFormat(@"<chart caption='{0}' 
-//                                    subCaption='{1}' 
-//                                    xAxisName='{2}' 
-//                                    yAxisName='{3}' 
-//                                    showValues='0' 
-//                                    formatNumberScale='0' 
-//                                    showBorder='1'  
-//                                    logoURL='/images/login_banquan.gif'  
-//                                    logoPosition='BR' 
-//                                    logoAlpha='20'>",
-//                                    "统计图","统计图副标题","X坐标标题","数量");
-//            for (int i = 0; i < dt.Rows.Count; i++)
-//            {
-//                xmlData.AppendFormat("<set label='{0}' value='{1}' />",dt.Rows[i]["字段名"],dt.Rows[i]["records"]);  
-//            }
-//            xmlData.Append("</chart>");
-//            string ChartHtml = FusionCharts.RenderChartHTML("../js/FusionCharts/" + swf + ".swf","", xmlData.ToString(), "myChart", "600", "350", false);
-//            result rlt = new result();
-//            rlt.success = true;
-//            rlt.msg = ChartHtml;
-//            context.Response.Write(JSONHelper.Convert2Json(rlt));
+            //            StringBuilder xmlData = new StringBuilder();
+            //            xmlData.AppendFormat(@"<chart caption='{0}' 
+            //                                    subCaption='{1}' 
+            //                                    xAxisName='{2}' 
+            //                                    yAxisName='{3}' 
+            //                                    showValues='0' 
+            //                                    formatNumberScale='0' 
+            //                                    showBorder='1'  
+            //                                    logoURL='/images/login_banquan.gif'  
+            //                                    logoPosition='BR' 
+            //                                    logoAlpha='20'>",
+            //                                    "统计图","统计图副标题","X坐标标题","数量");
+            //            for (int i = 0; i < dt.Rows.Count; i++)
+            //            {
+            //                xmlData.AppendFormat("<set label='{0}' value='{1}' />",dt.Rows[i]["字段名"],dt.Rows[i]["records"]);  
+            //            }
+            //            xmlData.Append("</chart>");
+            //            string ChartHtml = FusionCharts.RenderChartHTML("../js/FusionCharts/" + swf + ".swf","", xmlData.ToString(), "myChart", "600", "350", false);
+            //            result rlt = new result();
+            //            rlt.success = true;
+            //            rlt.msg = ChartHtml;
+            //            context.Response.Write(JSONHelper.Convert2Json(rlt));
 
         }
 
@@ -434,7 +441,7 @@ namespace RuRo
         {
             bool _success = false;
             string _msg = "";
-            public bool success 
+            public bool success
             {
                 set { _success = value; }
                 get { return _success; }
@@ -442,7 +449,7 @@ namespace RuRo
             public string msg
             {
                 set { _msg = value; }
-                get { return _msg; } 
+                get { return _msg; }
             }
         }
         #endregion

@@ -76,83 +76,83 @@ function AddHours(d, value) {
     d.setHours(d.getHours() + value);
     return d;
 }
-//查询NormalLisReport数据
-function GetNormalLisReportInfo() {
-    //<Request>
-    //  <hospnum></hospnum>
-    //  <ksrq00></ksrq00>
-    //  <jsrq00></jsrq00>
-    //</Request>
-    var code = $('#oldCode').textbox('getValue');
-    var codeType = $('#oldCodeType').textbox('getValue');
-    if (code) {
-        //开始查询日期为当前日期前五天
-        //结束日期为当前日期后一天
-        var dateNow = AddDays(new Date(), 0).toDateString();
-        $.ajax({
-            type: "POST",
-            url: "/Sever/NormalLisReport.ashx",
-            data: {
-                "mode": "qry",
-                "code": code,
-                "codeType": codeType,
-                "dateNow": dateNow
-            },
-            success: function (data) {
-                if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error') }
-                else {
-                    var obj = $.parseJSON(data);
-                    if (obj.Statu == "err") {
-                        ShowMsg("临床监测数据：" + obj.Msg);
-                        return;
-                    }
-                    else if (obj.Statu == "ok") {
-                        $('#NormalLisReportDg').datagrid("loadData", obj.Data);
-                        // var row = $('#NormalLisReportDg').datagrid('getRows');
-                    }
-                }
-            }
-        });
-    }
-    ajaxLoadEnd();
-}
-//查询PatientDiagnose数据
-function GetPatientDiagnoseInfo() {
-    //<Request>
-    //  <cardno></cardno>
-    //  <cxrq00></cxrq00>
-    //</Request>
-    var code = $('#oldCode').textbox('getValue');
-    var codeType = $('#oldCodeType').textbox('getValue');
-    if (code) {
-        var dateNow = AddDays(new Date(), 0).toDateString();
-        $.ajax({
-            type: "POST",
-            url: "/Sever/PatientDiagnose.ashx",
-            data: {
-                "mode": "qry",
-                "code": code,
-                "codeType": codeType,
-                "dateNow": dateNow
-            },
-            success: function (data) {
-            if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error') }
-            else {
-                var obj = $.parseJSON(data);
-                if (obj.Statu == "err") {
-                    ShowMsg("诊断数据：" + obj.Msg);
-                    return;
-                }
-                else if (obj.Statu == "ok") {
-                    $('#PatientDiagnoseDg').datagrid("loadData", obj.Data);
-                    // var row = $('#NormalLisReportDg').datagrid('getRows');
-                }
-            }
-        }
-        });
-    }
-    ajaxLoadEnd();
-}
+////查询NormalLisReport数据
+//function GetNormalLisReportInfo() {
+//    //<Request>
+//    //  <hospnum></hospnum>
+//    //  <ksrq00></ksrq00>
+//    //  <jsrq00></jsrq00>
+//    //</Request>
+//    var code = $('#oldCode').textbox('getValue');
+//    var codeType = $('#oldCodeType').textbox('getValue');
+//    if (code) {
+//        //开始查询日期为当前日期前五天
+//        //结束日期为当前日期后一天
+//        var dateNow = AddDays(new Date(), 0).toDateString();
+//        $.ajax({
+//            type: "POST",
+//            url: "/Sever/NormalLisReport.ashx",
+//            data: {
+//                "mode": "qry",
+//                "code": code,
+//                "codeType": codeType,
+//                "dateNow": dateNow
+//            },
+//            success: function (data) {
+//                if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error') }
+//                else {
+//                    var obj = $.parseJSON(data);
+//                    if (obj.Statu == "err") {
+//                        ShowMsg("临床监测数据：" + obj.Msg);
+//                        return;
+//                    }
+//                    else if (obj.Statu == "ok") {
+//                        $('#NormalLisReportDg').datagrid("loadData", obj.Data);
+//                        // var row = $('#NormalLisReportDg').datagrid('getRows');
+//                    }
+//                }
+//            }
+//        });
+//    }
+//    ajaxLoadEnd();
+//}
+////查询PatientDiagnose数据
+//function GetPatientDiagnoseInfo() {
+//    //<Request>
+//    //  <cardno></cardno>
+//    //  <cxrq00></cxrq00>
+//    //</Request>
+//    var code = $('#oldCode').textbox('getValue');
+//    var codeType = $('#oldCodeType').textbox('getValue');
+//    if (code) {
+//        var dateNow = AddDays(new Date(), 0).toDateString();
+//        $.ajax({
+//            type: "POST",
+//            url: "/Sever/PatientDiagnose.ashx",
+//            data: {
+//                "mode": "qry",
+//                "code": code,
+//                "codeType": codeType,
+//                "dateNow": dateNow
+//            },
+//            success: function (data) {
+//            if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error') }
+//            else {
+//                var obj = $.parseJSON(data);
+//                if (obj.Statu == "err") {
+//                    ShowMsg("诊断数据：" + obj.Msg);
+//                    return;
+//                }
+//                else if (obj.Statu == "ok") {
+//                    $('#PatientDiagnoseDg').datagrid("loadData", obj.Data);
+//                    // var row = $('#NormalLisReportDg').datagrid('getRows');
+//                }
+//            }
+//        }
+//        });
+//    }
+//    ajaxLoadEnd();
+//}
 //清除控件值
 function clearForm() {
     $('#BaseInfoForm').form('clear');

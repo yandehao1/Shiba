@@ -15,6 +15,7 @@ namespace RuRo
 {
     public partial class OPListForSpecimen_info : System.Web.UI.Page
     {
+        Model.ZSSY.OPListForSpecimen oPListForSpecimen = new Model.ZSSY.OPListForSpecimen();
         protected void Page_Load(object sender, EventArgs e)
         {
             //Common.js.SetNoCache(); 
@@ -25,6 +26,8 @@ namespace RuRo
             //    if (Request["pk"] != null)
             //        pk.Value = Request["pk"];
             //}
+            //将数据传入
+            //将数据绑定到页面
         }
     }
 }

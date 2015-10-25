@@ -21,13 +21,21 @@ namespace RuRo.BLL
             //根据样品源类型过滤字段
             List<string> list = FreezerProUtility.Fp_BLL.SampleSocrce.GetSampleSourceTypeFieldByTypeName(up.GetUp(), sampleSourceTypeName);
             //匹配字段并转换成
-            dataDic = MatchDic(list, dic, matchField);
+            dic = MatchDic(list, dataDic, matchField);
             Dictionary<string, string> nameAndDescDic = new Dictionary<string, string>() { { "Name", ssName }, { "Description", ssDescription } };
             Dictionary<string, string> temDic = new Dictionary<string, string>();
-            if (dataDic != null)
+            if (dic != null && dic.Count > 0)
             {
-                temDic = nameAndDescDic.Concat(dataDic) as Dictionary<string, string>;
+                foreach (var item in dic)
+                {
+                    if (!nameAndDescDic.ContainsKey(item.Key))
+                    {
+                        nameAndDescDic.Add(item.Key, item.Value);
+                    }
+                }
             }
+            temDic = nameAndDescDic;
+
             string result = FreezerProUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up.GetUp(), sampleSourceTypeName, temDic);
             return result;
         }
@@ -71,38 +79,38 @@ namespace RuRo.BLL
             return MatchFieldDic;
         }
 
-        private Dictionary<string, string> MatchDic(List<string> list, Dictionary<string, string> dic, Dictionary<string, string> matchDic)
+        private Dictionary<string, string> MatchDic(List<string> list, Dictionary<string, string> datadic, Dictionary<string, string> matchDic)
         {
-            Dictionary<string, string> dataDic = new Dictionary<string, string>();
+            Dictionary<string, string> resDic = new Dictionary<string, string>();
             //循环样品源类型字典
             foreach (var item in list)
             {
                 //匹配字典中包含这个中文字段
-                if (matchDic.ContainsValue(item))
+                //"姓名"："Name"
+                if (matchDic.ContainsKey(item))
                 {
-                    //获取当前value的键值对 matchDic ==> "PatientId：唯一标识号"
-                    KeyValuePair<string, string> k = matchDic.Where(a => a.Value == item).FirstOrDefault();
+                    //获取当前value的键值对 matchDic ==> "唯一标识号:PatientId"
+                    KeyValuePair<string, string> k = matchDic.Where(a => a.Key == item).FirstOrDefault();
 
-                    //dic ==>"PatientId：0000000"
-                    if (dic.ContainsKey(k.Key))
+                    //datadic ==>"PatientId：0000000"
+                    if (datadic.ContainsKey(k.Value))
                     {
                         //dataDic==> "唯一标识号 :0000000"
-                        if (dataDic.ContainsKey(item))
+                        if (resDic.ContainsKey(item))
                         {
-                            if (!string.IsNullOrEmpty(dic[k.Key]) && string.IsNullOrEmpty(dataDic[item]))
+                            if (!string.IsNullOrEmpty(datadic[k.Value]) && string.IsNullOrEmpty(resDic[item]))
                             {
-                                dataDic[item] = dic[k.Key];
+                                resDic[item] = datadic[k.Value];
                             }
                         }
                         else
                         {
-                            dataDic.Add(item, dic[k.Key]);
+                            resDic.Add(item, datadic[k.Value]);
                         }
                     }
                 }
             }
-
-            return dataDic;
+            return resDic;
         }
 
     }
