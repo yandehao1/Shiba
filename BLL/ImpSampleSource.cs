@@ -9,15 +9,18 @@ namespace RuRo.BLL
 {
     public class ImpSampleSource
     {
-        public string Import(object obj, string sampleSourceType)
+        public string Import(object obj, string sampleSourceTypeName)
         {
             UnameAndPwd up = new UnameAndPwd();
-            //将前台传入的对象转换成字段
-            Dictionary<string, string> data = new Dictionary<string, string>();
+            //将前台传入的对象转换成字典
+            Dictionary<string, string> data = Common.ObjAndDic.ObjectToDic(obj);
             //获取医院字段匹配字典
             Dictionary<string, string> matchField = GetMatchFieldsXmlToDic("configXML\\MatchFields.xml", "/Matchings/*");
             //过滤字段
-            FreezerProUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up.GetUp(), sampleSourceType, data);
+            //根据样品源类型过滤字段
+            List<string> ssTypeList = FreezerProUtility.Fp_BLL.SampleSocrce.GetSampleSourceTypeFieldByTypeName(up.GetUp(),sampleSourceTypeName);
+
+            FreezerProUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up.GetUp(), sampleSourceTypeName, data);
             return "";
         }
         private Dictionary<string, string> GetMatchFieldsXmlToDic(string xmlPath, string xPath)
@@ -58,6 +61,23 @@ namespace RuRo.BLL
                 }
             }
             return MatchFieldDic;
+        }
+
+        private Dictionary<string, string> MatchDic(List<object> list, Dictionary<string, string> dic, Dictionary<string, string> matchDic)
+        {
+            Dictionary<string, string> dataDic = new Dictionary<string, string>();
+            foreach (KeyValuePair<string,string> item in matchDic)
+            {
+                if (item.Key=="Name")
+                {
+                    dataDic.Add("Name", dic[item.Value]);
+                }
+                if (list.Contains(item.Value))
+                {
+                    
+                }
+            }
+            return new Dictionary<string, string>();
         }
 
     }

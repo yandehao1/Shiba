@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding ="utf-8"?>
 <Matchings>
+  <MatchItem>
+    <KeyFieldName>Name</KeyFieldName>
+    <ValueFieldName>PatientId</ValueFieldName>
+  </MatchItem>
+  <MatchItem>
+    <KeyFieldName>Description</KeyFieldName>
+    <ValueFieldName>PatientId</ValueFieldName>
+  </MatchItem>
 <MatchItem><KeyFieldName>唯一标识号</KeyFieldName><ValueFieldName>PatientId</ValueFieldName></MatchItem>
 <MatchItem><KeyFieldName>住院号</KeyFieldName><ValueFieldName>InpNO</ValueFieldName></MatchItem>
 <MatchItem><KeyFieldName>就诊号</KeyFieldName><ValueFieldName>VisitId</ValueFieldName></MatchItem>

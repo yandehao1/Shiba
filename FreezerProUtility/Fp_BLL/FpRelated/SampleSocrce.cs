@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FreezerProUtility;
+using FreezerProUtility.Fp_Model;
 
 namespace FreezerProUtility.Fp_BLL
 {
@@ -18,11 +20,11 @@ namespace FreezerProUtility.Fp_BLL
             return List;
         }
 
-        public Fp_Model.SampleSourceTypes GetSampleSourceTypeByTypeName(Fp_Common.UnameAndPwd up, string name)
+        public static Fp_Model.SampleSourceTypes GetSampleSourceTypeByTypeName(Fp_Common.UnameAndPwd up, string name)
         {
             List<Fp_Model.SampleSourceTypes> list = GetAll(up);
             Fp_Model.SampleSourceTypes resObj = new Fp_Model.SampleSourceTypes();
-            if (list!=null&&list.Count>0)
+            if (list != null && list.Count > 0)
             {
                 resObj = list.Where<Fp_Model.SampleSourceTypes>(a => a.name == name).FirstOrDefault();
             }
@@ -36,8 +38,8 @@ namespace FreezerProUtility.Fp_BLL
             dic.Add("username", up.UserName);
             dic.Add("password", up.PassWord);
             dic.Add("method", Fp_Common.FpMethod.import_sources.ToString());
-            dic.Add("sample_source_type",sampleSourceTypeName);
-            if (jsonDic!=null&&jsonDic.Count>0)
+            dic.Add("sample_source_type", sampleSourceTypeName);
+            if (jsonDic != null && jsonDic.Count > 0)
             {
                 string jsonStr = FreezerProUtility.Fp_Common.FpJsonHelper.DictionaryToJsonString(jsonDic);
                 dic.Add("json", jsonStr);
@@ -61,6 +63,34 @@ namespace FreezerProUtility.Fp_BLL
             return dic;
         }
 
+        /// <summary>
+        /// 使用样本源类型名称获取样本源类型中的字段集合list<string>
+        /// </summary>
+        /// <param name="typeName">指定样本元类型名称</param>
+        /// <returns>字段集合</returns>
+
+        public static List<string> GetSampleSourceTypeFieldByTypeName(Fp_Common.UnameAndPwd up, string typeName)
+        {
+            List<string> sampleSourceTypeField = new List<string>();
+            Fp_Model.SampleSourceTypes ss = GetSampleSourceTypeByTypeName(up, typeName);
+            if (ss != null)
+            {
+                string fieldsStr = ss.fields;
+                if (fieldsStr != null)
+                {
+                    string[] fields = ((fieldsStr.Replace("<br>", "$")).Replace("</br>", "$")).Split('$');
+                    foreach (string item in fields)
+                    {
+                        if (!String.IsNullOrEmpty(item))
+                        {
+                            sampleSourceTypeField.Add(item);
+                        }
+                    }
+                }
+
+            }
+            return sampleSourceTypeField;
+        }
         private static string CheckImportRes(string jsonResStr)
         {
             //检测是否导入成功
