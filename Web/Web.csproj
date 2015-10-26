@@ -668,6 +668,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx" />
+    <Content Include="Pages\Search.aspx" />
     <Content Include="Scripts\easyuicontrols.js" />
     <Content Include="Style.css" />
     <Content Include="ValidateCode.aspx" />
@@ -795,6 +796,13 @@
     </Compile>
     <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx.designer.cs">
       <DependentUpon>OPListForSpecimen_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespondHis.ashx.cs">
