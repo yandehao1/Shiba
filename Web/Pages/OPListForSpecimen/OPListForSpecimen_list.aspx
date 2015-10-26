@@ -86,7 +86,6 @@
     <div id="dlg" class="easyui-dialog" closed="true"></div>
     <div id="dd"></div>
     <script type="text/javascript">
-
         function PagePaging(loaddata) {
             var pager = $("#OPListForSpecimen").datagrid("getPager");
             pager.pagination({
@@ -224,13 +223,13 @@
                 }
             }, 'json');
         }
-
         /*关闭dialog重新加载datagrid数据*/
         $('#dlg').dialog({
             onClose: function () {
                 $('#datagrid').datagrid('reload'); //重新加载载数据
             }
         });
+
     </script>
 
 </body>

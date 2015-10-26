@@ -109,7 +109,6 @@ $.fn.datebox.defaults.parser = function (s) {
     } else {
         return new Date();
     }
-
 };
 //全局操作
 (function ($) {

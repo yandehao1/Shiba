@@ -23,5 +23,10 @@
         </div>
         <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'SpecimenRt/SpecimenRtLog_list.aspx'"></div>
     </div>
+    <script type="text/javascript">
+        function reshis() {
+            $.post('RespondHis.ashx', { action: respondhis })
+        }
+    </script>
 </body>
 </html>
