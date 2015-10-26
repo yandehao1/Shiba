@@ -134,7 +134,7 @@
 
     <!--diaglog窗口，用于编辑数据-->
     <div id="dlg" class="easyui-dialog" closed="true"></div>
-
+    <div id="dd"></div>
     <script type="text/javascript">
         var url;
         /*新增表单*/
@@ -167,9 +167,17 @@
                         $('#code').textbox('setValue', '');
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
-                            //测试代码
-                            //弹出窗口
-                            //赋值
+
+                            $('#dd').dialog({
+                                title: 'My Dialog',
+                                width: 700,
+                                height: 400,
+                                closed: false,
+                                cache: false,
+                                href: 'OPListForSpecimen_info.aspx?basedata='+data,
+                                modal: true
+                            });
+
                         }
                     }
                 });

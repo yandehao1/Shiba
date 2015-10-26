@@ -273,6 +273,13 @@
     </div>
 
     <script type="text/javascript">
+        //填充数据
+        $(function ()
+        {
+            var jsonData = $.parseJSON(data);
+            $("#frmAjax").form("load", jsonData);
+        })
+
         //给sampleSourceType下拉框绑定值
         $(function () {
             $('#sampleSourceType').combobox({
