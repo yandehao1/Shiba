@@ -89,10 +89,9 @@
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
                             $('#dd').window({
-
                                 title: '详细数据页面',
                                 width: 800,
-                                height: 500,
+                                height: 600,
                                 modal: true,
                                 href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
                                 onLoad: function () {
@@ -119,12 +118,11 @@
                     url: '../Sever/OPListForSpecimen_handler.ashx?mode=qrydate&ksdate=' + ksdate + '&jsdate=' + jsdate,
                     onSubmit: function () { },
                     success: function (data) {
-                        alert("加载。。。");
                         ajaxLoadEnd();
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
                             var loaddata = $.parseJSON(data);
-                            $('#OPListForSpecimen').datagrid('loadData', loaddata);
+                            //$('#OPListForSpecimen').datagrid('loadData', loaddata);
                             PagePaging(loaddata);
                         }
                     }

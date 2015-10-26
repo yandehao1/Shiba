@@ -16,20 +16,20 @@
 </head>
 <body>
     <!--datagrid栏-->
-    <table id="OPListForSpecimen" title="日期查询" class="easyui-datagrid" style="width: auto; height: 460px"
+    <table id="OPListForSpecimen" title="日期查询" class="easyui-datagrid" style="width: auto; height: 460px;text-align:center"
         url="OPListForSpecimen_handler.ashx?mode=qrydate" fit='false'
-        pagination="true" idfield="id" rownumbers="true"
+        pagination="true" idfield="PatientId" rownumbers="true"
         fitcolumns="true" singleselect="true" toolbar="#toolbar"
         striped="false" pagelist="[10,30,50]"
-        selectoncheck="true" checkonselect="true"remoteSort="false" multiSort="true">
+        selectoncheck="true" checkonselect="true" remoteSort="false" multiSort="true">
         <thead>
             <tr>
                 <%--<th field="ck" checkbox="true"></th>--%>
                 <th field="id" width="100"  hidden="true" >id</th>
-                <th field="PatientId" width="100" sortable="true>病人唯一标识号</th>
-                <th field="InpNO" width="100" sortable="true">住院号</th>
-                <th field="VisitId" width="100" sortable="true">就诊号</th>
-                <th field="Name" width="100" sortable="true">姓名</th>
+                <th field="PatientId" width="10%" sortable="true">病人唯一标识号</th>
+                <th field="InpNO" width="10%" sortable="true">住院号</th>
+                <th field="VisitId" width="10%" sortable="true">就诊号</th>
+                <th field="Name" width="10%" sortable="true">姓名</th>
                 <th field="NamePhonetic" width="100"  hidden="true">姓名拼音</th>
                 <th field="DateOfBirth" width="100"  hidden="true">出生日期</th>
                 <th field="BirthPlace" width="100"  hidden="true">行政区名称</th>
@@ -47,21 +47,21 @@
                 <th field="NextOfKinAddr" width="100" hidden="true">联系人地址</th>
                 <th field="NextOfKinZipCode" width="100" hidden="true">联系人邮政编码</th>
                 <th field="NextOfKinPhome" width="100" hidden="true">联系人电话号码</th>
-                <th field="DeptCode" width="100" sortable="true">当前科室代码@名称</th>
+                <th field="DeptCode" width="15%" sortable="true">科室代码@名称</th>
                 <th field="BedNO" width="100" hidden="true">病人所住床号</th>
                 <th field="AdmissionDateTime" width="100" hidden="true">入院日期及时间</th>
                 <th field="DoctorInCharge" width="100" hidden="true">主治医生工号@姓名</th>
                 <th field="ScheduleId" width="100"  hidden="true">手术id号</th>
-                <th field="DiagBeforeOperation" width="100" sortable="true">主要诊断</th>
+                <th field="DiagBeforeOperation"width="14%" sortable="true">主要诊断</th>
                 <th field="ScheduledDateTime" width="100" hidden="true">预约进行该次手术的日期及时间</th>
-                <th field="KeepSpecimenSign" width="100" sortable="true">是否留标本</th>
+                <th field="KeepSpecimenSign" width="10%" sortable="true">是否留标本</th>
                 <th field="OperatingRoom" width="100" hidden="true">手术室代码@名称</th>
                 <th field="Surgeon" width="100" hidden="true">手术医师工号@姓名</th>
                 <th field="InPatPreillness" width="100" hidden="true">现病史</th>
                 <th field="InPatPastillness" width="100" hidden="true">既往史</th>
                 <th field="InPatFamillness" width="100" hidden="true">家族史</th>
-                <th field="LabInfo" width="100" sortable="true">乙肝梅毒等阳性结果</th>
-                <th field="Sex" width="100" >性别</th>
+                <th field="LabInfo" width="10%" sortable="true">乙肝梅毒等阳性结果</th>
+                <th field="Sex" width="10%" >性别</th>
             </tr>
         </thead>
     </table>
@@ -86,7 +86,25 @@
     <div id="dlg" class="easyui-dialog" closed="true"></div>
     <div id="dd"></div>
     <script type="text/javascript">
+        $(function () {
+            //绑定双击行事件
+            $('#OPListForSpecimen').datagrid({
+                onDblClickRow:function(rowIndex,rowData) {
+                    showData(rowData);
+                }
+            });
+            //绑定列排序事件
+            $("#OPListForSpecimen").datagrid({
+                onSortColumn: function (sort, order) {
+                    sortData(sort, order);
+                }
+            })
+        })
+        
         function PagePaging(loaddata) {
+            $("#OPListForSpecimen").datagrid({
+                data: loaddata.slice(0, 10)
+            });
             var pager = $("#OPListForSpecimen").datagrid("getPager");
             pager.pagination({
                 total: loaddata.length,
@@ -101,6 +119,9 @@
                 }
             });
         }
+        function sortData(sort, order) {
+            //alert('排序，要写...'+sort+':'+order);
+        }
         var url;
         /*新增表单*/
         function newForm() {
@@ -113,10 +134,23 @@
                 href: 'OPListForSpecimen_info.aspx?mode=ins'
             });
         }
-
-
-
-
+        function showData(rowData) {
+            if (!rowData) { $.messager.alert('提示', '请检查数据是否存在！', 'error'); }
+            else {
+                $('#dd').window({
+                    title: '详细数据页面',
+                    width: 800,
+                    height: 600,
+                    modal: true,
+                    href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
+                    onLoad: function () {
+                        //var basedata = $.parseJSON(rowData);
+                        //$("#frmAjax").form("load", basedata);
+                        $("#frmAjax").form("load", rowData);
+                    }
+                });
+            }
+        }
         /*查看数据*/
         function infoForm() {
             var rows = $('#datagrid').datagrid('getSelections');
