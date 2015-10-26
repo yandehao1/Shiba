@@ -16,7 +16,7 @@
 </head>
 <body>
     <!--Search -->
-    <table style="width: 100%;" cellpadding="2" cellspacing="1" class="border">
+   <%-- <table style="width: 100%;" cellpadding="2" cellspacing="1" class="border">
         <tr>
             <td style="width: 80px" align="right" class="tdbg">
                 <select id="cc" class="easyui-combobox" name="dept" style="width:200px;">   
@@ -41,7 +41,7 @@
             </td>
             <td class="tdbg"></td>
         </tr>
-    </table>
+    </table>--%>
     <!--Search end-->
 
     <!--datagrid栏-->
@@ -134,7 +134,7 @@
 
     <!--diaglog窗口，用于编辑数据-->
     <div id="dlg" class="easyui-dialog" closed="true"></div>
-
+    <div id="dd"></div>
     <script type="text/javascript">
         var url;
         /*新增表单*/
@@ -147,34 +147,6 @@
                 cache: false,
                 href: 'OPListForSpecimen_info.aspx?mode=ins'
             });
-        }
-
-        //绑定数据 条码
-        function querybycode() {
-            var code = $('#code').textbox('getValue');//获取数据源
-            if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#code').textbox('clear'); return; }
-            if (code.length > 14) { $.messager.alert('错误', '条码最高不能超过15位', 'error'); $('#code').textbox('clear'); return; }
-            if (isEmptyStr(code)) { $.messager.alert('提示', '请检查条码号', 'error'); }
-            else {
-                ajaxLoading();
-                $.ajax({
-                    type: 'GET',
-                    url: '/Sever/OPListForSpecimen_handler.ashx?mode=qrycode&code=' + code,
-                    onSubmit: function () { },
-                    success: function (data) {
-                        alert(data);
-                        ajaxLoadEnd();
-                        $('#code').textbox('setValue', '');
-                        if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
-                        else {
-                            //测试代码
-                            //弹出窗口
-                            //赋值
-                        }
-                    }
-                });
-                ajaxLoadEnd();
-            }
         }
 
         //绑定数据 日期

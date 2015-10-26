@@ -36,7 +36,7 @@
             <div title="插件管理" data-options="iconCls:'icon-sys'" style="overflow: auto; padding: 0px;">
                 <ul>
                     <li>
-                        <div><a target="mainFrame" rel="Pages/OPListForSpecimen/OPListForSpecimen_list.aspx"><span></span>查询信息</a></div>
+                        <div><a target="mainFrame" rel="Pages/Search.aspx"><span></span>查询信息</a></div>
                     </li>
                     <li>
                         <div><a target="mainFrame" rel="Pages/NormalLisReport_list_F.aspx"><span></span>回发数据</a></div>
