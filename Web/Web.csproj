@@ -634,7 +634,6 @@
     <Content Include="include\js\default.js" />
     <Content Include="include\js\DgGRUD.js" />
     <Content Include="include\js\jquery.cookie.js" />
-    <Content Include="include\js\loading.js" />
     <Content Include="include\js\page.js" />
     <Content Include="include\js\samplepage.js" />
     <Content Include="include\js\sy_func.js" />

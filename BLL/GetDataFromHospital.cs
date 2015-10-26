@@ -89,7 +89,8 @@ namespace BLL
         /// <returns>转换好的Json格式的字符串</returns>
         public string GetOPListForSpecimenByLocalDateFileToJsonStr()
         {
-            return ConvertDicListToJsonStr(GetOPListForSpecimensByLocalDateFileToDic());
+            //return ConvertDicListToJsonStr();
+            return FreezerProUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(GetOPListForSpecimensByLocalDateFileToDic());
         }
         #endregion
 

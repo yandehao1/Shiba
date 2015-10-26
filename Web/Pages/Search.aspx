@@ -13,8 +13,8 @@
     <script type="text/javascript" src="../../include/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js"></script>
     <link rel="stylesheet" type="text/css" href="../../include/css/kfmis.css" />
     <script type="text/javascript" src="../../include/js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="../include/js/loading.js"></script>
-    <%--<script type="text/javascript" src="../../include/js/page.js"></script>--%>
+    <script type="text/javascript" src="../include/js/default.js"></script>
+    <script type="text/javascript" src="../include/js/page.js"></script>
 </head>
 <body style="width: 1000px">
     <div class="easyui-panel">
@@ -33,7 +33,7 @@
                 <div id="getdate" style="display: none;">
                     开始日期：<input id="ksrq" class="easyui-datebox" name="ksrq" data-options="required:true" style="width: 130px" />
                     结束日期：<input id="jsrq" class="easyui-datebox" name="jsrq" data-options="required:true" style="width: 130px" />
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="">日期查询信息</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="querybydate()">日期查询信息</a>
                 </div>
             </div>
             <!--Search end-->
@@ -41,6 +41,7 @@
     </div>
      <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'OPListForSpecimen/OPListForSpecimen_list.aspx'"></div>
     <script type="text/javascript">
+        var getdatageid;
         //样品数据绑定
         $(function () {
             $('#ss').combobox({
@@ -74,18 +75,18 @@
                         $('#code').textbox('setValue', '');
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
-                            $('#dd').dialog({
-                                title: '详细数据页面',
-                                width: 700,
-                                height: 400,
-                                closed: false,
-                                cache: false,
-                                href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
-                                modal: true
-                            });
-                            var basedata = $.parseJSON(data);
-                            $("#frmAjax").form("load", basedata);
+                            $('#dd').window({
 
+                                title: '详细数据页面',
+                                width: 800,
+                                height: 500,
+                                modal: true,
+                                href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
+                                onLoad: function () {
+                                    var basedata = $.parseJSON(data);
+                                    $("#frmAjax").form("load", basedata);
+                                }
+                            });
                         }
                     }
                 });
@@ -96,8 +97,8 @@
         function querybydate() {
             var ksdate = $('#ksrq').textbox('getValue');
             var jsdate = $('#jsrq').textbox('getValue');
-            if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#ksrq').textbox('clear'); return; }
-            if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '请检查条码类型和条码号', 'error'); }
+            //if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#ksrq').textbox('clear'); return; }
+            if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); }
             else {
                 ajaxLoading();
                 $.ajax({
@@ -105,20 +106,19 @@
                     url: '../Sever/OPListForSpecimen_handler.ashx?mode=qrydate&ksdate=' + ksdate + '&jsdate=' + jsdate,
                     onSubmit: function () { },
                     success: function (data) {
+                        alert(data);
                         ajaxLoadEnd();
-                        //$('#ksrq').textbox('setValue', '');
-                        //$('#jsrq').textbox('setValue', '');
-                        clearForm();
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
-                            //测试代码
+                            var loaddata = $.parseJSON(data);
+                            $('#OPListForSpecimen').datagrid('loadData', loaddata);
+                            PagePaging(loaddata);
                         }
                     }
                 });
                 ajaxLoadEnd();
             }
         }
-
     </script>
 </body>
 </html>

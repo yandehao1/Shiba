@@ -17,6 +17,7 @@
     <link href="../../include/css/kfmis.css" rel="stylesheet" />
     <script type="text/javascript" src="../../include/js/page.js"></script>
     <script type="text/javascript" src="../../include/js/jquery.cookie.js"></script>
+    <script type="text/javascript src="../../include/js/default.js"></script>
 </head>
 <body>
     <!--存储参数属性input控件，判断是新增还是修改-->
