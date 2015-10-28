@@ -421,6 +421,16 @@ function changeState(result) {
     }
 }
 
+//验证日期格式
+function checkdate(strdate) {
+    var a = /^(\d{4})-(\d{2})-(\d{2})$/
+    if (!a.test(strdate)) {
+        return false;
+    }
+    else
+        return true;
+}
+
 function removeSelections() {
     var rows = $('#sampleSourceDataGrid').datagrid("getSelections");
     var copyRows = [];

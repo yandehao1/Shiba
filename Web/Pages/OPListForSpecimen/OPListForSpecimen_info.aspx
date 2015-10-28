@@ -291,15 +291,15 @@
                 valueField: 'value',
                 textField: 'text',
                 url: '../../Fp_Ajax/PageConData.aspx?conMarc=ssType',
-                panelHeight: 'auto',
-                onChange: In_SSTypeChange,
-                //selectOnNavigation:$(this).is(':checked'),
-                onLoadSuccess: function (data) { //数据加载完毕事件
-                    if (data) {
-                        $('#sampleSourceType').combobox('setValue', data);
-                        //绑定数据到页面
-                    }
-                }
+                panelHeight: 'auto'
+                //onChange: In_SSTypeChange,
+                ////selectOnNavigation:$(this).is(':checked'),
+                //onLoadSuccess: function (data) { //数据加载完毕事件
+                //    if (data) {
+                //       // $('#sampleSourceType').combobox('setValue', data);
+                //        //绑定数据到页面
+                //    }
+                //}
             })
         })
 
