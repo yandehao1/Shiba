@@ -90,8 +90,8 @@
                         else {
                             $('#dd').window({
                                 title: '详细数据页面',
-                                width: 800,
-                                height: 600,
+                                width: 700,
+                                height: 500,
                                 modal: true,
                                 href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
                                 onLoad: function () {
