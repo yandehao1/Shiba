@@ -493,9 +493,9 @@ namespace BLL
                     }
                     else if (oPListForSpecimen.Count > 1)
                     {
-                        result = ConvertDicToJsonStr(oPListForSpecimen);
+                       // result = ConvertDicToJsonStr(oPListForSpecimen);
+                        result = FpJsonHelper.DictionaryToJsonString(oPListForSpecimen);
                     }
-
                 }
             }
             return result;
@@ -510,7 +510,8 @@ namespace BLL
             listDic = GetOPInfoListForSpecimenByTimeRangeAndToDicList(dateBegin, dateEnd);
             if (listDic.Count > 0)
             {
-                result = ConvertDicListToJsonStr(listDic);
+                //result = ConvertDicListToJsonStr(listDic);
+                result = Newtonsoft.Json.JsonConvert.SerializeObject(listDic);
             }
             return result;
         }

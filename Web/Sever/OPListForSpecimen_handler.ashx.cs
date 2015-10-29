@@ -244,7 +244,10 @@ namespace RuRo
             //}
             #region 下面是测试数据
             //下面是测试数据
-            context.Response.Write(hospitalDataByBarcode.GetOPListForSpecimenByLocalBracodeFileToJsonStr());
+            //string strData = hospitalDataByBarcode.GetOPListForSpecimenByLocalBracodeFileToJsonStr();
+            string strData = hospitalDataByBarcode.GetDataByBarcode(barcode);
+
+            context.Response.Write(strData);
             //if (barcode == "多行")
             //{
             //    context.Response.Write(hospitalDataByBarcode.GetOPListForSpecimenByLocalDateFileToJsonStr());
@@ -324,8 +327,9 @@ namespace RuRo
 
             #region 下面是测试数据
             //下面是测试数据
-            //string strdata = hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr();
-            context.Response.Write(hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr());
+            //string strData = hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr();
+            string strData = hospitalDataByDate.GetDataByDateTime(begindate,enddate);
+            context.Response.Write(strData);
             #endregion
         }
 
