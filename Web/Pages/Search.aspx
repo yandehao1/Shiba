@@ -95,7 +95,11 @@
                                 href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
                                 onLoad: function () {
                                     var basedata = $.parseJSON(data);
-                                    $("#frmAjax").form("load", basedata);
+                                    if (basedata.success==true) {
+                                        $("#frmAjax").form("load", basedata.result);
+                                    } else {
+                                        ShowMsg(basedata.result)
+                                    }
                                 }
                             });
                         }
@@ -125,7 +129,12 @@
                         else {
                             var loaddata = $.parseJSON(data);
                             //$('#OPListForSpecimen').datagrid('loadData', loaddata);
-                            PagePaging(loaddata);
+                            if (basedata.success == true) {
+                                    PagePaging(loaddata.result);
+                            } else {
+                                ShowMsg(loaddata.result)
+                            }
+                           // PagePaging(loaddata);
                         }
                     }
                 });

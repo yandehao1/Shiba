@@ -119,7 +119,7 @@ namespace BLL
                         if (getDataFromHospitalXml.HasChildNodes)
                         {
                             //创建前台页面Grid的字段数据
-                            string sampleSourceName = "", sampleSourceType = "", sampleSourceDescription = "", patientId = "", patientName = "", scheduledDateTime = "", importStatus = "待导入", diagBeforeOperation="", hiddenXml = getDataFromHospitalStr;
+                            string sampleSourceName = "", sampleSourceType = "", sampleSourceDescription = "", patientId = "", patientName = "", scheduledDateTime = "", importStatus = "待导入", diagBeforeOperation = "", hiddenXml = getDataFromHospitalStr;
                             XmlNodeList xmlnodelist = getDataFromHospitalXml.SelectNodes("/OPListForSpecimen/*");//获取OPListForSpecimen下的所有子节点
                             #region 有子节点返回节点数据
                             if (xmlnodelist.Count > 0)//有子节点返回节点数据
@@ -145,7 +145,7 @@ namespace BLL
                                         case "ScheduledDateTime":
                                             scheduledDateTime = item.InnerText == "" ? "" : item.InnerText;
                                             break;
-                                        case"DiagBeforeOperation":
+                                        case "DiagBeforeOperation":
                                             diagBeforeOperation = item.InnerText;
                                             break;
                                         default:
@@ -154,7 +154,7 @@ namespace BLL
 
                                 }
                                 result.Append("{");
-                                result.AppendFormat("\"sampleSourceName\":\"{0}\",\"sampleSourceTypeName\":\"{1}\",\"sampleSourceDescription\":\"{2}\",\"scheduledDateTime\":\"{3}\",\"patientName\":\"{4}\",\"diagBeforeOperation\":\"{5}\",\"importStatus\":\"{6}\",\"patientId\":\"{7}\"", sampleSourceName, sampleSourceType, sampleSourceDescription, scheduledDateTime, patientName, diagBeforeOperation, importStatus,patientId);
+                                result.AppendFormat("\"sampleSourceName\":\"{0}\",\"sampleSourceTypeName\":\"{1}\",\"sampleSourceDescription\":\"{2}\",\"scheduledDateTime\":\"{3}\",\"patientName\":\"{4}\",\"diagBeforeOperation\":\"{5}\",\"importStatus\":\"{6}\",\"patientId\":\"{7}\"", sampleSourceName, sampleSourceType, sampleSourceDescription, scheduledDateTime, patientName, diagBeforeOperation, importStatus, patientId);
                                 result.Append("}");
 
                             }
@@ -199,7 +199,7 @@ namespace BLL
             return result.ToString();
         }
         #endregion
-       
+
         #region 03.2 将oPListForSpecimen字典数据转换成Json格式的字符串发送到前台页面显示 +private string ConvertDicToJsonStr(Dictionary<string, string> oPListForSpecimenDic)
         /// <summary>
         /// 将oPListForSpecimen字典数据转换成Json格式的字符串
@@ -265,7 +265,7 @@ namespace BLL
 
         }
         #endregion
-        
+
         #region 04.2 将传入的oPListForSpecimen 集合转换成Json格式的字符串 +private string ConvertListDicToJsonStr(List<Dictionary<string, string>> listDic)
         /// <summary>
         /// 将传入的oPListForSpecimen 集合转换成Json格式的字符串
@@ -353,7 +353,7 @@ namespace BLL
             return oPListForSpecimenDic;
         }
         #endregion
-       
+
         #region  03.1 根据条码号获取医院数据并将数据转换成字典 +   public Dictionary<string, string> GetOPListForSpecimenByBarcodeAndToDic(string barcode)
         /// <summary>
         /// 根据条码号获取医院数据并将数据转换成字典
@@ -370,7 +370,7 @@ namespace BLL
             {
                 //02.1 根据条码号调用GetPatientInfoSpecimen方法获取单个人的数据
                 string getDataFromHospitalStr = centerLabServiceSoapClient.GetPatientInfoSpecimen(barcode);
-               // string getDataFromHospitalStr = GetOPListForSpecimenByLocalBracodeFileToJsonStr();//调用本地数据
+                // string getDataFromHospitalStr = GetOPListForSpecimenByLocalBracodeFileToJsonStr();//调用本地数据
                 if (getDataFromHospitalStr != null && getDataFromHospitalStr != "")//有数据并且不为null
                 {
                     //03.将数据转换成xml数据有数据并且能转换成xml文档
@@ -493,7 +493,7 @@ namespace BLL
                     }
                     else if (oPListForSpecimen.Count > 1)
                     {
-                       // result = ConvertDicToJsonStr(oPListForSpecimen);
+                        // result = ConvertDicToJsonStr(oPListForSpecimen);
                         result = FpJsonHelper.DictionaryToJsonString(oPListForSpecimen);
                     }
                 }
@@ -508,10 +508,19 @@ namespace BLL
             string result = "";
             List<Dictionary<string, string>> listDic = new List<Dictionary<string, string>>();
             listDic = GetOPInfoListForSpecimenByTimeRangeAndToDicList(dateBegin, dateEnd);
+            List<RuRo.Model.ZSSY.OPListForSpecimen> list = new List<RuRo.Model.ZSSY.OPListForSpecimen>();
             if (listDic.Count > 0)
             {
                 //result = ConvertDicListToJsonStr(listDic);
-                result = Newtonsoft.Json.JsonConvert.SerializeObject(listDic);
+                foreach (var item in listDic)
+                {
+                    RuRo.Model.ZSSY.OPListForSpecimen model = new RuRo.Model.ZSSY.OPListForSpecimen();
+                    RuRo.Common.ObjAndDic.DicToObject(item, model);
+                    list.Add(model);
+                }
+                //result = Newtonsoft.Json.JsonConvert.SerializeObject(listDic);
+                list.OrderByDescending(a => a.KeepSpecimenSign);
+                result = Newtonsoft.Json.JsonConvert.SerializeObject(list);
             }
             return result;
         }

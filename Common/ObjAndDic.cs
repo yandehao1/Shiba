@@ -48,9 +48,15 @@ namespace RuRo.Common
             PropertyInfo[] pi = t.GetProperties(BindingFlags.Public | BindingFlags.Instance);
             foreach (KeyValuePair<string,string> item in dic)
             {
-
+                foreach (var p in pi)
+                {
+                    if (item.Key ==p.Name)
+                    {
+                        Common.ReflectHelper.SetValue(model, p.Name, item.Value);
+                    }
+                }
             }
-            return new object();
+            return model;
         }
     }
 }

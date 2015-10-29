@@ -327,6 +327,7 @@ namespace RuRo
             //string strdata = hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr();
             //context.Response.Write(hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr());
             #endregion
+
         }
 
 
