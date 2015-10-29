@@ -139,8 +139,8 @@
             else {
                 $('#dd').window({
                     title: 'ÏêÏ¸Êý¾ÝÒ³Ãæ',
-                    width: 800,
-                    height: 600,
+                    width: 700,
+                    height: 500,
                     modal: true,
                     href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
                     onLoad: function () {

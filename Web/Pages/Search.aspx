@@ -83,15 +83,14 @@
                     url: '/Sever/OPListForSpecimen_handler.ashx?mode=qrycode&code=' + code,
                     onSubmit: function () { },
                     success: function (data) {
-                        //alert(data);
                         ajaxLoadEnd();
                         $('#code').textbox('setValue', '');
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
                             $('#dd').window({
                                 title: '详细数据页面',
-                                width: 800,
-                                height: 600,
+                                width: 700,
+                                height: 500,
                                 modal: true,
                                 href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
                                 onLoad: function () {
@@ -109,8 +108,11 @@
         function querybydate() {
             var ksdate = $('#ksrq').textbox('getValue');
             var jsdate = $('#jsrq').textbox('getValue');
+            if (!checkdate(ksdate) || !checkdate(jsdate)) {
+                $.messager.alert('提示', '日期格式不正确', 'error'); return;
+            }
             //if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#ksrq').textbox('clear'); return; }
-            if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); }
+            if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); return; }
             else {
                 ajaxLoading();
                 $.ajax({
