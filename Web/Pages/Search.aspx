@@ -22,7 +22,7 @@
         #SearchForm div{margin:5px}
     </style>
 </head>
-<body style="width: 1000px">
+<body style="width:940px">
     <div class="easyui-panel">
         <form id="SearchForm" runat="server">
             <div style="float: left">
@@ -89,7 +89,7 @@
                         else {
                             $('#dd').window({
                                 title: '详细数据页面',
-                                width: 700,
+                                width: 800,
                                 height: 500,
                                 modal: true,
                                 href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
@@ -112,9 +112,10 @@
         function querybydate() {
             var ksdate = $('#ksrq').textbox('getValue');
             var jsdate = $('#jsrq').textbox('getValue');
-            if (!checkdate(ksdate) || !checkdate(jsdate)) {
-                $.messager.alert('提示', '日期格式不正确', 'error'); return;
-            }
+            if (dateSearch(ksdate, jsdate) == false) {return;}
+            //if (!checkdate(ksdate) || !checkdate(jsdate)) {
+            //    $.messager.alert('提示', '日期格式不正确', 'error'); return;
+            //}
             //if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#ksrq').textbox('clear'); return; }
             if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); return; }
             else {
@@ -128,8 +129,10 @@
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
                             var loaddata = $.parseJSON(data);
+                            PagePaging(loaddata.result);
+                            //PagePaging(loaddata.result);
                             //$('#OPListForSpecimen').datagrid('loadData', loaddata);
-                            if (basedata.success == true) {
+                            if (loaddata.success) {
                                     PagePaging(loaddata.result);
                             } else {
                                 ShowMsg(loaddata.result)

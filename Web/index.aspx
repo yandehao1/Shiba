@@ -28,7 +28,7 @@
         </span>
     </div>
     <div region="south" split="true" style="height: 30px; background: #D2E0F2;">
-        <div class="footer">中山三院生物资源中心</div>
+        <div class="footer">中山三院临床样本资源库</div>
     </div>
     <div region="west" split="true" title="导航菜单" style="width: 180px;" id="nav">
         <div id="nav" class="easyui-accordion" fit="false" border="false">

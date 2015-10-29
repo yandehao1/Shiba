@@ -25,7 +25,7 @@
         <thead>
             <tr>
                 <%--<th field="ck" checkbox="true"></th>--%>
-                <th field="id" width="100"  hidden="true" >id</th>
+                <th field="id" width="10"  hidden="true" >id</th>
                 <th field="PatientId" width="10%" sortable="true">病人唯一标识号</th>
                 <th field="InpNO" width="10%" sortable="true">住院号</th>
                 <th field="VisitId" width="10%" sortable="true">就诊号</th>
@@ -54,14 +54,14 @@
                 <th field="ScheduleId" width="100"  hidden="true">手术id号</th>
                 <th field="DiagBeforeOperation"width="14%" sortable="true">主要诊断</th>
                 <th field="ScheduledDateTime" width="100" hidden="true">预约进行该次手术的日期及时间</th>
-                <th field="KeepSpecimenSign" width="10%" sortable="true">是否留标本</th>
+                <th field="KeepSpecimenSign" width="5%" sortable="true">是否留标本</th>
                 <th field="OperatingRoom" width="100" hidden="true">手术室代码@名称</th>
                 <th field="Surgeon" width="100" hidden="true">手术医师工号@姓名</th>
                 <th field="InPatPreillness" width="100" hidden="true">现病史</th>
                 <th field="InPatPastillness" width="100" hidden="true">既往史</th>
                 <th field="InPatFamillness" width="100" hidden="true">家族史</th>
                 <th field="LabInfo" width="10%" sortable="true">乙肝梅毒等阳性结果</th>
-                <th field="Sex" width="10%" >性别</th>
+                <th field="Sex" width="5%" >性别</th>
             </tr>
         </thead>
     </table>
@@ -139,7 +139,7 @@
             else {
                 $('#dd').window({
                     title: '详细数据页面',
-                    width: 700,
+                    width: 800,
                     height: 500,
                     modal: true,
                     href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',

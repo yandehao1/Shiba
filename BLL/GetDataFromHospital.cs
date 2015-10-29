@@ -516,10 +516,13 @@ namespace BLL
                 {
                     RuRo.Model.ZSSY.OPListForSpecimen model = new RuRo.Model.ZSSY.OPListForSpecimen();
                     RuRo.Common.ObjAndDic.DicToObject(item, model);
+                    if (model.KeepSpecimenSign=="N")
+                    {
+                        model.KeepSpecimenSign = "";
+                    }
                     list.Add(model);
                 }
-                //result = Newtonsoft.Json.JsonConvert.SerializeObject(listDic);
-                list.OrderByDescending(a => a.KeepSpecimenSign);
+                list = list.OrderByDescending(a => a.KeepSpecimenSign).ToList();
                 result = Newtonsoft.Json.JsonConvert.SerializeObject(list);
             }
             return result;

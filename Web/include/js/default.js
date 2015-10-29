@@ -314,25 +314,20 @@ function getdateinterval(dategegin, dateend) {
     return distance;
 };
 //时间验证
-function dateSearch() {
-    var begindate = $('#begindate').datetimebox('getValue')
-    var enddate = $('#enddate').datetimebox('getValue')
+function dateSearch(ksrq,jsrq) {
+    var begindate = ksrq;
+    var enddate = jsrq;
     if (begindate == "") {
-        alert("请输入开始日期");
-        $('begindate').focus;
+        $.messager.alert('提示', '请输入开始日期', 'error'); return false;
     }
     else if (enddate == "") {
-        alert("请输入结束日期");
+        $.messager.alert('提示', '请输入结束日期', 'error'); return false;
     }
     else if (getdateinterval(begindate, enddate) < 0) {
-        alert("结束日期不能小于起始日期");
+        $.messager.alert('提示', '结束日期不能小于起始日期', 'error'); return false;
     }
     else if (getdateinterval(begindate, enddate) > 5) {
-        alert("时间间隔超过5天")
-    }
-    else {
-        $('#dodatesearch').dialog('close');
-        querydatabydate(begindate, enddate);
+        $.messager.alert('提示', '时间间隔超过5天', 'error'); return false;
     }
 }
 //提交日期查询

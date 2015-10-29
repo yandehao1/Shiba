@@ -704,9 +704,6 @@
     <Content Include="ZSSY\SpecimenRt\List.aspx" />
     <Content Include="ZSSY\SpecimenRt\Modify.aspx" />
     <Content Include="ZSSY\SpecimenRt\Show.aspx" />
-    <Content Include="Images\Images\MenuImg\Thumbs.db" />
-    <Content Include="Images\Images\Thumbs.db" />
-    <Content Include="Images\Thumbs.db" />
     <Content Include="MasterPage.master" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />

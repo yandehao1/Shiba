@@ -268,7 +268,7 @@
                 <input class="easyui-combobox" name="sampleSourceType" id="sampleSourceType" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择样品源类型'" />
                 <a href="javascript:void(0)" id="linkbuttonSave" class="easyui-linkbutton" iconcls="icon-ok" onclick="saveForm()">导入</a>
                 <a href="javascript:void(0)" id="linkbuttonClear" class="easyui-linkbutton" iconcls="icon-back" onclick="clearForm();">清空</a>
-                <a href="javascript:void(0)" id="linkbuttonColse" class="easyui-linkbutton" iconcls="icon-cancel" onclick="$('#dlg').dialog('close');">关闭</a>
+<%--                <a href="javascript:void(0)" id="linkbuttonColse" class="easyui-linkbutton" iconcls="icon-cancel" onclick="$('#dlg').dialog('close');">关闭</a>--%>
             </div>
         </div>
     </div>
