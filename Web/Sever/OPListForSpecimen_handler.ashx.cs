@@ -210,41 +210,41 @@ namespace RuRo
         /// 按照条码查询
         /// </summary>
         /// <param name="context"></param>
-        /// <param name="export">是否导出Excel文件</param>
+        /// <param name="export">按照条码查询</param>
         private static void QueryDataCode(HttpContext context, bool export)
         {
             string barcode = context.Request["code"].ToString();
             GetDataFromHospital hospitalDataByBarcode = new GetDataFromHospital();
             ////正常调用医院webservice获取数据时取消注销下面一行
-            //string jsonStrResult = hospitalDataByBarcode.GetDataByBarcode(barcode);
-            //if (jsonStrResult == "")//直接无数据返回（可能是链接有问题）
-            //{
-            //    string result = "{\"success\":false,\"result\":\"获取数据失败，请检查条码号\"}";
-            //    context.Response.Write(result);
-            //    context.Response.End();
-            //}
-            //if (jsonStrResult.Contains("OPListForSpecimen"))
-            //{
-            //    string oPListForSpecimen = FreezerProUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("OPListForSpecimen", jsonStrResult);
-            //    string result = "{\"success\":false,\"result\":" + oPListForSpecimen + "}";
-            //    context.Response.Write(result);
-            //    context.Response.End();
-            //}
-            //if (jsonStrResult.Contains("Name"))
-            //{
-            //    string result = "{\"success\":true,\"result\":" + jsonStrResult + "}";
-            //    context.Response.Write(result);
-            //    context.Response.End();
-            //}
-            //else
-            //{
-            //    string result = "";
-            //    context.Response.Write(result);
-            //    context.Response.End();
-            //}
+            string jsonStrResult = hospitalDataByBarcode.GetDataByBarcode(barcode);
+            if (jsonStrResult == "")//直接无数据返回（可能是链接有问题）
+            {
+                string result = "{\"success\":false,\"result\":\"获取数据失败，请检查条码号\"}";
+                context.Response.Write(result);
+                context.Response.End();
+            }
+            if (jsonStrResult.Contains("OPListForSpecimen"))
+            {
+                string oPListForSpecimen = FreezerProUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("OPListForSpecimen", jsonStrResult);
+                string result = "{\"success\":false,\"result\":" + oPListForSpecimen + "}";
+                context.Response.Write(result);
+                context.Response.End();
+            }
+            if (jsonStrResult.Contains("Name"))
+            {
+                string result = "{\"success\":true,\"result\":" + jsonStrResult + "}";
+                context.Response.Write(result);
+                context.Response.End();
+            }
+            else
+            {
+                string result = "";
+                context.Response.Write(result);
+                context.Response.End();
+            }
             #region 下面是测试数据
             //下面是测试数据
-            context.Response.Write(hospitalDataByBarcode.GetOPListForSpecimenByLocalBracodeFileToJsonStr());
+            //context.Response.Write(hospitalDataByBarcode.GetOPListForSpecimenByLocalBracodeFileToJsonStr());
             //if (barcode == "多行")
             //{
             //    context.Response.Write(hospitalDataByBarcode.GetOPListForSpecimenByLocalDateFileToJsonStr());
@@ -287,45 +287,45 @@ namespace RuRo
         /// 按照日期查询
         /// </summary>
         /// <param name="context"></param>
-        /// <param name="export">是否导出Excel文件</param>
+        /// <param name="export">按照日期查询</param>
         private static void QueryDataDate(HttpContext context, bool export)
         {
             string begindate = context.Request["ksdate"];
             string enddate = context.Request["jsdate"];
             GetDataFromHospital hospitalDataByDate = new GetDataFromHospital();
-            //string jsonStrResult = hospitalDataByDate.GetDataByDateTime(begindate, enddate);
-            //#region 多行数据
-            //#endregion
-            //if (jsonStrResult == "")
-            //{
-            //    string result = "{\"success\":false,\"result\":\"获取数据失败，请检查日期\"}";
-            //    context.Response.Write(result);
-            //    context.Response.End();
-            //}
-            //if (jsonStrResult.Contains("OPListForSpecimenRt"))
-            //{
-            //    string oPListForSpecimen = FreezerProUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("OPListForSpecimenRt", jsonStrResult);
-            //    string result = "{\"success\":false,\"result\":" + oPListForSpecimen + "}";
-            //    context.Response.Write(result);
-            //    context.Response.End();
-            //}
-            //if (jsonStrResult.Contains("Name"))
-            //{
-            //    string result = "{\"success\":true,\"result\":" + jsonStrResult + "}";
-            //    context.Response.Write(result);
-            //    context.Response.End();
-            //}
-            //else
-            //{
-            //    string result = "";
-            //    context.Response.Write(result);
-            //    context.Response.End();
-            //}
+            string jsonStrResult = hospitalDataByDate.GetDataByDateTime(begindate, enddate);
+            #region 多行数据
+            #endregion
+            if (jsonStrResult == "")
+            {
+                string result = "{\"success\":false,\"result\":\"获取数据失败，请检查日期\"}";
+                context.Response.Write(result);
+                context.Response.End();
+            }
+            if (jsonStrResult.Contains("OPListForSpecimenRt"))
+            {
+                string oPListForSpecimen = FreezerProUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("OPListForSpecimenRt", jsonStrResult);
+                string result = "{\"success\":false,\"result\":" + oPListForSpecimen + "}";
+                context.Response.Write(result);
+                context.Response.End();
+            }
+            if (jsonStrResult.Contains("Name"))
+            {
+                string result = "{\"success\":true,\"result\":" + jsonStrResult + "}";
+                context.Response.Write(result);
+                context.Response.End();
+            }
+            else
+            {
+                string result = "";
+                context.Response.Write(result);
+                context.Response.End();
+            }
 
             #region 下面是测试数据
             //下面是测试数据
             //string strdata = hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr();
-            context.Response.Write(hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr());
+            //context.Response.Write(hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr());
             #endregion
         }
 
