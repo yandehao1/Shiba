@@ -293,9 +293,10 @@ namespace RuRo
             string begindate = context.Request["ksdate"];
             string enddate = context.Request["jsdate"];
             GetDataFromHospital hospitalDataByDate = new GetDataFromHospital();
-            string jsonStrResult = hospitalDataByDate.GetDataByDateTime(begindate, enddate);
-            #region 多行数据
-            #endregion
+            //string jsonStrResult = hospitalDataByDate.GetDataByDateTime(begindate, enddate);
+            string jsonStrResult = hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr();//测试数据
+            //#region 多行数据
+            //#endregion
             if (jsonStrResult == "")
             {
                 string result = "{\"success\":false,\"result\":\"获取数据失败，请检查日期\"}";
@@ -315,17 +316,17 @@ namespace RuRo
                 context.Response.Write(result);
                 context.Response.End();
             }
-            else
-            {
-                string result = "";
-                context.Response.Write(result);
-                context.Response.End();
-            }
+            //else
+            //{
+            //    string result = "";
+            //    context.Response.Write(result);
+            //    context.Response.End();
+            //}
 
             #region 下面是测试数据
             //下面是测试数据
             //string strdata = hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr();
-            //context.Response.Write(hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr());
+            context.Response.Write(hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr());
             #endregion
 
         }

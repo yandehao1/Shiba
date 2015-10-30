@@ -24,7 +24,7 @@
         selectoncheck="true" checkonselect="true" remoteSort="false" multiSort="true">
         <thead>
             <tr>
-                <%--<th field="ck" checkbox="true"></th>--%>
+                <th field="ck" checkbox="true"></th>
                 <th field="id" width="10"  hidden="true" >id</th>
                 <th field="PatientId" width="10%" sortable="true">病人唯一标识号</th>
                 <th field="InpNO" width="10%" sortable="true">住院号</th>
@@ -47,7 +47,8 @@
                 <th field="NextOfKinAddr" width="100" hidden="true">联系人地址</th>
                 <th field="NextOfKinZipCode" width="100" hidden="true">联系人邮政编码</th>
                 <th field="NextOfKinPhome" width="100" hidden="true">联系人电话号码</th>
-                <th field="DeptCode" width="15%" sortable="true">科室代码@名称</th>
+                <th field="DeptCode" width="15%" sortable="true" hidden="true">科室代码@名称</th>
+                <th field="DeptCodeName" width="15%" sortable="true">名称</th>
                 <th field="BedNO" width="100" hidden="true">病人所住床号</th>
                 <th field="AdmissionDateTime" width="100" hidden="true">入院日期及时间</th>
                 <th field="DoctorInCharge" width="100" hidden="true">主治医生工号@姓名</th>
@@ -71,13 +72,7 @@
         <table style="width: 100%;">
             <tr>
                 <!--button按钮工具栏-->
-                <td style="text-align: right;">
-<%--                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonInfo" iconcls="icon-search" plain="false" onclick="infoForm();">查看</a>
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonAdd" iconcls="icon-add" plain="false" onclick="newForm();">添加</a>
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonEdit" iconcls="icon-edit" plain="false" onclick="editForm();">编辑</a>
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonDel" iconcls="icon-cancel" plain="false" onclick="destroy();">删除</a>
-                    <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonExport" iconcls="icon-save" plain="false" onclick="exportData();">导出</a>--%>
-                </td>
+                <td style="text-align: right;"></td>
             </tr>
         </table>
     </div>
@@ -89,7 +84,7 @@
         $(function () {
             //绑定双击行事件
             $('#OPListForSpecimen').datagrid({
-                onDblClickRow:function(rowIndex,rowData) {
+                onDblClickRow: function (rowIndex, rowData) {
                     showData(rowData);
                 }
             });
@@ -100,8 +95,12 @@
                 }
             })
         })
-        
+
         function PagePaging(loaddata) {
+            for (var i = 0; i < loaddata.length; i++) {
+                var text = loaddata[i].DeptCode.split("-");
+                loaddata[i].DeptCodeName = text[1];
+            }
             $("#OPListForSpecimen").datagrid({
                 data: loaddata.slice(0, 10)
             });
@@ -123,17 +122,7 @@
             //alert('排序，要写...'+sort+':'+order);
         }
         var url;
-        /*新增表单*/
-        function newForm() {
-            $('#dlg').dialog({
-                title: 'OPListForSpecimen-添加数据',
-                width: 650,
-                height: 450,
-                closed: false,
-                cache: false,
-                href: 'OPListForSpecimen_info.aspx?mode=ins'
-            });
-        }
+
         function showData(rowData) {
             if (!rowData) { $.messager.alert('提示', '请检查数据是否存在！', 'error'); }
             else {
@@ -243,19 +232,6 @@
             var Parm = getSearchParm();//获得查询条件参数构建，用URL传递查询参数
             var QryUrl = 'OPListForSpecimen_handler.ashx?mode=qry&' + Parm;
             $('#datagrid').datagrid({ url: QryUrl });
-        }
-
-        /*导出数据*/
-        function exportData() {
-            var Parm = getSearchParm();//获得查询条件参数构建，用URL传递查询参数
-            var QryUrl = 'OPListForSpecimen_handler.ashx?mode=exp&' + Parm;
-            $.post(QryUrl, function (result) {
-                if (result.success) {
-                    window.location.href = result.msg;
-                } else {
-                    $.messager.alert('错误', result.msg, 'warning');
-                }
-            }, 'json');
         }
         /*关闭dialog重新加载datagrid数据*/
         $('#dlg').dialog({

@@ -705,7 +705,6 @@
     <Content Include="ZSSY\SpecimenRt\Modify.aspx" />
     <Content Include="ZSSY\SpecimenRt\Show.aspx" />
     <Content Include="MasterPage.master" />
-    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
