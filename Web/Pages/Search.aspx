@@ -16,9 +16,7 @@
     <script type="text/javascript" src="../include/js/default.js"></script>
     <script type="text/javascript" src="../include/js/page.js"></script>
     <style type="text/css">
-        #SearchForm {
-           margin: 5px;
-        }
+        #SearchForm {margin: 5px;}
         #SearchForm div{margin:5px}
     </style>
 </head>
@@ -30,6 +28,7 @@
                     <select id="ss" class="easyui-combobox" name="dept" style="width: 130px;">
                         <option value="1">编码</option>
                         <option value="2">日期</option>
+                        <option value="3">批量扫码</option>
                     </select>
             </div>
             <div id="getcode" style="float: left">
@@ -113,10 +112,7 @@
             var ksdate = $('#ksrq').textbox('getValue');
             var jsdate = $('#jsrq').textbox('getValue');
             if (dateSearch(ksdate, jsdate) == false) {return;}
-            //if (!checkdate(ksdate) || !checkdate(jsdate)) {
-            //    $.messager.alert('提示', '日期格式不正确', 'error'); return;
-            //}
-            //if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#ksrq').textbox('clear'); return; }
+            if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error');  return; }
             if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); return; }
             else {
                 ajaxLoading();
@@ -129,9 +125,6 @@
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
                             var loaddata = $.parseJSON(data);
-                            PagePaging(loaddata.result);
-                            //PagePaging(loaddata.result);
-                            //$('#OPListForSpecimen').datagrid('loadData', loaddata);
                             if (loaddata.success) {
                                     PagePaging(loaddata.result);
                             } else {
