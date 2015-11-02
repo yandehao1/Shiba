@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using DAL;
 using Model;
+using System.Data;
 namespace BLL
 {
     public class Respond
@@ -77,11 +78,15 @@ namespace BLL
             //1、回发根据日期查询到的样本
             //检查数据库中当前用户最后一次更新的时间
             //获取当前用户
-            string username = GetUserName();
-            DateTime datetime = fpExtendDatabase.GetSpecimenRtLogLastPostBackDate(username);
+           
+           // string username = GetUserName();
+            string username =RuRo.Common.CookieHelper.GetCookieValue("username");
+           // DateTime datetime = fpExtendDatabase.GetSpecimenRtLogLastPostBackDate(username);
+            DateTime datetime = fpExtendDatabase.GetSpecimenRtLogLastPostBackforDate(username);
             if (datetime.CompareTo(DateTime.Now.AddDays(-1)) <= 0)
             {
-                string date = string.Format("{0},{1}", fpExtendDatabase.GetSpecimenRtLogLastPostBackDate(username).ToString("yyyy.MM.dd"), DateTime.Now.AddDays(-1).ToString("yyyy.MM.dd"));
+                string date = string.Format("{0},{1}", datetime.ToString("yyyy.MM.dd"), DateTime.Now.AddDays(-1).ToString("yyyy.MM.dd"));
+                //string date = string.Format("{0},{1}", fpExtendDatabase.GetSpecimenRtLogLastPostBackDate(username).ToString("yyyy.MM.dd"), DateTime.Now.AddDays(-1).ToString("yyyy.MM.dd"));
                 HFSamples_By_Date(date);
             }
             //2、回发被删除的样本
@@ -90,6 +95,36 @@ namespace BLL
             HFWithSamples_Out();
             //都要使用到：回发、从数据库查询数据、从Fp中查询数据
             //单条回发
+        }
+        public static DataSet GetSpecimenRtLogGetdata() 
+        {
+            DAL.FpExtendDatabaseHelper hh=new FpExtendDatabaseHelper();
+            string username = RuRo.Common.CookieHelper.GetCookieValue("username");
+            DataSet ds =hh.GetSpecimenRtLogGetdata(username);
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                if (ds.Tables[0].Rows[i]["username"]== null)
+                {
+                    ds.Tables[0].Rows[i]["username"] = "";
+                }
+                if (ds.Tables[0].Rows[i]["PatiendId"]== null)
+                {
+                    ds.Tables[0].Rows[i]["PatiendId"] = "";
+                }
+                if (ds.Tables[0].Rows[i]["SampleId"]== null)
+                {
+                    ds.Tables[0].Rows[i]["SampleId"] = "";
+                }
+                if (ds.Tables[0].Rows[i]["PostBackStatus"]== null)
+                {
+                    ds.Tables[0].Rows[i]["PostBackStatus"] = "";
+                }
+                if (ds.Tables[0].Rows[i]["PostBackDate"]== null)
+                {
+                    ds.Tables[0].Rows[i]["PostBackDate"] = "";
+                }
+            }
+            return ds;
         }
         private void HFSamples_By_Date(string date)
         {
@@ -116,7 +151,6 @@ namespace BLL
                     string otherInfo = Common.FpJsonHelper.DictionaryToJsonString(dic);
                     specimen.OtherInfo = OtherInfo(otherInfo);//添加其他信息（样本类型、总管数、样本创建时间、样本保存时间、样本可用管数、样本出库在外的管数）
                     Get_SpecimenRt(source_id, specimen);
-
                 }
             }
         }

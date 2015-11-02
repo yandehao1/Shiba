@@ -42,10 +42,7 @@ namespace FreezerProPlugin
             //{
 
             //}
-            if (context.Request.Params["action"] == "respondhis")
-            {
-                StarRespond();
-            }
+
         }
 
         public void StarRespond()

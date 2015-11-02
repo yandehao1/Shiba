@@ -38,12 +38,12 @@
                     <li>
                         <div><a target="mainFrame" rel="Pages/Search.aspx"><span></span>查询信息</a></div>
                     </li>
-<%--                    <li>
-                        <div><a target="mainFrame" rel="Pages/NormalLisReport_list_F.aspx"><span></span>回发数据</a></div>
+                    <li>
+                        <div><a target="mainFrame" rel="Pages/ResHis.aspx"><span></span>回发数据</a></div>
                     </li>
                     <li>
                         <div><a target="mainFrame" rel="Pages/NormalLisReport_list_F.aspx"><span></span>查看检测信息</a></div>
-                    </li>--%>
+                    </li>
                 </ul>
             </div>
         </div>
