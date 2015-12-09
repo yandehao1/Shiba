@@ -60,7 +60,7 @@
 	    alert('loadLogData');
 	}
 	function resHis() {
-	    alert('resHis');
+	    $.post('RespondHis.ashx', { action: respondhis })
 	}
 	function searchData(){
 		/*兼顾导出Excel公用条件，在这里datagrid不用load函数加载参数，直接用URL传递参数*/

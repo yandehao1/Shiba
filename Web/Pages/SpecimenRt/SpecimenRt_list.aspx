@@ -19,7 +19,7 @@
 </head>
 <body>
 <!--datagrid栏--> 
-<table id="datagrid" title="主要作用是用于判断是否需要回发给His" class="easyui-datagrid" style="width:auto;height:460px"
+<table id="datagrid" title="回发数据" class="easyui-datagrid" style="width:auto;height:460px"
              url="SpecimenRt_handler.ashx?mode=qry" fit='false'
              pagination="true" idField="id" rownumbers="true" 
              fitColumns="true"  singleSelect="true" toolbar="#toolbar"
@@ -79,7 +79,7 @@
 	/*新增表单*/
 	function newForm(){
 		$('#dlg').dialog({    
-            title: '主要作用是用于判断是否需要回发给His-添加数据',    
+            title: '添加数据',    
             width: 650, 
             height: 450,    
             closed: false,  
@@ -95,7 +95,7 @@
 	       if(rows.length==1){
 				var row = $('#datagrid').datagrid('getSelected');
 				$('#dlg').dialog({    
-                    title: '主要作用是用于判断是否需要回发给His-查看数据',    
+                    title: '查看数据',    
                     width: 650,    
                     height: 450,    
                     closed: false,    

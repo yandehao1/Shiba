@@ -2,7 +2,7 @@
 using System.Text;
 using System.IO;
 
-namespace Common
+namespace RuRo.Common
 {
     /// <summary>
     /// 文件操作夹

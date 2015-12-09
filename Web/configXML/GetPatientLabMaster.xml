@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Response>
+  <ResultCode>0</ResultCode>
+  <ResultContent>数据提取成功</ResultContent>
+  <PatientId>0002180798</PatientId>
+  <VisitId>IP0000327373</VisitId>
+  <Name>刘锦田</Name>
+  <LabTestMasters>
+    <LabTestMaster>
+      <TestNo>14127391</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||4</WorkingId>
+      <TestCause>血常规(五分类)</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>全血</Specimen>
+      <SpcmReceivedDateTime>2015-12-01 07:55</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162401</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-01 08:45</ResultsRptDateTime>
+      <transcriptionist>053036</transcriptionist>
+      <VerifiedBy>830563</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14127392</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||5</WorkingId>
+      <TestCause>尿常规(套)</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>小便</Specimen>
+      <SpcmReceivedDateTime>2015-12-01 10:04</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162401</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-01 10:58</ResultsRptDateTime>
+      <transcriptionist></transcriptionist>
+      <VerifiedBy>830551</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14127393</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||6</WorkingId>
+      <TestCause>大便常规三项(含潜血)</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>大便</Specimen>
+      <SpcmReceivedDateTime>2015-12-01 10:03</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162401</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-01 10:55</ResultsRptDateTime>
+      <transcriptionist>P60625</transcriptionist>
+      <VerifiedBy>P60485</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14127394</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||7</WorkingId>
+      <TestCause>生化全套（33项）</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>血清</Specimen>
+      <SpcmReceivedDateTime>2015-12-01 08:10</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162402</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-01 09:23</ResultsRptDateTime>
+      <transcriptionist></transcriptionist>
+      <VerifiedBy>830566</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14127395</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||8</WorkingId>
+      <TestCause>凝血四项</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>血浆</Specimen>
+      <SpcmReceivedDateTime>2015-12-01 07:56</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162401</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-01 10:36</ResultsRptDateTime>
+      <transcriptionist></transcriptionist>
+      <VerifiedBy>830549</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14127396</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||9</WorkingId>
+      <TestCause>肿瘤三项</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>血清</Specimen>
+      <SpcmReceivedDateTime>2015-12-01 08:37</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>1518</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-01 15:11</ResultsRptDateTime>
+      <transcriptionist>L09013</transcriptionist>
+      <VerifiedBy>L070134</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14127397</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||10</WorkingId>
+      <TestCause>糖类抗原测定CA19-9(化学发光法)</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>血清</Specimen>
+      <SpcmReceivedDateTime>2015-12-01 08:27</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162404</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-01 11:09</ResultsRptDateTime>
+      <transcriptionist>830554</transcriptionist>
+      <VerifiedBy>830546</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14221841</TestNo>
+      <priorityIndicator>即刻医嘱</priorityIndicator>
+      <WorkingId>13766938||174</WorkingId>
+      <TestCause>血常规(五分类)</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>全血</Specimen>
+      <SpcmReceivedDateTime>2015-12-08 22:23</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162401</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-08 22:36</ResultsRptDateTime>
+      <transcriptionist></transcriptionist>
+      <VerifiedBy>P11239</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14221842</TestNo>
+      <priorityIndicator>即刻医嘱</priorityIndicator>
+      <WorkingId>13766938||175</WorkingId>
+      <TestCause>生化全套（33项）</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>血清</Specimen>
+      <SpcmReceivedDateTime>2015-12-08 22:23</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162402</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-08 22:52</ResultsRptDateTime>
+      <transcriptionist></transcriptionist>
+      <VerifiedBy>P11239</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14221843</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||176</WorkingId>
+      <TestCause>血常规(五分类)</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>全血</Specimen>
+      <SpcmReceivedDateTime>2015-12-09 07:57</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162401</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-09 08:44</ResultsRptDateTime>
+      <transcriptionist>P10007</transcriptionist>
+      <VerifiedBy>830563</VerifiedBy>
+    </LabTestMaster>
+    <LabTestMaster>
+      <TestNo>14221844</TestNo>
+      <priorityIndicator>临时医嘱</priorityIndicator>
+      <WorkingId>13766938||177</WorkingId>
+      <TestCause>生化全套（33项）</TestCause>
+      <RelevantClinicDiag>直肠恶性肿瘤</RelevantClinicDiag>
+      <Specimen>血清</Specimen>
+      <SpcmReceivedDateTime>2015-12-09 08:08</SpcmReceivedDateTime>
+      <OrderingDept>13030101</OrderingDept>
+      <orderingProvider>830141</orderingProvider>
+      <PerformedBy>162402</PerformedBy>
+      <ResultStatus>确认报告</ResultStatus>
+      <ResultsRptDateTime>2015-12-09 10:06</ResultsRptDateTime>
+      <transcriptionist>830568</transcriptionist>
+      <VerifiedBy>830566</VerifiedBy>
+    </LabTestMaster>
+  </LabTestMasters>
+</Response>

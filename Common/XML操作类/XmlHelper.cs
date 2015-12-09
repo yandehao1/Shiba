@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 using System;
 using System.Text;
 
-namespace Common
+namespace RuRo.Common
 {
     public class XmlHelper
     {
@@ -711,6 +711,19 @@ namespace Common
             { }
             return xmldoc;
         }
+        public static XmlDocument XMLLoad(string xmlStr, ref bool b)
+        {
+            XmlDocument xmlHospitalDt = new XmlDocument();
+            StringBuilder strXml = new StringBuilder();
+            b = true;
+            try
+            {
+                string xmlHead = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+                xmlHospitalDt.LoadXml(xmlHead + xmlStr);
+            }
+            catch (Exception ex) { xmlHospitalDt = null; b = false; }
+            return xmlHospitalDt;
+        } 
         /// <summary>
         /// 返回完整路径
         /// </summary>

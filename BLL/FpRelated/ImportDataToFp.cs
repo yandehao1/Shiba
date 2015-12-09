@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml;
 using Common;
 using System.IO;
+using RuRo.Common;
 
 namespace BLL
 {

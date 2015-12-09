@@ -23,7 +23,7 @@ namespace RuRo.Web.ZSSY.LabTestMaster
             {
                 gridView.BorderColor = ColorTranslator.FromHtml(Application[Session["Style"].ToString() + "xtable_bordercolorlight"].ToString());
                 gridView.HeaderStyle.BackColor = ColorTranslator.FromHtml(Application[Session["Style"].ToString() + "xtable_titlebgcolor"].ToString());
-                btnDelete.Attributes.Add("onclick", "return confirm(\"你确认要删除吗？\")");
+               // btnDelete.Attributes.Add("onclick", "return confirm(\"你确认要删除吗？\")");
                 BindData();
             }
         }
@@ -66,8 +66,8 @@ namespace RuRo.Web.ZSSY.LabTestMaster
             StringBuilder strWhere = new StringBuilder();
             if (txtKeyword.Text.Trim() != "")
             {      
-                #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
-                //strWhere.AppendFormat("keywordField like '%{0}%'", txtKeyword.Text.Trim());
+               // #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
+                strWhere.AppendFormat("TestNo like '%{0}%'", txtKeyword.Text.Trim());
             }            
             ds = bll.GetList(strWhere.ToString());            
             gridView.DataSource = ds;
@@ -91,8 +91,8 @@ namespace RuRo.Web.ZSSY.LabTestMaster
             e.Row.Attributes.Add("style", "background:#FFF");
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                LinkButton linkbtnDel = (LinkButton)e.Row.FindControl("LinkButton1");
-                linkbtnDel.Attributes.Add("onclick", "return confirm(\"你确认要删除吗\")");
+                //LinkButton linkbtnDel = (LinkButton)e.Row.FindControl("LinkButton1");
+                //linkbtnDel.Attributes.Add("onclick", "return confirm(\"你确认要删除吗\")");
                 
                 //object obj1 = DataBinder.Eval(e.Row.DataItem, "Levels");
                 //if ((obj1 != null) && ((obj1.ToString() != "")))

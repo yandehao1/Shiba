@@ -10,6 +10,6 @@
 namespace RuRo {
     
     
-    public partial class SpecimenRt_list {
+    public partial class LabTestResult_list {
     }
 }

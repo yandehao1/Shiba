@@ -71,6 +71,8 @@
     </Content>
     <Content Include="configXML\WS.ForCenterLabServiceByBarcode.xml" />
     <Content Include="configXML\WS.ForCenterLabServiceByDate.xml" />
+    <Content Include="configXML\GetPatientLabMaster.xml" />
+    <Content Include="configXML\GetLabTestResult.xml" />
     <Content Include="Controls\checkright.ascx" />
     <Content Include="Controls\copyright.ascx" />
     <Content Include="default-old.aspx" />
@@ -671,6 +673,11 @@
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\LabTest.aspx" />
+    <Content Include="Pages\LabTestMaster\LabTestMaster_info.aspx" />
+    <Content Include="Pages\LabTestMaster\LabTestMaster_list.aspx" />
+    <Content Include="Pages\LabTestResult\LabTestResult_info.aspx" />
+    <Content Include="Pages\LabTestResult\LabTestResult_list.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx" />
     <Content Include="Pages\ResHis.aspx" />
@@ -788,6 +795,41 @@
     <Compile Include="MasterPage.master.designer.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\LabTest.aspx.cs">
+      <DependentUpon>LabTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LabTest.aspx.designer.cs">
+      <DependentUpon>LabTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LabTestMaster\LabTestMaster_info.aspx.cs">
+      <DependentUpon>LabTestMaster_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LabTestMaster\LabTestMaster_info.aspx.designer.cs">
+      <DependentUpon>LabTestMaster_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LabTestMaster\LabTestMaster_list.aspx.cs">
+      <DependentUpon>LabTestMaster_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LabTestMaster\LabTestMaster_list.aspx.designer.cs">
+      <DependentUpon>LabTestMaster_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LabTestResult\LabTestResult_info.aspx.cs">
+      <DependentUpon>LabTestResult_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LabTestResult\LabTestResult_info.aspx.designer.cs">
+      <DependentUpon>LabTestResult_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LabTestResult\LabTestResult_list.aspx.cs">
+      <DependentUpon>LabTestResult_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LabTestResult\LabTestResult_list.aspx.designer.cs">
+      <DependentUpon>LabTestResult_list.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx.cs">
       <DependentUpon>OPListForSpecimen_info.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -833,6 +875,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespondHis.ashx.cs">
       <DependentUpon>RespondHis.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Sever\LabTest.ashx.cs">
+      <DependentUpon>LabTest.ashx</DependentUpon>
     </Compile>
     <Compile Include="Sever\OPListForSpecimen_handler.ashx.cs">
       <DependentUpon>OPListForSpecimen_handler.ashx</DependentUpon>
@@ -1030,6 +1075,7 @@
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Sever\OPListForSpecimen_handler.ashx" />
     <Content Include="Sever\SpecimenRtLog_handler.ashx" />
+    <Content Include="Sever\LabTest.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

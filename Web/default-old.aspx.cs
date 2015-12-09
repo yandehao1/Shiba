@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Common;
 using System.Data;
 using System.Text;
+using RuRo.Common;
 
 namespace FreezerProPlugin
 {

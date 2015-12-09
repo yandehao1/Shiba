@@ -36,7 +36,7 @@ namespace BLL
         /// <returns>OPListForSpecimen节点下的数据</returns>
         public static string HospitalXmlFileToXmlStr(string path)
         {
-            XmlDocument xd = Common.XmlHelper.XMLLoad(path);
+            XmlDocument xd = RuRo.Common.XmlHelper.XMLLoad(path);
             //string xn = xd.SelectSingleNode("/OPListForSpecimen").InnerText;//有问题，未将对象应用到实例
             string xn = xd.InnerText;
             //StringBuilder xmlStr = new StringBuilder();

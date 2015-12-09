@@ -9,8 +9,7 @@ namespace FreezerProUtility.Fp_Common
 {
     public class FpJsonHelper
     {
-
-        #region 取API返回的数据中的文本对象,比如Total + public static string stringToobject(string str, string json)
+#region 取API返回的数据中的文本对象,比如Total + public static string stringToobject(string str, string json)
         /// <summary>
         /// 取API返回的数据中的文本对象,比如Total
         /// </summary>

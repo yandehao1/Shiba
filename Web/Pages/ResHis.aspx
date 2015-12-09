@@ -21,12 +21,12 @@
         <div id="funcTool"></div>
         <div>
         </div>
-        <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'SpecimenRt/SpecimenRtLog_list.aspx'"></div>
+        <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'ZSSY/SpecimenRtLog/List.aspx'"></div>
     </div>
     <script type="text/javascript">
-        function reshis() {
-            $.post('RespondHis.ashx', { action: respondhis })
-        }
+        //function reshis() {
+        //    $.post('RespondHis.ashx', { action: respondhis })
+        //}
     </script>
 </body>
 </html>

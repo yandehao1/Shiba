@@ -3,7 +3,7 @@ using System.Data;
 using System.IO;
 using System.Xml;
 
-namespace Common
+namespace RuRo.Common
 {
     public class XMLProcess
     {

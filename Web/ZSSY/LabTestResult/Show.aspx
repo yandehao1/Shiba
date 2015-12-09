@@ -30,7 +30,7 @@
 	</td></tr>
 	<tr>
 	<td height="25" width="30%" align="right">
-		N-正常L-低H-高
+		正常-N低-L高-H
 	：</td>
 	<td height="25" width="*" align="left">
 		<asp:Label id="lblAbnormalIndicator" runat="server"></asp:Label>
