@@ -6,6 +6,8 @@ using System.Text;
 using System.Data.Entity;
 using Model;
 using RuRo.Model;
+using System.Data;
+using System.Data.SqlClient;
 namespace DAL
 {
     /// <summary>
@@ -66,6 +68,20 @@ namespace DAL
             }
             return date;
         }
+
+        public DateTime GetSpecimenRtLogLastPostBackforDate(string username) 
+        {
+            string sqlstr = "SELECT TOP 1 PostBackDate  FROM SpecimenRtLog WHERE username='" + username + "'ORDER BY PostBackDate desc";
+            DateTime dt=(DateTime)Maticsoft.DBUtility.DbHelperSQL.GetSingle(sqlstr);
+            return dt;
+        }
+        public DataSet GetSpecimenRtLogGetdata(string username)
+        {
+            string sqlstr = "SELECT TOP 300 *  FROM SpecimenRtLog WHERE username='" + username + "'ORDER BY id desc";
+            DataSet ds = Maticsoft.DBUtility.DbHelperSQL.Query(sqlstr);
+            return ds;
+        }
+
         #endregion
 
         #region  添加SpecimenRt +  public void AddToSpecimenRt(SpecimenRt specimenRt)

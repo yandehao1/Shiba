@@ -7,11 +7,9 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.Collections.Generic;
 using System.Text;
+using BLL;
 namespace RuRo
 {
-    /// <summary>
-    /// HttpHandler处理程序基础代码由科发EasyUi代码生成器v3.5(build 20140519)代码生成器生成,免费版自动增加版权注释,请保留版权信息，尊重作者劳动成果，如您有更好的建议请发至邮箱：843330160@qq.com
-    /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     public class SpecimenRtLog_handler : IHttpHandler
@@ -44,9 +42,18 @@ namespace RuRo
                         break;
                 }
             }
-            else 
-                QueryData(context, false);
+            if (context.Request.Params["action"] == "respondhis")
+            {
+                StarRespond();
+            }
         }
+
+        public void StarRespond()
+        {
+            Respond respond = new Respond();
+            respond.RespondHis();
+        }
+
 
         /// <summary>
         /// 查询info数据实体类
@@ -184,42 +191,42 @@ namespace RuRo
         private static void QueryData(HttpContext context, bool export)
         {
             #region 获取Jquery回传Server分页页码和每页行数
-            int page,rows;
-            if (context.Request["page"] != null)
-               page = int.Parse(context.Request["page"]);
-            else
-               page = 1; 
-            if (context.Request["rows"]!= null)
-                rows = int.Parse(context.Request["rows"]);
-            else
-                rows = 10;
+            //int page, rows;
+            //if (context.Request["page"] != null)
+            //    page = int.Parse(context.Request["page"]);
+            //else
+            //    page = 1;
+            //if (context.Request["rows"] != null)
+            //    rows = int.Parse(context.Request["rows"]);
+            //else
+            //    rows = 10;
             #endregion
 
             #region 获取Jquery回传查询条件参数
-            string strWhere = " 1=1 ";
-            if (context.Request["so_keywords"] != null)
-            {
-                string strKeywords = context.Request["so_keywords"];
-                if (strKeywords.Length > 0)
-                {
-                    strWhere += " and (";
-                    strWhere += " id like '%" + strKeywords + "%'";
-                    strWhere += " or username like '%" + strKeywords + "%'";
-                    strWhere += " or patiendid like '%" + strKeywords + "%'";
-                    strWhere += " or sampleid like '%" + strKeywords + "%'";
-                    strWhere += " or postbackstatus like '%" + strKeywords + "%'";
-                    strWhere += ")";
-                }
-            }
+            //string strWhere = " 1=1 ";
+            //if (context.Request["so_keywords"] != null)
+            //{
+            //    string strKeywords = context.Request["so_keywords"];
+            //    if (strKeywords.Length > 0)
+            //    {
+            //        strWhere += " and (";
+            //        strWhere += " id like '%" + strKeywords + "%'";
+            //        strWhere += " or username like '%" + strKeywords + "%'";
+            //        strWhere += " or patiendid like '%" + strKeywords + "%'";
+            //        strWhere += " or sampleid like '%" + strKeywords + "%'";
+            //        strWhere += " or postbackstatus like '%" + strKeywords + "%'";
+            //        strWhere += ")";
+            //    }
+            //}
             #endregion
 
             #region 字段排序
-            string sort = "id";
-            string order = "asc";
-            if (context.Request["sort"] != null)
-                sort = context.Request["sort"];
-            if (context.Request["order"] != null)
-                order = context.Request["order"];
+            //string sort = "id";
+            //string order = "asc";
+            //if (context.Request["sort"] != null)
+            //    sort = context.Request["sort"];
+            //if (context.Request["order"] != null)
+            //    order = context.Request["order"];
             #endregion
 
             #region 分页数据
@@ -257,9 +264,12 @@ namespace RuRo
             //}
             //else
             //{
-            //    string strJson = JSONHelper.CreateJsonParameters(m_dtTable,true, pageAction.RdCount);
+            //    string strJson = JSONHelper.CreateJsonParameters(m_dtTable, true, pageAction.RdCount);
             //    context.Response.Write(strJson);
             //}
+            DataSet ds = Respond.GetSpecimenRtLogGetdata();
+            string strJson = FreezerProUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
+            context.Response.Write(strJson);
         }
         /// <summary>
         /// FusionChart统计图格式化字符串
