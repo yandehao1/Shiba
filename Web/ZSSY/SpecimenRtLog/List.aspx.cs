@@ -13,9 +13,6 @@ namespace RuRo.Web.ZSSY.SpecimenRtLog
 {
     public partial class List : Page
     {
-        
-        
-        
 		RuRo.BLL.ZSSY.SpecimenRtLog bll = new RuRo.BLL.ZSSY.SpecimenRtLog();
 
         protected void Page_Load(object sender, EventArgs e)

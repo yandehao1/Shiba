@@ -28,7 +28,7 @@
                     <select id="ss" class="easyui-combobox" name="dept" style="width: 130px;">
                         <option value="1">编码</option>
                         <option value="2">日期</option>
-                        <option value="3">批量扫码</option>
+                       <%-- <option value="3">批量扫码</option>--%>
                     </select>
             </div>
             <div id="getcode" style="float: left">

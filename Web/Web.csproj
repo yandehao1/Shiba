@@ -680,7 +680,7 @@
     <Content Include="Pages\LabTestResult\LabTestResult_list.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx" />
-    <Content Include="Pages\ResHis.aspx" />
+    <Content Include="ZSSY\SpecimenRtLog\ResHis.aspx" />
     <Content Include="Pages\Search.aspx" />
     <Content Include="Pages\SpecimenRt\SpecimenRtLog_list.aspx" />
     <Content Include="Pages\SpecimenRt\SpecimenRt_list.aspx" />
@@ -844,11 +844,11 @@
     <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx.designer.cs">
       <DependentUpon>OPListForSpecimen_list.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ResHis.aspx.cs">
+    <Compile Include="ZSSY\SpecimenRtLog\ResHis.aspx.cs">
       <DependentUpon>ResHis.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\ResHis.aspx.designer.cs">
+    <Compile Include="ZSSY\SpecimenRtLog\ResHis.aspx.designer.cs">
       <DependentUpon>ResHis.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Search.aspx.cs">

@@ -14,14 +14,11 @@
     <link rel="stylesheet" type="text/css" href="../../include/css/kfmis.css" />
     <script type="text/javascript" src="../../include/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="../include/js/loading.js"></script>
-    <%--<script type="text/javascript" src="../../include/js/page.js"></script>--%>
 </head>
 <body>
     <div id="main">
         <div id="funcTool"></div>
-        <div>
-        </div>
-        <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'ZSSY/SpecimenRtLog/List.aspx'"></div>
+        <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'/ZSSY/SpecimenRtLog/List.aspx'"></div>
     </div>
     <script type="text/javascript">
         //function reshis() {
