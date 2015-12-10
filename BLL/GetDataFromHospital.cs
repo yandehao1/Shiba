@@ -477,6 +477,14 @@ namespace BLL
             Dictionary<string, string> oPListForSpecimen = new Dictionary<string, string>();
             //02.调用方法获取数据并将数据转换成字典
             oPListForSpecimen = GetOPListForSpecimenByBarcodeAndToDic(barcode);
+            //计算当前年龄
+            //int InAge = 0;
+            //if (oPListForSpecimen["DateOfBirth"]!="")
+            //{
+            //    DateTime old = Convert.ToDateTime(oPListForSpecimen["DateOfBirth"]);
+            //    InAge = RekoenAge(old,DateTime.Now);
+            //    oPListForSpecimen.Add("DateOfAge", InAge.ToString());
+            //}
             string result = "";
             if (oPListForSpecimen != null)//链接无错误
             {
@@ -526,6 +534,22 @@ namespace BLL
                 result = Newtonsoft.Json.JsonConvert.SerializeObject(list);
             }
             return result;
+        }
+
+        /// <summary>
+        /// 计算年龄
+        /// </summary>
+        /// <param name="old">出生日期</param>
+        /// <param name="now">当前时间</param>
+        /// <returns></returns>
+        public int RekoenAge(DateTime old, DateTime now) 
+        {
+            int InAge = 0;
+            if (now>old)
+            {
+                InAge = now.Year - old.Year;
+            }
+            return InAge;
         }
     }
 }

@@ -47,6 +47,7 @@ namespace RuRo.Model.ZSSY
 		private string _inpatpastillness;
 		private string _inpatfamillness;
 		private string _labinfo;
+        private string _dateofage;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -111,6 +112,14 @@ namespace RuRo.Model.ZSSY
 			set{ _dateofbirth=value;}
 			get{return _dateofbirth;}
 		}
+        /// <summary>
+        /// 
+        /// </summary>
+        public string DateOfAge
+        {
+            set { _dateofage = value; }
+            get { return _dateofage; }
+        }
 		/// <summary>
 		/// 行政区名称
 		/// </summary>
