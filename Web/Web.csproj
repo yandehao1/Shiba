@@ -39,13 +39,18 @@
     <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LTP.Accounts">
-      <HintPath>..\..\SZY\Lib\LTP.Accounts.dll</HintPath>
+    <Reference Include="LTP.Accounts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -680,6 +685,7 @@
     <Content Include="Pages\LabTestResult\LabTestResult_list.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx" />
     <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx" />
+    <Content Include="Test\TestEnum.aspx" />
     <Content Include="ZSSY\SpecimenRtLog\ResHis.aspx" />
     <Content Include="Pages\Search.aspx" />
     <Content Include="Pages\SpecimenRt\SpecimenRtLog_list.aspx" />
@@ -843,6 +849,13 @@
     </Compile>
     <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx.designer.cs">
       <DependentUpon>OPListForSpecimen_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestEnum.aspx.cs">
+      <DependentUpon>TestEnum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TestEnum.aspx.designer.cs">
+      <DependentUpon>TestEnum.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZSSY\SpecimenRtLog\ResHis.aspx.cs">
       <DependentUpon>ResHis.aspx</DependentUpon>

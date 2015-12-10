@@ -18,38 +18,45 @@
     <script type="text/javascript">
         function GetPatientLabMaster() {
             $('#name').textbox('setValue', "患者姓名");
-            loadData({ total: 0, rows: [] });
+            $("#datagridMaster").datagrid("loadData", { total: 0, rows: [] });
             var PatientId = $('#PatientId').textbox('getValue');
             var VisitId = $('#VisitId').textbox('getValue');
+            ajaxLoading();
             $.ajax({
                 type: "get",
                 url: "/Sever/LabTest.ashx?mod=getPLM&PatientId=" + PatientId + "&VisitId=" + VisitId,
                 dataType: "json",
                 success: function (response) {
+                    ajaxLoadEnd();
                     if (response) {
                         // var data = JSON.parse(response);
                         var data = response;
                         if (data.State == "0") {
-                            if (data.Data.ResultCode == 0) {
-                                //获取数据成功
-                                loadData(data.Data.LabTestMaste);
-                                $('#name').textbox('setValue', data.Data.Name);
+                            if (data.Data) {
+                                if (data.Data.ResultCode == 0) {
+                                    //获取数据成功
+                                    $("#datagridMaster").datagrid("loadData", data.Data.LabTestMaste);
+                                    $('#name').textbox('setValue', data.Data.Name);
+                                } else {
+                                    //获取数据失败
+                                    ShowMsg(data.Data.ResultContent)
+                                }
                             } else {
-                                //获取数据失败
-                                alert(data.Data.ResultContent)
+                                ShowMsg(data.Msg);
                             }
                         }
-                        else if (data.State == "err") {
-                            alert(data.Msg);
+                        else if (data.State == "1") {
+                            ShowMsg(data.Msg);
                         }
                         else {
-                            alert("查询数据错误请检查数据")
+                            ShowMsg("查询数据错误请检查数据")
                         }
                     } else {
-                        alert("查询数据错误请检查数据")
+                        ShowMsg("查询数据错误请检查数据")
                     }
                 }
             });
+            ajaxLoadEnd();
         }
         //
     </script>

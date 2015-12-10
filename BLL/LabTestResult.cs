@@ -30,6 +30,8 @@ namespace RuRo.BLL
         public string GetData(string oeordID, string testNo)
         {
             string data = string.Empty;
+            respondData.State = Model.State.err;
+            respondData.Data = string.Empty;
             //data = "321";
             data = GetDataFromHP(oeordID, testNo);
             if (!string.IsNullOrEmpty(data))
@@ -65,11 +67,12 @@ namespace RuRo.BLL
                 }
                 else
                 {
-                    //转换不成功
-                    respondData.Data = string.Empty;
-                    respondData.Msg = "调用医院接口失败";
-                    respondData.State = Model.State.err;
+                    respondData.Msg = "调用医院接口成功,无数据";
                 }
+            }
+            else
+            {
+                respondData.Msg = "调用医院接口失败";
             }
             return JsonConvert.SerializeObject(respondData);
         }
