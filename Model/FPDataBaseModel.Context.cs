@@ -28,5 +28,8 @@ namespace RuRo.Model
         public DbSet<ImportSampleSourceLog> ImportSampleSourceLog { get; set; }
         public DbSet<SpecimenRt> SpecimenRt { get; set; }
         public DbSet<SpecimenRtLog> SpecimenRtLog { get; set; }
+        public DbSet<LabTestMaster> LabTestMaster { get; set; }
+        public DbSet<LabTestResult> LabTestResult { get; set; }
+        public DbSet<OPListForSpecimen> OPListForSpecimen { get; set; }
     }
 }
