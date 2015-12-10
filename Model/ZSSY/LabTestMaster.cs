@@ -7,7 +7,7 @@ namespace RuRo.Model.ZSSY
 	[Serializable]
 	public partial class LabTestMaster
 	{
-		public LabTestMaster()
+		public LabTestMaster() 
 		{}
 		#region Model
 		private int _id;
