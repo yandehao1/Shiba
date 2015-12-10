@@ -123,7 +123,7 @@
             var ksdate = $('#ksrq').textbox('getValue');
             var jsdate = $('#jsrq').textbox('getValue');
             if (dateSearch(ksdate, jsdate) == false) {return;}
-            
+            if (!CheckDate(ksdate) || !CheckDate(jsdate)) { $.messager.alert('提示', '日期格式不正确', 'error'); return;}
            // if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error');  return; }
             if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); return; }
             else {
@@ -148,6 +148,16 @@
                     }
                 });
                 ajaxLoadEnd();
+            }
+        }
+
+        function CheckDate(checkdate) {
+            var result = checkdate.match(/((^((1[8-9]\d{2})|([2-9]\d{3}))(-)(10|12|0?[13578])(-)(3[01]|[12][0-9]|0?[1-9])$)|(^((1[8-9]\d{2})|([2-9]\d{3}))(-)(11|0?[469])(-)(30|[12][0-9]|0?[1-9])$)|(^((1[8-9]\d{2})|([2-9]\d{3}))(-)(0?2)(-)(2[0-8]|1[0-9]|0?[1-9])$)|(^([2468][048]00)(-)(0?2)(-)(29)$)|(^([3579][26]00)(-)(0?2)(-)(29)$)|(^([1][89][0][48])(-)(0?2)(-)(29)$)|(^([2-9][0-9][0][48])(-)(0?2)(-)(29)$)|(^([1][89][2468][048])(-)(0?2)(-)(29)$)|(^([2-9][0-9][2468][048])(-)(0?2)(-)(29)$)|(^([1][89][13579][26])(-)(0?2)(-)(29)$)|(^([2-9][0-9][13579][26])(-)(0?2)(-)(29)$))/);
+            if (result == null) {
+                return false;
+            }
+            else {
+                return true;
             }
         }
     </script>

@@ -42,25 +42,41 @@ namespace RuRo.BLL
                 if (tranRes && xd != null)
                 {
                     //转换成功
+                    Response resp = new Response();
                     XmlNode xn = xd.SelectSingleNode("/Response");
                     string xml2Str1 = JsonConvert.SerializeXmlNode(xn, Newtonsoft.Json.Formatting.None, true);
-                    Response resp = JsonConvert.DeserializeObject<Response>(xml2Str1);
-                    XmlNodeList xl = xd.SelectNodes("/Response/LabTestResults/LabTestResult");
-                    List<Model.ZSSY.LabTestResult> list = new List<Model.ZSSY.LabTestResult>();
-                    foreach (XmlNode item in xl)
+                    try
                     {
-                        try
-                        {
-                            string xmlStr = JsonConvert.SerializeXmlNode(item, Newtonsoft.Json.Formatting.None, true);
-                            list.Add(JsonConvert.DeserializeObject<Model.ZSSY.LabTestResult>(xmlStr));
-                        }
-                        catch (Exception ex)
-                        {
-                            Common.LogHelper.WriteError(ex);
-                            continue;
-                        }
+                        resp = JsonConvert.DeserializeObject<Response>(xml2Str1);
                     }
-                    resp.LabTestResul = list.OrderBy(a => a.ReportItemName).ToList();
+                    catch (Exception ex)
+                    {
+                        Common.LogHelper.WriteError(ex);
+                        resp.Name = xd.SelectSingleNode("/Response/Name") == null ? "" : (xd.SelectSingleNode("/Response/Name").InnerText);
+                        resp.TestNo = xd.SelectSingleNode("/Response/TestNo") == null ? "" : (xd.SelectSingleNode("/Response/TestNo").InnerText);
+                        resp.ResultCode = xd.SelectSingleNode("/Response/ResultCode") == null ? "" : (xd.SelectSingleNode("/Response/ResultCode").InnerText);
+                        resp.ResultContent = xd.SelectSingleNode("/Response/ResultContent") == null ? "" : (xd.SelectSingleNode("/Response/ResultContent").InnerText);
+                        resp.VisitId = xd.SelectSingleNode("/Response/VisitId")== null ? "" : (xd.SelectSingleNode("/Response/VisitId").InnerText);
+                    }
+                    XmlNodeList xl = xd.SelectNodes("/Response/LabTestResults/LabTestResult") == null ? null : xd.SelectNodes("/Response/LabTestResults/LabTestResult");
+                    List<Model.ZSSY.LabTestResult> list = new List<Model.ZSSY.LabTestResult>();
+                    if (xl!=null)
+                    {
+                        foreach (XmlNode item in xl)
+                        {
+                            try
+                            {
+                                string xmlStr = JsonConvert.SerializeXmlNode(item, Newtonsoft.Json.Formatting.None, true);
+                                list.Add(JsonConvert.DeserializeObject<Model.ZSSY.LabTestResult>(xmlStr));
+                            }
+                            catch (Exception ex)
+                            {
+                                Common.LogHelper.WriteError(ex);
+                                continue;
+                            }
+                        }
+                        resp.LabTestResul = list.OrderBy(a => a.ReportItemName).ToList();
+                    }
                     respondData.Data = resp;
                     respondData.Msg = "调用医院接口成功";
                     respondData.State = Model.State.ok;
@@ -78,7 +94,7 @@ namespace RuRo.BLL
         }
         class Response
         {
-            public int ResultCode { get; set; }
+            public string ResultCode { get; set; }
             public string ResultContent { get; set; }
             public string TestNo { get; set; }
             public string VisitId { get; set; }
