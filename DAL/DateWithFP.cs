@@ -68,6 +68,10 @@ namespace DAL
                 {
                     Username = RuRo.Common.CookieHelper.GetCookieValue("username");
                     passWord = RuRo.Common.CookieHelper.GetCookieValue("password");
+                    if (!string.IsNullOrEmpty(passWord))
+                    {
+                        passWord = RuRo.Common.DEncrypt.DESEncrypt.Decrypt(passWord);
+                    }
                 }
             }
             uriStr = string.Format("{0}/api?", XmlHelper.Read("configXML\\UriConfigXml.xml", "Uri"));

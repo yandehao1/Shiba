@@ -67,8 +67,11 @@ namespace RuRo.Web.ZSSY.SpecimenRtLog
                 //#warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
                 strWhere.AppendFormat("PatiendId like '%{0}%'", txtKeyword.Text.Trim());
             }            
-            ds = bll.GetList(strWhere.ToString());            
-            gridView.DataSource = ds;
+            ds = bll.GetList(strWhere.ToString());
+            DataView dv = new DataView();
+            dv.Table = ds.Tables[0];
+            dv.Sort = "PostBackDate DESC";
+            gridView.DataSource = dv;
             gridView.DataBind();
         }
 
