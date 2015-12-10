@@ -45,29 +45,39 @@ namespace RuRo.BLL
                     Response resp = new Response();
                     //转换成功
                     XmlNode xn = xd.SelectSingleNode("/Response");
-                    //resp.Name = xd.SelectSingleNode("/Response/Name").InnerText==null?"":(xd.SelectSingleNode("/Response/Name").InnerText);
-                    //resp.PatientId = xd.SelectSingleNode("/Response/PatientId").InnerText == null ? "" : (xd.SelectSingleNode("/Response/PatientId").InnerText);
-                    //resp.ResultCode = xd.SelectSingleNode("/Response/ResultCode").InnerText == null ? "" : (xd.SelectSingleNode("/Response/ResultCode").InnerText);
-                    //resp.ResultContent = xd.SelectSingleNode("/Response/ResultContent").InnerText == null ? "" : (xd.SelectSingleNode("/Response/ResultContent").InnerText);
-                    //resp.VisitId = xd.SelectSingleNode("/Response/VisitId").InnerText == null ? "" : (xd.SelectSingleNode("/Response/VisitId").InnerText);
                     string xml2Str1 = JsonConvert.SerializeXmlNode(xn, Newtonsoft.Json.Formatting.None, true);
-                    resp = JsonConvert.DeserializeObject<Response>(xml2Str1);
-                    XmlNodeList xl = xd.SelectNodes("/Response/LabTestMasters/LabTestMaster");
-                    List<Model.ZSSY.LabTestMaster> list = new List<Model.ZSSY.LabTestMaster>();
-                    foreach (XmlNode item in xl)
+                    try
                     {
-                        try
-                        {
-                            string xmlStr = JsonConvert.SerializeXmlNode(item, Newtonsoft.Json.Formatting.None, true);
-                            list.Add(JsonConvert.DeserializeObject<Model.ZSSY.LabTestMaster>(xmlStr));
-                        }
-                        catch (Exception ex)
-                        {
-                            Common.LogHelper.WriteError(ex);
-                            continue;
-                        }
+                        resp = JsonConvert.DeserializeObject<Response>(xml2Str1);
                     }
-                    resp.LabTestMaste = list.OrderBy(a => a.TestCause).ToList();
+                    catch (Exception ex)
+                    {
+                        Common.LogHelper.WriteError(ex);
+                        resp.Name = xd.SelectSingleNode("/Response/Name") == null ? "" : (xd.SelectSingleNode("/Response/Name").InnerText);
+                        resp.PatientId = xd.SelectSingleNode("/Response/PatientId") == null ? "" : (xd.SelectSingleNode("/Response/PatientId").InnerText);
+                        resp.ResultCode = xd.SelectSingleNode("/Response/ResultCode") == null ? "" : (xd.SelectSingleNode("/Response/ResultCode").InnerText);
+                        resp.ResultContent = xd.SelectSingleNode("/Response/ResultContent") == null ? "" : (xd.SelectSingleNode("/Response/ResultContent").InnerText);
+                        resp.VisitId = xd.SelectSingleNode("/Response/VisitId")== null ? "" : (xd.SelectSingleNode("/Response/VisitId").InnerText);
+                    }
+                    XmlNodeList xl = xd.SelectNodes("/Response/LabTestMasters/LabTestMaster") == null ? null : xd.SelectNodes("/Response/LabTestMasters/LabTestMaster");
+                    List<Model.ZSSY.LabTestMaster> list = new List<Model.ZSSY.LabTestMaster>();
+                    if (xl!=null)
+                    {
+                        foreach (XmlNode item in xl)
+                        {
+                            try
+                            {
+                                string xmlStr = JsonConvert.SerializeXmlNode(item, Newtonsoft.Json.Formatting.None, true);
+                                list.Add(JsonConvert.DeserializeObject<Model.ZSSY.LabTestMaster>(xmlStr));
+                            }
+                            catch (Exception ex)
+                            {
+                                Common.LogHelper.WriteError(ex);
+                                continue;
+                            }
+                        }
+                        resp.LabTestMaste = list.OrderBy(a => a.TestCause).ToList();
+                    }
                     respondData.Data = resp;
                     respondData.Msg = "调用医院接口成功";
                     respondData.State = Model.State.ok;
