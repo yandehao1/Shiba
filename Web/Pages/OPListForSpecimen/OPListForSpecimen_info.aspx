@@ -17,7 +17,7 @@
     <link href="../../include/css/kfmis.css" rel="stylesheet" />
     <script type="text/javascript" src="../../include/js/page.js"></script>
     <script type="text/javascript" src="../../include/js/jquery.cookie.js"></script>
-    <script type="text/javascript src="../../include/js/default.js"></script>
+    <script type="text/javascript" src="../../include/js/default.js"></script>
 </head>
 <body>
     <!--存储参数属性input控件，判断是新增还是修改-->
@@ -83,6 +83,12 @@
                         <div class="label">出生日期:</div>
                         <div class="control">
                             <input id="DateOfBirth" name="DateOfBirth" />
+                        </div>
+                    </div>
+                    <div class="fitem">
+                        <div class="label">年龄:</div>
+                        <div class="control">
+                            <input id="DateOfAge" name="DateOfAge" />
                         </div>
                     </div>
                     <div class="fitem">
@@ -268,7 +274,7 @@
                 <input class="easyui-combobox" name="sampleSourceType" id="sampleSourceType" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择样品源类型'" />
                 <a href="javascript:void(0)" id="linkbuttonSave" class="easyui-linkbutton" iconcls="icon-ok" onclick="saveForm()">导入</a>
                 <a href="javascript:void(0)" id="linkbuttonClear" class="easyui-linkbutton" iconcls="icon-back" onclick="clearForm();">清空</a>
-<%--                <a href="javascript:void(0)" id="linkbuttonColse" class="easyui-linkbutton" iconcls="icon-cancel" onclick="$('#dlg').dialog('close');">关闭</a>--%>
+                <%--                <a href="javascript:void(0)" id="linkbuttonColse" class="easyui-linkbutton" iconcls="icon-cancel" onclick="$('#dlg').dialog('close');">关闭</a>--%>
             </div>
         </div>
     </div>
@@ -292,7 +298,7 @@
                 textField: 'text',
                 url: '../../Fp_Ajax/PageConData.aspx?conMarc=ssType',
                 panelHeight: 'auto',
-                onChange: In_SSTypeChange,
+                onChange: In_SSTypeChange
                 //selectOnNavigation:$(this).is(':checked'),
                 //onLoadSuccess: function (data) { //数据加载完毕事件
                 //    if (data) {
@@ -359,7 +365,7 @@
             //});
             $('#frmAjax').form('submit', {
                 url: url,
-                onSubmit: function(param){    
+                onSubmit: function (param) {
                     param.mode = 'ins';
                     param.pId = PatientId;
                     param.ssType = sampleSourceType;

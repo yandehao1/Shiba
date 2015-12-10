@@ -173,6 +173,8 @@ namespace RuRo
 
                 if (context.Request["LabInfo"] != null)
                     model_OPListForSpecimen.LabInfo = context.Request["LabInfo"];
+                if (context.Request["DateOfAge"] != null)
+                    model_OPListForSpecimen.DateOfAge = context.Request["DateOfAge"];
                 #endregion
                 //数据转换
                 if (context.Request["ssType"] != null)
@@ -182,7 +184,7 @@ namespace RuRo
                 if (context.Request["ssType"] != null)
                     ssDecription = context.Request["ssType"] + "病区";
                 //数据匹配
-                BLL.ImpSampleSource imp = new BLL.ImpSampleSource();
+               BLL.ImpSampleSource imp = new BLL.ImpSampleSource();
                string result = imp.Import(model_OPListForSpecimen, ssType, ssName, ssDecription);
                context.Response.Write(result);
                 //数据提交

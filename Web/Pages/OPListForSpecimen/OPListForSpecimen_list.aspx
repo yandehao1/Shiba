@@ -32,6 +32,7 @@
                 <th field="Name" width="10%" sortable="true">姓名</th>
                 <th field="NamePhonetic" width="100"  hidden="true">姓名拼音</th>
                 <th field="DateOfBirth" width="100"  hidden="true">出生日期</th>
+                <th field="DateOfAge" width="150">年龄</th>
                 <th field="BirthPlace" width="100"  hidden="true">行政区名称</th>
                 <th field="Citizenship" width="100"  hidden="true">国家简称</th>
                 <th field="Nation" width="100"  hidden="true">民族</th>
@@ -100,6 +101,15 @@
             for (var i = 0; i < loaddata.length; i++) {
                 var text = loaddata[i].DeptCode.split("-");
                 loaddata[i].DeptCodeName = text[1];
+                var age = 0
+                if (loaddata[i].DateOfBirth != "") {
+                    var old = new Date(loaddata[i].DateOfBirth);
+                    var now = new Date();
+                    if (now.getTime() > old.getTime()) {
+                        age = now.getFullYear() - old.getFullYear();
+                    }
+                }
+                loaddata[i].DateOfAge = age.toString();
             }
             $("#OPListForSpecimen").datagrid({
                 data: loaddata.slice(0, 10)

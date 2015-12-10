@@ -29,6 +29,10 @@
     <ValueFieldName>DateOfBirth</ValueFieldName>
   </MatchItem>
   <MatchItem>
+    <KeyFieldName>年龄</KeyFieldName>
+    <ValueFieldName>DateOfAge</ValueFieldName>
+  </MatchItem>
+  <MatchItem>
     <KeyFieldName>行政区名称</KeyFieldName>
     <ValueFieldName>BirthPlace</ValueFieldName>
   </MatchItem>

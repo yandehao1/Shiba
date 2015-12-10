@@ -94,10 +94,21 @@
                                 href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
                                 onLoad: function () {
                                     var basedata = $.parseJSON(data);
-                                    if (basedata.success==true) {
+                                    if (basedata.success == true) {
+                                        var resultdata = basedata.result;
+                                        var age = 0;
+                                        if (resultdata.DateOfBirth != "") {
+                                            var old = new Date(resultdata.DateOfBirth);
+                                            var now = new Date();
+                                            var age = 0
+                                            if (now.getTime() > old.getTime()) {
+                                                age = now.getFullYear() - old.getFullYear();
+                                            }
+                                            resultdata.DateOfAge = age.toString();
+                                        }
                                         $("#frmAjax").form("load", basedata.result);
                                     } else {
-                                        ShowMsg(basedata.result)
+                                        ShowMsg(basedata.result);
                                     }
                                 }
                             });
@@ -112,6 +123,7 @@
             var ksdate = $('#ksrq').textbox('getValue');
             var jsdate = $('#jsrq').textbox('getValue');
             if (dateSearch(ksdate, jsdate) == false) {return;}
+            
            // if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error');  return; }
             if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); return; }
             else {
@@ -126,6 +138,7 @@
                         else {
                             var loaddata = $.parseJSON(data);
                             if (loaddata.success) {
+
                                     PagePaging(loaddata.result);
                             } else {
                                 ShowMsg(loaddata.result)
