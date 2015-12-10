@@ -42,12 +42,12 @@
     <!--toolbar栏，用于datagrid的toolbar自定义内容-->
     <!--diaglog窗口，用于编辑数据-->
     <div id="dlg" class="easyui-dialog" closed="true"></div>
-    <div id="win" class="easyui-window" closed="true"></div>
+    <div id="winresultinfo"></div>
     <script type="text/javascript">
         function showLabTestResult_listData(rowData) {
             if (!rowData) { $.messager.alert('提示', '请检查数据是否存在！', 'error'); }
             else {
-                $('#win').window({
+                $('#winresultinfo').window({
                     title: 'LabTestResult_list--详细数据页面',
                     width: 800,
                     height: 500,
@@ -67,12 +67,6 @@
                 }
             });
         })
-        /*关闭dialog重新加载datagrid数据*/
-        //$('#dlg').dialog({
-        //    onClose: function () {
-        //        $('#datagridLTR').datagrid('reload'); //重新加载载数据
-        //    }
-        //});
     </script>
 
 </body>

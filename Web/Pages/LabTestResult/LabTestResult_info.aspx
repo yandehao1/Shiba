@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LabTestResult_info.aspx.cs" Inherits="RuRo.LabTestResult_info" %>
+ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LabTestResult_info.aspx.cs" Inherits="RuRo.LabTestResult_info" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
@@ -25,7 +25,7 @@
 <div class="ftitle"></div>
     <form id="frmAjaxLTR" method="post" novalidate>
         <!--如需控制表单控件为必填项，请增加class="easyui-validatebox" required="true" -->
-        <div class="fitem">
+        <div class="fitem" style="display:none">
             <div class="label">id:</div>
             <div class="control"><input id="id"  name="id"  disabled="disabled" /></div>
         </div>

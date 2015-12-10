@@ -25,7 +25,7 @@
         <form id="SearchForm" runat="server">
             <div style="float: left">
                 查询方式：
-                    <select id="ss" class="easyui-combobox" name="dept" style="width: 130px;">
+                    <select id="ss" class="easyui-combobox" name="dept" style="width:130px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
                         <option value="1">编码</option>
                         <option value="2">日期</option>
                        <%-- <option value="3">批量扫码</option>--%>
@@ -123,6 +123,8 @@
             var ksdate = $('#ksrq').textbox('getValue');
             var jsdate = $('#jsrq').textbox('getValue');
             if (dateSearch(ksdate, jsdate) == false) {return;}
+            
+           // if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error');  return; }
             if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); return; }
             else {
                 ajaxLoading();

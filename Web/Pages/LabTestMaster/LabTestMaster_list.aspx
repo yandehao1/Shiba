@@ -17,7 +17,7 @@
 </head>
 <body>
     <!--datagrid栏-->
-    <table id="datagrid" title="LabTestMaster--临床检测数据" class="easyui-datagrid" style="width: auto; height: 460px; text-align: center"
+    <table id="datagridMaster" title="LabTestMaster--临床检测数据" class="easyui-datagrid" style="width: auto; height: 510px; text-align: center"
         fit='false'
         pagination="false" idfield="TestNo" rownumbers="true"
         fitcolumns="true" singleselect="true" toolbar="#toolbar"
@@ -56,16 +56,33 @@
     </div>
     <!--diaglog窗口，用于编辑数据-->
     <div id="dlg" class="easyui-dialog" closed="true"></div>
-    <div id="winmaster"></div>
-    <div id="master"></div>
-<input id="workingId" class="easyui-textbox" name="name" disabled="disabled"  hidden="false" />
-<input id="testNo" class="easyui-textbox" name="name" disabled="disabled"  hidden="false" />
-
+    <div id="resultwin"></div>
+    <div id="masterinfo" ></div>
+    <div id="winmasterinfo"></div>
+    <div style="display: none">
+        <input id="workingId" class="easyui-textbox" name="name" style="display: none" />
+        <input id="testNo" class="easyui-textbox" name="name" style="display: none" />
+    </div>
     <script type="text/javascript">
+        $(function () {
+            //绑定双击行事件
+            $('#datagridMaster').datagrid({
+                onDblClickRow: function (rowIndex, rowData) {
+                    showLabTestMasterData(rowData);
+                }
+            });
+            //绑定列排序事件
+            //$("#datagrid").datagrid({
+            //    onSortColumn: function (sort, order) {
+            //        //sortData(sort, order);
+            //    }
+            //})
+        })
         function showLabTestMasterData(rowData) {
             if (!rowData) { $.messager.alert('提示', '请检查数据是否存在！', 'error'); }
             else {
-                $('#master').window({
+                $('#winmasterinfo').window(function () { this.window.close() });
+                $('#winmasterinfo').window({
                     title: 'LabTestMaster--详细数据页面',
                     width: 800,
                     height: 500,
@@ -79,29 +96,10 @@
                 });
             }
         }
-        $(function () {
-            //绑定双击行事件
-            $('#datagrid').datagrid({
-                onDblClickRow: function (rowIndex, rowData) {
-                    showLabTestMasterData(rowData);
-                }
-            });
-            //绑定列排序事件
-            //$("#datagrid").datagrid({
-            //    onSortColumn: function (sort, order) {
-            //        //sortData(sort, order);
-            //    }
-            //})
-        })
-        /*关闭dialog重新加载datagrid数据*/
-        $('#dlg').dialog({
-            onClose: function () {
-                $('#datagrid').datagrid('reload'); //重新加载载数据
-            }
-        });
+
         function loadTestResultData(workingId, testNo) {
             $('#name').textbox('setValue', "患者姓名");
-            loadData({ total: 0, rows: [] });
+            $("#datagridLTR").datagrid("loadData", { total: 0, rows: [] });
             $.ajax({
                 type: "get",
                 url: "/Sever/LabTest.ashx?mod=getLTR&workingId=" + workingId + "&testNo=" + testNo,
@@ -111,33 +109,37 @@
                         // var data = JSON.parse(response);
                         var data = response;
                         if (data.State == "0") {
-                            if (data.Data.ResultCode == 0) {
-                                //获取数据成功
-                                $("#datagridLTR").datagrid("loadData", data.Data.LabTestResul);
-                                //$('#name').textbox('setValue', data.Data.Name);
+                            if (data.Data) {
+                                if (data.Data.ResultCode == 0) {
+                                    //获取数据成功
+                                    $("#datagridLTR").datagrid("loadData", data.Data.LabTestResul);
+                                    //$('#name').textbox('setValue', data.Data.Name);
+                                } else {
+                                    //获取数据失败
+                                    ShowMsg(data.Data.ResultContent)
+                                }
                             } else {
-                                //获取数据失败
-                                alert(data.Data.ResultContent)
+                                ShowMsg(data.Msg);
                             }
                         }
-                        else if (data.State == "err") {
-                            alert(data.Msg);
+                        else if (data.State == "1") {
+                            ShowMsg(data.Msg);
                         }
                         else {
-                            alert("查询数据错误请检查数据")
+                            ShowMsg("查询数据错误请检查数据")
                         }
                     } else {
-                        alert("查询数据错误请检查数据")
+                        ShowMsg("查询数据错误请检查数据")
                     }
                 }
             });
         }
         function getLabTestResult() {
-            var rows = $('#datagrid').datagrid('getSelections');
+            var rows = $('#datagridMaster').datagrid('getSelections');
             if (rows.length > 0) {
                 if (rows.length == 1) {
-                    var row = $('#datagrid').datagrid('getSelected');
-                    $('#winmaster').window({
+                    var row = $('#datagridMaster').datagrid('getSelected');
+                    $('#resultwin').window({
                         title: 'LabTestMaster-查看结果',
                         width: 800,
                         height: 500,
@@ -154,10 +156,6 @@
                 $.messager.alert('警告', '请选择数据', 'warning');
             }
         }
-        function loadData(data) {
-            $("#datagrid").datagrid("loadData", data);
-        }
-
     </script>
 
 </body>
