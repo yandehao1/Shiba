@@ -217,7 +217,6 @@ namespace RuRo
         {
             string barcode = context.Request["code"].ToString();
             GetDataFromHospital hospitalDataByBarcode = new GetDataFromHospital();
-            //////正常调用医院webservice获取数据时取消注销下面一行
             string jsonStrResult = hospitalDataByBarcode.GetDataByBarcode(barcode);
             if (jsonStrResult == "")//直接无数据返回（可能是链接有问题）
             {
@@ -295,8 +294,8 @@ namespace RuRo
             string begindate = context.Request["ksdate"];
             string enddate = context.Request["jsdate"];
             GetDataFromHospital hospitalDataByDate = new GetDataFromHospital();
-            //string jsonStrResult = hospitalDataByDate.GetDataByDateTime(begindate, enddate);
-            string jsonStrResult = hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr();//测试数据
+            string jsonStrResult = hospitalDataByDate.GetDataByDateTime(begindate, enddate);
+           //string jsonStrResult = hospitalDataByDate.GetOPListForSpecimenByLocalDateFileToJsonStr();//测试数据
             //#region 多行数据
             //#endregion
             if (jsonStrResult == "")

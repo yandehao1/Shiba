@@ -73,11 +73,19 @@ namespace DAL
             //    SpecimenRtLog specimenRtLog = fpExtendEntities.SpecimenRtLog.Where<SpecimenRtLog>(a => a.username == specimenRtLogUserName).OrderByDescending(a => a.PostBackDate).First<SpecimenRtLog>();
             //    date = specimenRtLog.PostBackDate.Value;
             //}
-            string strWhere = " username =' " + specimenRtLogUserName;
-            string strOrderBy = " 'ORDER BY PostBackDate desc";
+            //当前存在问题 如果DS为NULL爆出异常
+            string strWhere = "username ='" + specimenRtLogUserName+"'";
+            string strOrderBy = "PostBackDate desc";
             DataSet ds = spr.GetList(1, strWhere, strOrderBy);
-            string value = ds.Tables[0].Rows[0]["PostBackDate"].ToString();
-            bool res = DateTime.TryParse(value, out date);
+            if (ds!=null||ds.Tables[0].Rows.Count>0)
+            {
+                string value = ds.Tables[0].Rows[0]["PostBackDate"].ToString();
+                bool res = DateTime.TryParse(value, out date);
+            }
+            else
+            {
+                    
+            }
             return date;
         }
         /// <summary>

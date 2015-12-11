@@ -483,6 +483,10 @@ namespace BLL
                 if (oPListForSpecimen.Count > 0)//有获取到数据
                 {
                     //03.调用方法将字典转换成JSON数据
+                    if (oPListForSpecimen["KeepSpecimenSign"]=="N")
+                    {
+                        oPListForSpecimen["KeepSpecimenSign"] = "";
+                    }
                     if (oPListForSpecimen.Keys.Contains("OPListForSpecimen"))
                     {
                         string value = "";

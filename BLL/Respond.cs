@@ -268,8 +268,9 @@ namespace BLL
             RuRo.DAL.ZSSY.SpecimenRt sr = new RuRo.DAL.ZSSY.SpecimenRt();
             RuRo.Model.ZSSY.SpecimenRt specimenRt;
             //RuRo.Model.ZSSY.SpecimenRt specimenRt = sr.GetModel(item.Specimens[0].Id);
-            DataSet ds  = sr.GetList(1, " SampleId ='" + item.Specimens[0].Id + "'","");
-            if ( ds!=null)
+            //这里不清楚做什么排序 不排序要换调用方法
+            DataSet ds  = sr.GetList(1, " SampleId ='" + item.Specimens[0].Id + "'","ID ASC");
+            if ( ds!=null&&ds.Tables[0].Rows.Count>0)
             {
                specimenRt = sr.DataRowToModel(ds.Tables[0].Rows[0]);
             }
