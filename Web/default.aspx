@@ -15,7 +15,7 @@
     <script type="text/javascript">
         //初始化win弹窗在显示器中央
         function doimport() {
-            var width = 1500;
+            var width = 1350;
             var height = 650;
             var l = Math.round((window.screen.width - width) / 2);
             var t = Math.round((window.screen.height - height) / 2);
