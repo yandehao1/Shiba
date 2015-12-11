@@ -217,7 +217,7 @@ namespace RuRo
         {
             string barcode = context.Request["code"].ToString();
             GetDataFromHospital hospitalDataByBarcode = new GetDataFromHospital();
-            ////正常调用医院webservice获取数据时取消注销下面一行
+            //////正常调用医院webservice获取数据时取消注销下面一行
             string jsonStrResult = hospitalDataByBarcode.GetDataByBarcode(barcode);
             if (jsonStrResult == "")//直接无数据返回（可能是链接有问题）
             {
