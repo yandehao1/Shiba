@@ -8,7 +8,7 @@ using System.IO.Compression;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
 
-namespace FreezerProUtility.Fp_DAL
+namespace FpUtility.Fp_DAL
 {
     /// <summary>
     /// Http连接操作帮助类

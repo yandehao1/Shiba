@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Text;
 
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     public class Config
     {

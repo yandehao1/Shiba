@@ -1,11 +1,11 @@
-﻿using FreezerProUtility.Fp_Common;
-using FreezerProUtility.Fp_Model;
+﻿using FpUtility.Fp_Common;
+using FpUtility.Fp_Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     public class Samples
     {
@@ -221,7 +221,7 @@ namespace FreezerProUtility.Fp_BLL
         //生成默认临时储存结构的方法--目的，查看对应位置是否存在可以存放样本的孔
         private static Fp_Model.Box_Path CreatTemFreezerPath(Fp_Common.UnameAndPwd up, string department, out bool creat)
         {
-            FreezerProUtility.Fp_Model.Box_Path box_path = new Box_Path();
+            FpUtility.Fp_Model.Box_Path box_path = new Box_Path();
             ////Tem-->username-->month-->day(-->box)
             //string box_path = string.Empty;
             string username = Fp_Common.CookieHelper.GetCookieValue("username");
@@ -393,13 +393,26 @@ namespace FreezerProUtility.Fp_BLL
                     dataDic.Add("Box", box_path.Box);//盒子
                 }
             }
-            jsonsampledata = FreezerProUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(dataDicList);
+            jsonsampledata = FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(dataDicList);
             Dictionary<string, string> jsonDic = new Dictionary<string, string>();
             jsonDic.Add("create_storage", create_storage);
             jsonDic.Add("box_type", box_type);
             jsonDic.Add("json", jsonsampledata);
             string importRes = ImportSampleToFp(up, jsonDic);
             return importRes;
+        }
+
+        public static List<T> getdata<T>(FpMethod fpMethod, Dictionary<string, string> param, string datawith)
+        {
+            List<T> list = new List<T>();
+            // string str_Json = dataWithFP.getDateFromFp(fpMethod, param);
+            string str_Json = ""
+ ;            //默认取出来的数据只有100条
+            if (ValidationData.checkTotal(str_Json))
+            {
+                list = FpJsonHelper.JObjectToList<T>(datawith, str_Json);
+            }
+            return list;
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Text;
 using System.IO;
 
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     /// <summary>
     /// 文件操作夹

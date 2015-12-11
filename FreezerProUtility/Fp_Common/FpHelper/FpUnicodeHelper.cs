@@ -5,7 +5,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     public static class FpUnicodeHelper
     {

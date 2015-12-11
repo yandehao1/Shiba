@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     public class CookieHelper
     {

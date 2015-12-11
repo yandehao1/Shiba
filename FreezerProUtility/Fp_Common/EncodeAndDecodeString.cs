@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Security.Cryptography;
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     public static class EncodeAndDecodeString
     {

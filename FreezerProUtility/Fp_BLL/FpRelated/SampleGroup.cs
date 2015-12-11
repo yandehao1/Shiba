@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     public class SampleGroup
     {
@@ -13,7 +13,7 @@ namespace FreezerProUtility.Fp_BLL
             dic.Add("username", up.UserName);
             dic.Add("password", up.PassWord);
             dic.Add("method", Fp_Common.FpMethod.sample_groups.ToString());
-            FreezerProUtility.Fp_DAL.CallApi call = new FreezerProUtility.Fp_DAL.CallApi(dic);
+            FpUtility.Fp_DAL.CallApi call = new FpUtility.Fp_DAL.CallApi(dic);
             List<Fp_Model.Sample_Group> List = call.getdata<Fp_Model.Sample_Group>("SampleGroups");
             return List;
         }

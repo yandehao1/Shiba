@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FreezerProUtility.Fp_Model
+namespace FpUtility.Fp_Model
 {
     using System;
     using System.Collections.Generic;

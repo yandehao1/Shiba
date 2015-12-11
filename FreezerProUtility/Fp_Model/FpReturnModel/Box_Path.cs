@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_Model
+namespace FpUtility.Fp_Model
 {
    public class Box_Path
     {

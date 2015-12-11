@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     public class FpUrlMaker
     {

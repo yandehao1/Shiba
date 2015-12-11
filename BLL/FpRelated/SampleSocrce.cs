@@ -18,14 +18,18 @@ namespace BLL
         /// <returns> 获取Sample_Source_Types对象集合</returns>
         public List<Model.SampleSourceTypes> Sample_Source_Types()
         {
-            List<Model.SampleSourceTypes> list_Sample_Source_Types = new List<Model.SampleSourceTypes>() { };
-            string str_Json = dataWithFP.getDateFromFp(FpMethod.sample_source_types);
-            if (ValidationData.checkTotal(str_Json))
-            {
-                list_Sample_Source_Types = FpJsonHelper.JObjectToList<Model.SampleSourceTypes>("SampleSourceTypes", str_Json);
+            List<Model.SampleSourceTypes> list_Sample_Source_TypesOld = new List<Model.SampleSourceTypes>() { };
+            //string str_Json = dataWithFP.getDateFromFp(FpMethod.sample_source_types);
+            List<FpUtility.Fp_Model.SampleSourceTypes> list_Sample_Source_TypesNew = FpUtility.Fp_BLL.SampleSocrce.GetAll(null);
 
-            }
-            return list_Sample_Source_Types;
+            //if (ValidationData.checkTotal(str_Json))
+            //{
+            //    list_Sample_Source_Types = FpJsonHelper.JObjectToList<Model.SampleSourceTypes>("SampleSourceTypes", str_Json);
+
+            //}
+            string str = Newtonsoft.Json.JsonConvert.SerializeObject(list_Sample_Source_TypesNew, Newtonsoft.Json.Formatting.Indented);
+            list_Sample_Source_TypesOld = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Model.SampleSourceTypes>>(str);
+            return list_Sample_Source_TypesOld;
         }
         #endregion
 
@@ -111,10 +115,10 @@ namespace BLL
             string username = RuRo.Common.CookieHelper.GetCookieValue("username");
             string password = RuRo.Common.CookieHelper.GetCookieValue("password");
             string result = string.Empty;
-            FreezerProUtility.Fp_Common.UnameAndPwd up = new FreezerProUtility.Fp_Common.UnameAndPwd(username, password);
-            if (up!=null)
+            FpUtility.Fp_Common.UnameAndPwd up = new FpUtility.Fp_Common.UnameAndPwd(username, password);
+            if (up != null)
             {
-                result = FreezerProUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up, sampleSourceTypeName, sampleSourceFieldsDic);
+                result = FpUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up, sampleSourceTypeName, sampleSourceFieldsDic);
             }
             //string sampleSourceFieldsJsonStr = FpJsonHelper.DictionaryToJsonString(sampleSourceFieldsDic);
             //string result = dataWithFP.ImportSampleSource(FpMethod.import_sources, "&sample_source_type=" + sampleSourceTypeName + "&json=" + sampleSourceFieldsJsonStr);

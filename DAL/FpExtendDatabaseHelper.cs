@@ -18,8 +18,6 @@ namespace DAL
     /// </summary>
     public class FpExtendDatabaseHelper
     {
-
-        //FpExtendEntities fpExtendEntities = new FpExtendEntities();
         //01.样本源数据记录（包括样本源）——此数据数据库中只保存30天
         //a、读取——查询导入记录
         //b、写入——保存数据到数据库
@@ -33,21 +31,29 @@ namespace DAL
         /// 添加回发记录
         /// </summary>
         /// <param name="specimenRtLog">回发记录</param>
-        public bool AddToSpecimenRtLog(SpecimenRtLog specimenRtLog)
+        public bool AddToSpecimenRtLog(RuRo.Model.ZSSY.SpecimenRtLog specimenRtLog)
         {
+            bool result = false;
             try
             {
-                using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
+                RuRo.DAL.ZSSY.SpecimenRtLog spr = new RuRo.DAL.ZSSY.SpecimenRtLog();
+                int i = spr.Add(specimenRtLog);
+                if (i > 0)
                 {
-                    fpExtendEntities.SpecimenRtLog.Add(specimenRtLog);
-                    fpExtendEntities.SaveChanges();
-                    return true;
+                    result = true;
                 }
+                //using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
+                //{
+                //    fpExtendEntities.SpecimenRtLog.Add(specimenRtLog);
+                //    fpExtendEntities.SaveChanges();
+                //    return true;
+                //}
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
+                RuRo.Common.LogHelper.WriteError(ex);
             }
+            return result;
         }
         #endregion
 
@@ -61,18 +67,34 @@ namespace DAL
         {
             //查询当前用户最后一次添加纪录的时间（当前用户时间最大项）
             DateTime date = new DateTime();
-            using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
-            {
-                SpecimenRtLog specimenRtLog = fpExtendEntities.SpecimenRtLog.Where<SpecimenRtLog>(a => a.username == specimenRtLogUserName).OrderByDescending(a => a.PostBackDate).First<SpecimenRtLog>();
-                date = specimenRtLog.PostBackDate.Value;
-            }
+            RuRo.DAL.ZSSY.SpecimenRtLog spr = new RuRo.DAL.ZSSY.SpecimenRtLog();
+            //using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
+            //{
+            //    SpecimenRtLog specimenRtLog = fpExtendEntities.SpecimenRtLog.Where<SpecimenRtLog>(a => a.username == specimenRtLogUserName).OrderByDescending(a => a.PostBackDate).First<SpecimenRtLog>();
+            //    date = specimenRtLog.PostBackDate.Value;
+            //}
+            string strWhere = " username =' " + specimenRtLogUserName;
+            string strOrderBy = " 'ORDER BY PostBackDate desc";
+            DataSet ds = spr.GetList(1, strWhere, strOrderBy);
+            string value = ds.Tables[0].Rows[0]["PostBackDate"].ToString();
+            bool res = DateTime.TryParse(value, out date);
             return date;
         }
-
-        public DateTime GetSpecimenRtLogLastPostBackforDate(string username) 
+        /// <summary>
+        /// 这里有更改
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        public DateTime GetSpecimenRtLogLastPostBackforDate(string username)
         {
             string sqlstr = "SELECT TOP 1 PostBackDate  FROM SpecimenRtLog WHERE username='" + username + "'ORDER BY PostBackDate desc";
-            DateTime dt=(DateTime)Maticsoft.DBUtility.DbHelperSQL.GetSingle(sqlstr);
+            RuRo.DAL.ZSSY.SpecimenRtLog spr = new RuRo.DAL.ZSSY.SpecimenRtLog();
+            DateTime dt = new DateTime();
+            Object obj = Maticsoft.DBUtility.DbHelperSQL.GetSingle(sqlstr);
+            if (obj != null)
+            {
+                dt = (DateTime)obj;
+            }
             return dt;
         }
         public DataSet GetSpecimenRtLogGetdata(string username)
@@ -88,19 +110,22 @@ namespace DAL
         /// 添加SpecimenRt
         /// </summary>
         /// <param name="specimenRt">回发数据完整信息</param>
-        public bool AddToSpecimenRt(SpecimenRt specimenRt)
+        public bool AddToSpecimenRt(RuRo.Model.ZSSY.SpecimenRt specimenRt)
         {
+            RuRo.DAL.ZSSY.SpecimenRt sr = new RuRo.DAL.ZSSY.SpecimenRt();
             try
             {
-                using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
-                {
-                    fpExtendEntities.SpecimenRt.Add(specimenRt);
-                    fpExtendEntities.SaveChanges();//执行保存操作
-                    return true;
-                }
+                //using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
+                //{
+                //    fpExtendEntities.SpecimenRt.Add(specimenRt);
+                //    fpExtendEntities.SaveChanges();//执行保存操作
+                //    return true;
+                //}
+                return sr.Add(specimenRt) > 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                RuRo.Common.LogHelper.WriteError(ex);
                 return false;
             }
         }
@@ -112,26 +137,32 @@ namespace DAL
         /// 更新SpecimenRt
         /// </summary>
         /// <param name="specimenRt">需要更新的SpecimenRt</param>
-        public bool UpdateToSpecimenRt(SpecimenRt specimenRt)
+        public bool UpdateToSpecimenRt(RuRo.Model.ZSSY.SpecimenRt specimenRt)
         {
+            bool res = false;
+            RuRo.DAL.ZSSY.SpecimenRt sr = new RuRo.DAL.ZSSY.SpecimenRt();
             try
             {
-                using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
-                {
-                    SpecimenRt s = fpExtendEntities.SpecimenRt.Where(a => a.SampleId == specimenRt.SampleId).FirstOrDefault();
-                    s.OtherInfo = specimenRt.OtherInfo;
-                    s.PatientId = specimenRt.PatientId;
-                    s.PatientName = specimenRt.PatientName;
-                    s.SampleName = specimenRt.SampleName;
-                    s.VisitId = specimenRt.VisitId;
-                    fpExtendEntities.SaveChanges();//执行更新操作
-                    return true;
-                }
+                string strWhere = " SampleId ='" + specimenRt.SampleId + "' ";
+                System.Data.DataSet ds = sr.GetList(1, strWhere, "");
+                RuRo.Model.ZSSY.SpecimenRt s = sr.DataRowToModel(ds.Tables[0].Rows[0]);
+                //using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
+                //{
+                //    SpecimenRt s = fpExtendEntities.SpecimenRt.Where(a => a.SampleId == specimenRt.SampleId).FirstOrDefault();
+                s.OtherInfo = specimenRt.OtherInfo;
+                s.PatientId = specimenRt.PatientId;
+                s.PatientName = specimenRt.PatientName;
+                s.SampleName = specimenRt.SampleName;
+                s.VisitId = specimenRt.VisitId;
+                //fpExtendEntities.SaveChanges();//执行更新操作
+                res = sr.Update(s);
+                //}
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
+                RuRo.Common.LogHelper.WriteError(ex);
             }
+            return res;
         }
         #endregion
 
@@ -141,14 +172,14 @@ namespace DAL
         /// </summary>
         /// <param name="SampleId">样本id</param>
         /// <returns>返回根据当前id查询到的数据的第一个（只可能最多一个）</returns>
-        public SpecimenRt SelectSpecimenRtBySampleId(string SampleId)
-        {
-            using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
-            {
-                SpecimenRt specimenRt = fpExtendEntities.SpecimenRt.Where(a => a.SampleId == SampleId).FirstOrDefault();
-                return specimenRt;
-            }
-        }
+        //public SpecimenRt SelectSpecimenRtBySampleId(string SampleId)
+        //{
+        //    using (FpExtendEntities fpExtendEntities = new FpExtendEntities())
+        //    {
+        //        SpecimenRt specimenRt = fpExtendEntities.SpecimenRt.Where(a => a.SampleId == SampleId).FirstOrDefault();
+        //        return specimenRt;
+        //    }
+        //}
         #endregion
     }
 }

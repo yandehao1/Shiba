@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     /// <summary>
     /// 检查数据类
@@ -25,7 +25,7 @@ namespace FreezerProUtility.Fp_BLL
                 //包含Total就进行再次判断是否有值
                 if (Json.Contains("Total"))
                 {
-                    string total = FreezerProUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("Total", Json);
+                    string total = FpUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("Total", Json);
                     if (Convert.ToInt32(total) > 0)
                     {
                         result = true;

@@ -52,8 +52,6 @@
     <Compile Include="FpRelated\ImportDataToFp.cs" />
     <Compile Include="FpRelated\Samples.cs" />
     <Compile Include="FpRelated\SampleSocrce.cs" />
-    <Compile Include="FpRelated\Token.cs" />
-    <Compile Include="FpRelated\UserFields.cs" />
     <Compile Include="GetDataFromHospital.cs" />
     <Compile Include="HospitalXmlStrHelper.cs" />
     <Compile Include="ImpSampleSource.cs" />
@@ -120,9 +118,9 @@
       <Project>{306f6f45-4df3-468f-8c3a-2e172e132265}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FreezerProUtility\FreezerProUtility.csproj">
+    <ProjectReference Include="..\FreezerProUtility\FpUtility.csproj">
       <Project>{8f8a2679-a4e7-4f84-8306-74c7bc8cd24c}</Project>
-      <Name>FreezerProUtility</Name>
+      <Name>FpUtility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{a661a86f-a5c9-4b35-b0d7-d16af1d13c8d}</Project>

@@ -10,7 +10,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Text;
 using RuRo.Common;
-using FreezerProUtility;
+using FpUtility;
 using System.Collections.Generic;
 //using LTP.Accounts.Bus;
 namespace RuRo.Web.ZSSY.OPListForSpecimen
@@ -20,7 +20,7 @@ namespace RuRo.Web.ZSSY.OPListForSpecimen
         BLL.UnameAndPwd Up = new BLL.UnameAndPwd();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Dictionary<string, string> dic  =FreezerProUtility.Fp_BLL.SampleSocrce.GetAllIdAndNamesDic(Up.GetUp());
+            Dictionary<string, string> dic  =FpUtility.Fp_BLL.SampleSocrce.GetAllIdAndNamesDic(Up.GetUp());
             SampleSourceType.DataSource = dic;
             SampleSourceType.DataTextField = "key";
             SampleSourceType.DataTextField = "value";

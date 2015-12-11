@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{A661A86F-A5C9-4B35-B0D7-D16AF1D13C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreezerProUtility", "FreezerProUtility\FreezerProUtility.csproj", "{8F8A2679-A4E7-4F84-8306-74C7BC8CD24C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FpUtility", "FreezerProUtility\FpUtility.csproj", "{8F8A2679-A4E7-4F84-8306-74C7BC8CD24C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{3436A951-E869-4DDA-BB83-EAF8B05EBF76}"
 EndProject

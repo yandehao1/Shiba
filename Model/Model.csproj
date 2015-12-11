@@ -47,21 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FPDataBaseModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FPDataBaseModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FPDataBaseModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FPDataBaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FPDataBaseModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FPDataBaseModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="FpObjiectModel\ArcSample.cs" />
     <Compile Include="FpObjiectModel\AuditRec.cs" />
     <Compile Include="FpObjiectModel\Box.cs" />
@@ -83,56 +68,15 @@
     <Compile Include="FpObjiectModel\useefieldsinfo.cs" />
     <Compile Include="FpObjiectModel\User.cs" />
     <Compile Include="FpObjiectModel\UserFields.cs" />
-    <Compile Include="ImportSampleSourceLog.cs">
-      <DependentUpon>FPDataBaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LabTestMaster.cs">
-      <DependentUpon>FPDataBaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LabTestResult.cs">
-      <DependentUpon>FPDataBaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OPListForSpecimen.cs">
-      <DependentUpon>FPDataBaseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="ResPondData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespondHisOtherInfo.cs" />
-    <Compile Include="SpecimenRt.cs">
-      <DependentUpon>FPDataBaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SpecimenRtLog.cs">
-      <DependentUpon>FPDataBaseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="ZSSY\ImportSampleSourceLog.cs" />
     <Compile Include="ZSSY\LabTestMaster.cs" />
     <Compile Include="ZSSY\LabTestResult.cs" />
     <Compile Include="ZSSY\OPListForSpecimen.cs" />
     <Compile Include="ZSSY\SpecimenRt.cs" />
     <Compile Include="ZSSY\SpecimenRtLog.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="FPDataBaseModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FPDataBaseModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="FPDataBaseModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FPDataBaseModel.edmx</DependentUpon>
-      <LastGenOutput>FPDataBaseModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="FPDataBaseModel.edmx.diagram">
-      <DependentUpon>FPDataBaseModel.edmx</DependentUpon>
-    </None>
-    <None Include="FPDataBaseModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FPDataBaseModel.edmx</DependentUpon>
-      <LastGenOutput>FPDataBaseModel.cs</LastGenOutput>
-    </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

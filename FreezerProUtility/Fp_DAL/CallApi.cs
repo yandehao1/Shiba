@@ -1,10 +1,10 @@
 ﻿
-using FreezerProUtility.Fp_Common;
+using FpUtility.Fp_Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FreezerProUtility.Fp_DAL
+namespace FpUtility.Fp_DAL
 {
     /// <summary>
     /// 调用Api提交数据类
@@ -97,7 +97,7 @@ namespace FreezerProUtility.Fp_DAL
                 t = FpJsonHelper.DeserializeObject<T>(str_Json);
             }
             return t;
-        } 
+        }
         #endregion
     }
 }

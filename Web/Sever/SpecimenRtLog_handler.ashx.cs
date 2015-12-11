@@ -268,7 +268,7 @@ namespace RuRo
             //    context.Response.Write(strJson);
             //}
             DataSet ds = Respond.GetSpecimenRtLogGetdata();
-            string strJson = FreezerProUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
+            string strJson = FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
             context.Response.Write(strJson);
         }
         /// <summary>

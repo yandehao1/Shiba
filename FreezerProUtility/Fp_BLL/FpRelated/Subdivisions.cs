@@ -1,10 +1,10 @@
-﻿using FreezerProUtility.Fp_Model;
+﻿using FpUtility.Fp_Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     public class Subdivisions
     {
@@ -18,7 +18,7 @@ namespace FreezerProUtility.Fp_BLL
             dic.Add("password", up.PassWord);
             dic.Add("method", Fp_Common.FpMethod.subdivisions.ToString());
             dic.Add("id", id);
-            FreezerProUtility.Fp_DAL.CallApi call = new FreezerProUtility.Fp_DAL.CallApi(dic);
+            FpUtility.Fp_DAL.CallApi call = new FpUtility.Fp_DAL.CallApi(dic);
             List<Fp_Model.Subdivision> List = call.getdata<Fp_Model.Subdivision>("Subdivisions");
             return List;
         }

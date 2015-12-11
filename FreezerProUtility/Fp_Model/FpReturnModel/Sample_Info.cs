@@ -5,7 +5,7 @@ using System.Text;
 //
 using System.Threading;
 
-namespace FreezerProUtility.Fp_Model
+namespace FpUtility.Fp_Model
 {
     public class Sample_Info
     {

@@ -227,7 +227,7 @@ namespace RuRo
             }
             if (jsonStrResult.Contains("OPListForSpecimen"))
             {
-                string oPListForSpecimen = FreezerProUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("OPListForSpecimen", jsonStrResult);
+                string oPListForSpecimen = FpUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("OPListForSpecimen", jsonStrResult);
                 string result = "{\"success\":false,\"result\":" + oPListForSpecimen + "}";
                 context.Response.Write(result);
                 context.Response.End();
@@ -307,7 +307,7 @@ namespace RuRo
             }
             if (jsonStrResult.Contains("OPListForSpecimenRt"))
             {
-                string oPListForSpecimen = FreezerProUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("OPListForSpecimenRt", jsonStrResult);
+                string oPListForSpecimen = FpUtility.Fp_Common.FpJsonHelper.GetStrFromJsonStr("OPListForSpecimenRt", jsonStrResult);
                 string result = "{\"success\":false,\"result\":" + oPListForSpecimen + "}";
                 context.Response.Write(result);
                 context.Response.End();

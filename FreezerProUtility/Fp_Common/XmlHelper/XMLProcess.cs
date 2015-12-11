@@ -3,7 +3,7 @@ using System.Data;
 using System.IO;
 using System.Xml;
 
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     public class XMLProcess
     {

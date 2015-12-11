@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F8A2679-A4E7-4F84-8306-74C7BC8CD24C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FpUtility</RootNamespace>
+    <AssemblyName>FpUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fp_BLL\FpRelated\Freezers.cs" />
+    <Compile Include="Fp_BLL\FpRelated\Get_Perfect_Box.cs" />
+    <Compile Include="Fp_BLL\FpRelated\Location_Info.cs" />
+    <Compile Include="Fp_BLL\FpRelated\Samples.cs" />
+    <Compile Include="Fp_BLL\FpRelated\SampleSocrce.cs" />
+    <Compile Include="Fp_BLL\FpRelated\Subdivisions.cs" />
+    <Compile Include="Fp_BLL\FpRelated\Token.cs" />
+    <Compile Include="Fp_BLL\FpRelated\UserFields.cs" />
+    <Compile Include="Fp_BLL\FpRelated\Users.cs" />
+    <Compile Include="Fp_BLL\FpRelated\FpUrlMaker.cs" />
+    <Compile Include="Fp_BLL\FpRelated\TestData.cs" />
+    <Compile Include="Fp_BLL\FpRelated\SampleGroup.cs" />
+    <Compile Include="Fp_BLL\postData.cs" />
+    <Compile Include="Fp_Common\ConvertResStr.cs" />
+    <Compile Include="Fp_Common\SessionHelper.cs" />
+    <Compile Include="Fp_Common\UnameAndPwd.cs" />
+    <Compile Include="Fp_BLL\ValidationData.cs" />
+    <Compile Include="Fp_Common\AttributeHelper.cs" />
+    <Compile Include="Fp_Common\CookieHelper.cs" />
+    <Compile Include="Fp_Common\EncodeAndDecodeString.cs" />
+    <Compile Include="Fp_Common\FpHelper\Config.cs" />
+    <Compile Include="Fp_Common\Fp_Control_parameters.cs" />
+    <Compile Include="Fp_Common\FpHelper\FpJsonHelper.cs" />
+    <Compile Include="Fp_Common\FpHelper\FpUnicodeHelper.cs" />
+    <Compile Include="Fp_Common\Fp_Enum.cs" />
+    <Compile Include="Fp_Common\Fp_Msg.cs" />
+    <Compile Include="Fp_Common\ValidationData.cs" />
+    <Compile Include="Fp_Common\XmlHelper\DirFile.cs" />
+    <Compile Include="Fp_Common\XmlHelper\SysHelper.cs" />
+    <Compile Include="Fp_Common\XmlHelper\XmlHelper.cs" />
+    <Compile Include="Fp_Common\XmlHelper\XMLProcess.cs" />
+    <Compile Include="Fp_BLL\FpRelated\Boxes.cs" />
+    <Compile Include="Fp_DAL\CallApi.cs" />
+    <Compile Include="Fp_DAL\HttpHelper.cs" />
+    <Compile Include="Fp_DAL\HttpProc.cs" />
+    <Compile Include="Fp_DAL\Login.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\ArcSample.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\AuditRec.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Box.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\BoxType.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Box_Path.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Freezer.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Location.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Role.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Sample.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\SampleSourceTypes.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Samples_Trashbin.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\SampleTypes.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Sample_Group.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Sample_Info.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Sample_Out.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Sample_Source.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Sample_Source_Info.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\Subdivision.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\User.cs" />
+    <Compile Include="Fp_Model\FpReturnModel\UserFields.cs" />
+    <Compile Include="Fp_Model\NameAndPwd.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fp_Model\Fp_Method\" />
+    <Folder Include="TestData\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

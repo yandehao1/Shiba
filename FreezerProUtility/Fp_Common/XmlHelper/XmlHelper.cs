@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 using System;
 using System.Text;
 
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     public class XmlHelper
     {

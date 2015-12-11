@@ -107,7 +107,7 @@ namespace DAL
                     dic.Add(item.Key, item.Value);
                 }
             }
-           return FreezerProUtility.Fp_BLL.postData.postDataToFp(dic);
+           return FpUtility.Fp_BLL.postData.postDataToFp(dic);
         }
         public string getDateFromFp(FpMethod fpMethod)
         {
@@ -117,7 +117,7 @@ namespace DAL
             dic.Add("username", Username);
             dic.Add("password", Password);
             dic.Add("method", fpMethod.ToString());
-            return FreezerProUtility.Fp_BLL.postData.postDataToFp(dic);
+            return FpUtility.Fp_BLL.postData.postDataToFp(dic);
         }
         #endregion
 
@@ -139,7 +139,7 @@ namespace DAL
             dic.Add("password", Password);
             dic.Add("method", fpMethod.ToString());
             dic.Add("id", date);
-            result= FreezerProUtility.Fp_BLL.postData.postDataToFp(dic);
+            result= FpUtility.Fp_BLL.postData.postDataToFp(dic);
             return result;
         }
         #endregion

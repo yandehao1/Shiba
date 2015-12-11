@@ -17,7 +17,7 @@ namespace BLL
         public string GetOPListForSpecimenByLocalBracodeFileToJsonStr()
         {
             //return ConvertDicToJsonStr(GetOPListForSpecimenByLocalBarcodeFileToDic());
-            return FreezerProUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(GetOPListForSpecimenByLocalBarcodeFileToDic());
+            return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(GetOPListForSpecimenByLocalBarcodeFileToDic());
         }
         #endregion
 
@@ -90,7 +90,7 @@ namespace BLL
         public string GetOPListForSpecimenByLocalDateFileToJsonStr()
         {
             //return ConvertDicListToJsonStr();
-            return FreezerProUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(GetOPListForSpecimensByLocalDateFileToDic());
+            return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(GetOPListForSpecimensByLocalDateFileToDic());
         }
         #endregion
 

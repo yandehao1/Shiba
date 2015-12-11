@@ -10,7 +10,7 @@ namespace RuRo.BLL
         private string UserName { get; set; }
         private string PassWord { get; set; }
 
-        public  FreezerProUtility.Fp_Common.UnameAndPwd GetUp()
+        public  FpUtility.Fp_Common.UnameAndPwd GetUp()
         {
             this.UserName = Common.CookieHelper.GetCookieValue("username");
             string pwd = Common.CookieHelper.GetCookieValue("password");
@@ -26,7 +26,7 @@ namespace RuRo.BLL
                     Common.LogHelper.WriteError(ex);
                 }
             }
-            return new FreezerProUtility.Fp_Common.UnameAndPwd(this.UserName, this.PassWord);
+            return new FpUtility.Fp_Common.UnameAndPwd(this.UserName, this.PassWord);
         }
     }
 }

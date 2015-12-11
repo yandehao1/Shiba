@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     public class FpJsonHelper
     {

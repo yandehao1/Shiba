@@ -3,7 +3,7 @@ using System.Web;
 using System.Threading;
 using System.Diagnostics;
 
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
     /// <summary>
     /// 系统操作相关的公共类

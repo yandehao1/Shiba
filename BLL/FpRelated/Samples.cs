@@ -20,10 +20,11 @@ namespace BLL
         /// <param name="param">调用方法的参数</param>
         /// <param name="datawith">从fp返回值中取什么数据</param>
         /// <returns>返回集合</returns>
-        private List<T> getdata<T>(FpMethod fpMethod,Dictionary<string,string> param,string datawith)
+        private List<T> getdata<T>(FpMethod fpMethod, Dictionary<string, string> param, string datawith)
         {
             List<T> list = new List<T>();
-            string str_Json = dataWithFP.getDateFromFp(fpMethod, param);
+           string str_Json = dataWithFP.getDateFromFp(fpMethod, param);
+          //  string str_Json = FpUtility.
             //默认取出来的数据只有100条
             if (ValidationData.checkTotal(str_Json))
             {
@@ -93,10 +94,10 @@ namespace BLL
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("id", sample_id);
             Model.Sample_Info sample_info = new Model.Sample_Info();
-            string strJson= dataWithFP.getDateFromFp(FpMethod.sample_info, dic);
+            string strJson = dataWithFP.getDateFromFp(FpMethod.sample_info, dic);
             sample_info = FpJsonHelper.JsonStrToObject<Model.Sample_Info>(strJson);
             return sample_info;
         }
-        
+
     }
 }

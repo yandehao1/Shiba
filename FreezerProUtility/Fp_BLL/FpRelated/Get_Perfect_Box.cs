@@ -1,10 +1,10 @@
-﻿using FreezerProUtility.Fp_Common;
+﻿using FpUtility.Fp_Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     public class Get_Perfect_Box
     {
@@ -18,7 +18,7 @@ namespace FreezerProUtility.Fp_BLL
             dic.Add("method", Fp_Common.FpMethod.get_perfect_box.ToString());
             dic.Add("freezer_name", freezer_name);
             dic.Add("space", space);
-            FreezerProUtility.Fp_DAL.CallApi call = new FreezerProUtility.Fp_DAL.CallApi(dic);
+            FpUtility.Fp_DAL.CallApi call = new FpUtility.Fp_DAL.CallApi(dic);
             resultStr = call.GetData();
             return resultStr;
             //暂时如此，直接返回查询之后的结果，能不能查到得到都返回，后期需要将返回结果解析之后返回
@@ -31,7 +31,7 @@ namespace FreezerProUtility.Fp_BLL
             dic.Add("username", up.UserName);
             dic.Add("password", up.PassWord);
             dic.Add("method", Fp_Common.FpMethod.freezers.ToString());
-            FreezerProUtility.Fp_DAL.CallApi call = new FreezerProUtility.Fp_DAL.CallApi(dic);
+            FpUtility.Fp_DAL.CallApi call = new FpUtility.Fp_DAL.CallApi(dic);
             List<Fp_Model.Freezer> freezersList = call.getdata<Fp_Model.Freezer>("Freezers");
             return freezersList;
         }

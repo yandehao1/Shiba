@@ -128,8 +128,8 @@ namespace RuRo.Web
             }
             else
             {
-                FreezerProUtility.Fp_Common.UnameAndPwd up = new FreezerProUtility.Fp_Common.UnameAndPwd(username, password);
-                FreezerProUtility.Fp_BLL.Token token = new FreezerProUtility.Fp_BLL.Token(up);
+                FpUtility.Fp_Common.UnameAndPwd up = new FpUtility.Fp_Common.UnameAndPwd(username, password);
+                FpUtility.Fp_BLL.Token token = new FpUtility.Fp_BLL.Token(up);
                 bool b = token.checkAuth_Token();
                 return b;
             }

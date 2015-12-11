@@ -1,10 +1,10 @@
-﻿using FreezerProUtility.Fp_Common;
-using FreezerProUtility.Fp_DAL;
+﻿using FpUtility.Fp_Common;
+using FpUtility.Fp_DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     public class Token
     {

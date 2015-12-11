@@ -9,7 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.IO.Compression;
 using System.Net.Cache;
 
-namespace FreezerProUtility.Fp_DAL
+namespace FpUtility.Fp_DAL
 {
     /// <summary>    
     /// 上传数据参数    

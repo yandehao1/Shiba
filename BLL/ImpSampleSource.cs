@@ -20,7 +20,7 @@ namespace RuRo.BLL
             Dictionary<string, string> matchField = GetMatchFieldsXmlToDic("configXML\\MatchFields.xml", "/Matchings/*");
             //过滤字段
             //根据样品源类型过滤字段
-            List<string> list = FreezerProUtility.Fp_BLL.SampleSocrce.GetSampleSourceTypeFieldByTypeName(up.GetUp(), sampleSourceTypeName);
+            List<string> list = FpUtility.Fp_BLL.SampleSocrce.GetSampleSourceTypeFieldByTypeName(up.GetUp(), sampleSourceTypeName);
             //匹配字段并转换成
             dic = MatchDic(list, dataDic, matchField);
             Dictionary<string, string> nameAndDescDic = new Dictionary<string, string>() { { "Name", ssName }, { "Description", ssDescription } };
@@ -37,7 +37,7 @@ namespace RuRo.BLL
             }
             temDic = nameAndDescDic;
 
-            string result = FreezerProUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up.GetUp(), sampleSourceTypeName, temDic);
+            string result = FpUtility.Fp_BLL.SampleSocrce.ImportSampleSourceDataToFp(up.GetUp(), sampleSourceTypeName, temDic);
             return result;
         }
         private Dictionary<string, string> GetMatchFieldsXmlToDic(string xmlPath, string xPath)

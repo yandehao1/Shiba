@@ -1,12 +1,12 @@
-﻿using FreezerProUtility.Fp_DAL;
-using FreezerProUtility.Fp_Model;
+﻿using FpUtility.Fp_DAL;
+using FpUtility.Fp_Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     public class Users
     {

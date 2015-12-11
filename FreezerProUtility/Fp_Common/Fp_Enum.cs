@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_Common
+namespace FpUtility.Fp_Common
 {
 
     #region 调用fp方法返回值排序方式

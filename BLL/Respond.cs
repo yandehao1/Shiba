@@ -70,7 +70,7 @@ namespace BLL
                         bool SaveSpecimenRtResult = UpdateSpecimenRt(specimenRt);
                     }
                 }
-            } 
+            }
             #endregion
         }
         public void RespondHis()
@@ -78,11 +78,12 @@ namespace BLL
             //1、回发根据日期查询到的样本
             //检查数据库中当前用户最后一次更新的时间
             //获取当前用户
-           
-           // string username = GetUserName();
-            string username =RuRo.Common.CookieHelper.GetCookieValue("username");
-           // DateTime datetime = fpExtendDatabase.GetSpecimenRtLogLastPostBackDate(username);
-            DateTime datetime = fpExtendDatabase.GetSpecimenRtLogLastPostBackforDate(username);
+
+            // string username = GetUserName();
+            string username = RuRo.Common.CookieHelper.GetCookieValue("username");
+            DateTime datetime = fpExtendDatabase.GetSpecimenRtLogLastPostBackDate(username);
+            // DateTime datetime = fpExtendDatabase.GetSpecimenRtLogLastPostBackforDate(username);
+            //回发日期如果获取不到需要验证
             if (datetime.CompareTo(DateTime.Now.AddDays(-1)) <= 0)
             {
                 string date = string.Format("{0},{1}", datetime.ToString("yyyy.MM.dd"), DateTime.Now.AddDays(-1).ToString("yyyy.MM.dd"));
@@ -96,30 +97,30 @@ namespace BLL
             //都要使用到：回发、从数据库查询数据、从Fp中查询数据
             //单条回发
         }
-        public static DataSet GetSpecimenRtLogGetdata() 
+        public static DataSet GetSpecimenRtLogGetdata()
         {
-            DAL.FpExtendDatabaseHelper hh=new FpExtendDatabaseHelper();
+            DAL.FpExtendDatabaseHelper hh = new FpExtendDatabaseHelper();
             string username = RuRo.Common.CookieHelper.GetCookieValue("username");
-            DataSet ds =hh.GetSpecimenRtLogGetdata(username);
+            DataSet ds = hh.GetSpecimenRtLogGetdata(username);
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                if (ds.Tables[0].Rows[i]["username"]== null)
+                if (ds.Tables[0].Rows[i]["username"] == null)
                 {
                     ds.Tables[0].Rows[i]["username"] = "";
                 }
-                if (ds.Tables[0].Rows[i]["PatiendId"]== null)
+                if (ds.Tables[0].Rows[i]["PatiendId"] == null)
                 {
                     ds.Tables[0].Rows[i]["PatiendId"] = "";
                 }
-                if (ds.Tables[0].Rows[i]["SampleId"]== null)
+                if (ds.Tables[0].Rows[i]["SampleId"] == null)
                 {
                     ds.Tables[0].Rows[i]["SampleId"] = "";
                 }
-                if (ds.Tables[0].Rows[i]["PostBackStatus"]== null)
+                if (ds.Tables[0].Rows[i]["PostBackStatus"] == null)
                 {
                     ds.Tables[0].Rows[i]["PostBackStatus"] = "";
                 }
-                if (ds.Tables[0].Rows[i]["PostBackDate"]== null)
+                if (ds.Tables[0].Rows[i]["PostBackDate"] == null)
                 {
                     ds.Tables[0].Rows[i]["PostBackDate"] = "";
                 }
@@ -264,7 +265,18 @@ namespace BLL
         private bool CheckSpecimenRt(RuRo.BLL.WebService.SpecimenRt item, ref bool exist)
         {
             //检查当前的数据(RuRo.BLL.WebService.SpecimenRt)在数据库中是否存在
-           RuRo.Model.SpecimenRt specimenRt = fpExtendDatabase.SelectSpecimenRtBySampleId(item.Specimens[0].Id);
+            RuRo.DAL.ZSSY.SpecimenRt sr = new RuRo.DAL.ZSSY.SpecimenRt();
+            RuRo.Model.ZSSY.SpecimenRt specimenRt;
+            //RuRo.Model.ZSSY.SpecimenRt specimenRt = sr.GetModel(item.Specimens[0].Id);
+            DataSet ds  = sr.GetList(1, " SampleId ='" + item.Specimens[0].Id + "'","");
+            if ( ds!=null)
+            {
+               specimenRt = sr.DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                specimenRt = null;
+            }
             if (specimenRt != null)//根据样本ID查询到了数据
             {
                 //判断当前传入的item是否和数据中保存的数据一样
@@ -289,7 +301,7 @@ namespace BLL
         private bool AddToSpecimenRtLog(RuRo.BLL.WebService.SpecimenRt item, string result)
         {
             //保存日志：a、直接保存SpecimenRtLog
-            RuRo.Model.SpecimenRtLog specimenRtLog = new RuRo.Model.SpecimenRtLog();
+            RuRo.Model.ZSSY.SpecimenRtLog specimenRtLog = new RuRo.Model.ZSSY.SpecimenRtLog();
             specimenRtLog.PatiendId = item.PatientId;//提交的患者唯一标识
             specimenRtLog.PostBackDate = DateTime.Now;//提交日期
             specimenRtLog.PostBackStatus = result;//保存提交的结果
@@ -316,8 +328,8 @@ namespace BLL
         private bool AddToSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         {
             //保存当前记录到数据库——b、成功之后保存详细的SpecimenRt
-            RuRo.Model.SpecimenRt specimenRt =WebSpecimenRtToDataBaseSpecimenRt(item);
-            if (specimenRt!=null)
+            RuRo.Model.ZSSY.SpecimenRt specimenRt = WebSpecimenRtToDataBaseSpecimenRt(item);
+            if (specimenRt != null)
             {
                 return fpExtendDatabase.AddToSpecimenRt(specimenRt);
             }
@@ -333,9 +345,10 @@ namespace BLL
         private bool UpdateSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         {
             //更新SpecimenRt
-            RuRo.Model.SpecimenRt specimenRt = WebSpecimenRtToDataBaseSpecimenRt(item);
+            RuRo.Model.ZSSY.SpecimenRt specimenRt = WebSpecimenRtToDataBaseSpecimenRt(item);
             if (specimenRt != null)
             {
+                RuRo.DAL.ZSSY.SpecimenRt sr = new RuRo.DAL.ZSSY.SpecimenRt();
                 return fpExtendDatabase.UpdateToSpecimenRt(specimenRt);
             }
             return false;
@@ -347,10 +360,10 @@ namespace BLL
         /// </summary>
         /// <param name="item">RuRo.BLL.WebService.SpecimenRt</param>
         /// <returns>SpecimenRt</returns>
-        private RuRo.Model.SpecimenRt WebSpecimenRtToDataBaseSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
+        private RuRo.Model.ZSSY.SpecimenRt WebSpecimenRtToDataBaseSpecimenRt(RuRo.BLL.WebService.SpecimenRt item)
         {
             //将当前需要回传的样本数据转换成数据库里保存的格式
-            RuRo.Model.SpecimenRt specimenRt = new RuRo.Model.SpecimenRt();
+            RuRo.Model.ZSSY.SpecimenRt specimenRt = new RuRo.Model.ZSSY.SpecimenRt();
             if (!string.IsNullOrEmpty(item.PatientId))
             {
                 specimenRt.PatientId = item.PatientId;

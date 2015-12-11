@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using FreezerProUtility;
-using FreezerProUtility.Fp_Model;
+using FpUtility;
+using FpUtility.Fp_Model;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
     public class SampleSocrce
     {
@@ -41,7 +41,7 @@ namespace FreezerProUtility.Fp_BLL
             dic.Add("sample_source_type", sampleSourceTypeName);
             if (jsonDic != null && jsonDic.Count > 0)
             {
-                string jsonStr = FreezerProUtility.Fp_Common.FpJsonHelper.DictionaryToJsonString(jsonDic);
+                string jsonStr = FpUtility.Fp_Common.FpJsonHelper.DictionaryToJsonString(jsonDic);
                 dic.Add("json", jsonStr);
             }
             Fp_DAL.CallApi call = new Fp_DAL.CallApi(dic);
@@ -52,7 +52,7 @@ namespace FreezerProUtility.Fp_BLL
         public static Dictionary<string, string> GetAllIdAndNamesDic(Fp_Common.UnameAndPwd up)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
-            List<FreezerProUtility.Fp_Model.SampleSourceTypes> list = GetAll(up);
+            List<FpUtility.Fp_Model.SampleSourceTypes> list = GetAll(up);
             if (list != null && list.Count > 0)
             {
                 foreach (var item in list)

@@ -1,10 +1,10 @@
-﻿using FreezerProUtility.Fp_Model;
+﻿using FpUtility.Fp_Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FreezerProUtility.Fp_BLL
+namespace FpUtility.Fp_BLL
 {
 
     public class Boxes
@@ -38,7 +38,7 @@ namespace FreezerProUtility.Fp_BLL
             dic.Add("method", Fp_Common.FpMethod.boxes.ToString());
             dic.Add("id", id);
             dic.Add("show_empty", "true");
-            FreezerProUtility.Fp_DAL.CallApi call = new FreezerProUtility.Fp_DAL.CallApi(dic);
+            FpUtility.Fp_DAL.CallApi call = new FpUtility.Fp_DAL.CallApi(dic);
             List<Box> boxes = call.getdata<Box>("Boxes");
             return boxes;
         }

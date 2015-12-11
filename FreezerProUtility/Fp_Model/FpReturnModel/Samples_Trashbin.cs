@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 //
 using System.Threading;
-namespace FreezerProUtility.Fp_Model
+namespace FpUtility.Fp_Model
 {
    public class Samples_Trashbin
     {
