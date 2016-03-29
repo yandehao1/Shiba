@@ -1,11 +1,33 @@
-//==========================================================
-//基础代码由科发EasyUi代码生成器v3.5(build 20140519)代码生成器生成,免费版自动增加版权注释,请保留版权信息，尊重作者劳动成果，如您有更好的建议请发至邮箱：843330160@qq.com
-//==========================================================
-namespace RURO
-{
-    public partial class Info_info
-    {
-            protected System.Web.UI.HtmlControls.HtmlInputText mode;
-            protected System.Web.UI.HtmlControls.HtmlInputText pk; 
+//------------------------------------------------------------------------------
+// <自动生成>
+//     此代码由工具生成。
+//
+//     对此文件的更改可能会导致不正确的行为，并且如果
+//     重新生成代码，这些更改将会丢失。 
+// </自动生成>
+//------------------------------------------------------------------------------
+
+namespace RURO {
+    
+    
+    public partial class Info_info {
+        
+        /// <summary>
+        /// mode 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText mode;
+        
+        /// <summary>
+        /// pk 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText pk;
     }
 }

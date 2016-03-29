@@ -19,12 +19,12 @@
 </head>
 <body>
 <!--datagrid栏--> 
-<table id="datagrid" title="Info" class="easyui-datagrid" style="width:auto;height:460px"
+<table id="datagrid" title="查询列表" class="easyui-datagrid" style="width:auto;height:460px"
              url="Info_handler.ashx?mode=qry" fit='false'
              pagination="true" idField="id" rownumbers="true" 
              fitColumns="true"  singleSelect="true" toolbar="#toolbar"
-             striped="false" pageList="[15,30,50,100,500]"
-             SelectOnCheck="true" CheckOnSelect="true" remoteSort="true">
+             striped="false" pagelist="[10,30,50]"
+             SelectOnCheck="true" CheckOnSelect="true" remoteSort="true" multiSort="true">
     <thead>    
 			<tr>
 			    <th field="ck" checkbox="true"></th>
@@ -46,43 +46,17 @@
 
 <!--toolbar栏，用于datagrid的toolbar自定义内容--> 
 <div id="toolbar">
-<table style="width:100%;">
-<tr>
-    <td>
-        <!--查询输入栏--> 
-        <table>
+        <table style="width: 100%;">
             <tr>
-               <!--Page数据选择模式-->  
-                <td><select onchange="$('#datagrid').datagrid({singleSelect:(this.value==0)})"><option value="0">单选模式</option><option value="1">多选模式</option></select></td>
-
-                <!--查询控件-->
-                <td>
-                    <!--
-                    编码字段<input id="so_字段名称"  class="easyui-combobox" panelHeight="auto"  data-options="valueField:'编码表对应code字段名',textField:'编码表对应name字段名', url:'/common/codeDataHandler.ashx?tabName=编码表名'"/>
-                    <input id="date"     class="easyui-datebox" type="text" />
-                    -->
-                </td>
-                <!--检索关键字-->
-                <td><input id="so_keywords"  class="easyui-searchbox" data-options="prompt:'请输入查询关键字',searcher:searchData" ></input></td>
+                <!--button按钮工具栏-->
+                <td style="text-align: right;"></td>
             </tr>
-        </table> 
-    </td>
-    <!--button按钮工具栏--> 
-    <td  style="text-align:right;">
-        <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonInfo" iconCls="icon-search" plain="false" onclick="infoForm();">查看</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonAdd" iconCls="icon-add" plain="false" onclick="newForm();">添加</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonEdit" iconCls="icon-edit" plain="false" onclick="editForm();">编辑</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonDel" iconCls="icon-cancel" plain="false" onclick="destroy();">删除</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonExport" iconCls="icon-save" plain="false" onclick="exportData();">导出</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" id="linkbuttonPrint" iconCls="icon-print" plain="false" onclick="CreateFormPage('Info', $('#datagrid'));">打印</a>
-    </td>
-</tr>
-</table>  
+        </table>
 </div>
 
 <!--diaglog窗口，用于编辑数据--> 
 <div id="dlg"  class="easyui-dialog" closed="true"></div>
-
+<div id="dd"></div>
 <script type="text/javascript">
 	var url;
 	/*新增表单*/

@@ -1,8 +1,9 @@
-﻿using Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RuRo.DAL;
 using RuRo.Common;
+using Common;
 
 namespace DAL
 {
@@ -74,14 +75,14 @@ namespace DAL
                     }
                 }
             }
-            uriStr = string.Format("{0}/api?", XmlHelper.Read("configXML\\UriConfigXml.xml", "Uri"));
+            uriStr = string.Format("{0}/api?", FpUtility.Fp_Common.XmlHelper.Read("configXML\\UriConfigXml.xml", "Uri"));
         }
         //指定账号密码
         public DataWithFP(string username, string password)
         {
             Username = username;
             passWord = password;
-            uriStr = string.Format("{0}/api?", XmlHelper.Read("configXML\\UriConfigXml.xml", "Uri"));
+            uriStr = string.Format("{0}/api?", FpUtility.Fp_Common.XmlHelper.Read("configXML\\UriConfigXml.xml", "Uri"));
         }
         #endregion
 

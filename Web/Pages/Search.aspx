@@ -26,9 +26,8 @@
             <div style="float: left">
                 查询方式：
                     <select id="selectType" class="easyui-combobox" name="dept" style="width:130px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
-                        <option value="住院号">住院号</option>
-                        <option value="卡号">卡号</option>
-                       <%-- <option value="3">批量扫码</option>--%>
+                        <option value="1">住院号</option>
+                        <option value="2">卡号</option>
                     </select>
             </div>
             <div id="getcode" style="float: left">
@@ -43,7 +42,7 @@
             <!--Search end-->
         </form>
     </div>
-    <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'OPListForSpecimen/OPListForSpecimen_list.aspx'"></div>
+    <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'ShiBa/Info_list.aspx'"></div>
     <script type="text/javascript">
         ////给日期框设置值
         //function SetDate() {
@@ -80,19 +79,20 @@
                 ajaxLoading();
                 $.ajax({
                     type: 'GET',
-                    url: '/Sever/OPListForSpecimen_handler.ashx?mode=qrycode&code=' + code +'& selectType='+selectType,
+                    url: '/Sever/Info_handler.ashx?mode=qry&code=' + code + '& selectType=' + selectType,
                     onSubmit: function () { },
                     success: function (data) {
                         ajaxLoadEnd();
                         $('#code').textbox('setValue', '');
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
+
                             $('#dd').window({
                                 title: '详细数据页面',
                                 width: 800,
                                 height: 500,
                                 modal: true,
-                                href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
+                                href: 'ShiBa/Info_info.aspx',
                                 onLoad: function () {
                                     var basedata = $.parseJSON(data);
                                     if (basedata.success == true) {

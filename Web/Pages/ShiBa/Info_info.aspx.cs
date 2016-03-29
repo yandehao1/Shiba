@@ -17,7 +17,7 @@ namespace RURO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Common.js.SetNoCache(); 
+           
             if (Page.IsPostBack == false)
             {
                 if (Request["mode"] != null)
