@@ -26,7 +26,7 @@
     </style>
 </head>
 <body style="width: 940px">
-    <div class="easyui-panel">
+    <div class="easyui-panel">  
         <form id="SearchForm" runat="server">
             <div style="float: left">
                 查询方式：
@@ -90,6 +90,7 @@
                     success: function (data)
                     {
                         ajaxLoadEnd();
+                        $('Info_datagrid').datagrid();
                         alert(data);
                     }
                 })

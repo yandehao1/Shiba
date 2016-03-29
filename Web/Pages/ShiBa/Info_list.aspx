@@ -16,8 +16,8 @@
 </head>
 <body>
 <!--datagrid栏--> 
-<table id="datagrid" title="信息列表页面" class="easyui-datagrid" style="width: auto; height: 460px;text-align:center"
-             url="Info_handler.ashx?mode=qry" fit='false'
+<table id="Info_datagrid" title="信息列表页面" class="easyui-datagrid" style="width: auto; height: 460px;text-align:center"
+             url="../Fp_Ajax/getData.ashx?mode=qry" fit='false'
              pagination="true" idField="id" rownumbers="true" 
              fitColumns="true"  singleSelect="true" toolbar="#toolbar"
              striped="false" pageList="[15,30,50,100,500]"

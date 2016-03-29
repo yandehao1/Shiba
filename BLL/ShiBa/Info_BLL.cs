@@ -39,5 +39,28 @@ namespace RuRo.BLL
             return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
         }
 
+        /// <summary>
+        /// 返回测试住院信息
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public string GetZhuYuanTest(string code)
+        {
+            DataSet ds = new DataSet();
+            ds = g_DAL.GetTestzhuyuan();
+            return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
+        }
+
+        /// <summary>
+        /// 返回测试门诊信息
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public string GetmenzhenTest(string code)
+        {
+            DataSet ds = new DataSet();
+            ds = g_DAL.GetTestmenzhen();
+            return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
+        }
     }
 }

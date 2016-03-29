@@ -7,7 +7,7 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.Collections.Generic;
 using System.Text;
-namespace RuRo.Web
+namespace RuRo.Web.Pages.ShiBa
 {
     public class Info_handler : IHttpHandler
     {
