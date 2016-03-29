@@ -102,7 +102,6 @@
     <Content Include="Error\AppExError\150915.txt" />
     <Content Include="Error\AppExError\150916.txt" />
     <Content Include="Error\AppExError\150917.txt" />
-    <Content Include="FpExtendPage.aspx" />
     <Content Include="Fp_Ajax\Fp_Ajax.txt" />
     <Content Include="Fp_Ajax\getjson.aspx" />
     <Content Include="Global.asax" />
@@ -688,8 +687,6 @@
     <Content Include="MasterPage.master" />
     <Content Include="Pages\ShiBa\Info_handler.ashx" />
     <Content Include="Fp_Ajax\PageConData.ashx" />
-    <Content Include="BaseFp.Master" />
-    <Content Include="FpExtendMaster.Master" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
@@ -701,12 +698,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseFp.Master.cs">
-      <DependentUpon>BaseFp.Master</DependentUpon>
-    </Compile>
-    <Compile Include="BaseFp.Master.designer.cs">
-      <DependentUpon>BaseFp.Master</DependentUpon>
-    </Compile>
     <Compile Include="Controls\checkright.ascx.cs">
       <DependentUpon>checkright.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -727,18 +718,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FpExtendMaster.Master.cs">
-      <DependentUpon>FpExtendMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="FpExtendMaster.Master.designer.cs">
-      <DependentUpon>FpExtendMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="FpExtendPage.aspx.cs">
-      <DependentUpon>FpExtendPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FpExtendPage.aspx.designer.cs">
-      <DependentUpon>FpExtendPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Fp_Ajax\getjson.aspx.cs">
       <DependentUpon>getjson.aspx</DependentUpon>

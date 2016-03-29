@@ -85,7 +85,7 @@
                 ajaxLoading();
                 $.ajax({
                     type: 'GET',
-                    url: 'ShiBa/Info_handler.ashx?mode=qrycode&code=' + code + '& selectType=' + selectType,
+                    url: 'ShiBa/Info_handler.ashx?mode=qry&code=' + code + '& selectType=' + selectType,
                     onSubmit: function () { },
                     success: function (data) {
                         ajaxLoadEnd();
