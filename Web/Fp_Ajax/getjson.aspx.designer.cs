@@ -7,9 +7,9 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace RuRo.Web {
+namespace RuRo.Web.Fp_Ajax {
     
     
-    public partial class PageConData {
+    public partial class getjson {
     }
 }
