@@ -16,25 +16,31 @@
     <script type="text/javascript" src="../include/js/default.js"></script>
     <script type="text/javascript" src="../include/js/page.js"></script>
     <style type="text/css">
-        #SearchForm {margin: 5px;}
-        #SearchForm div{margin:5px}
+        #SearchForm {
+            margin: 5px;
+        }
+
+            #SearchForm div {
+                margin: 5px;
+            }
     </style>
 </head>
-<body style="width:940px">
+<body style="width: 940px">
     <div class="easyui-panel">
         <form id="SearchForm" runat="server">
             <div style="float: left">
                 查询方式：
-                    <select id="selectType" class="easyui-combobox" name="dept" style="width:130px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
-                        <option value="1">住院号</option>
-                        <option value="2">卡号</option>
+                    <select id="selectType" class="easyui-combobox" name="dept" style="width: 130px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
+                        <option value="住院号">住院号</option>
+                        <option value="卡号">卡号</option>
+                        <%-- <option value="3">批量扫码</option>--%>
                     </select>
             </div>
             <div id="getcode" style="float: left">
                 <input id="code" class="easyui-textbox" name="code" data-options="prompt:'请输入条码',required:true" />
                 <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="querybycode()">条码查询信息</a>
             </div>
-          <%--  <div id="getdate" style="display: none; float: left">
+            <%--  <div id="getdate" style="display: none; float: left">
                 开始日期：<input id="ksrq" class="easyui-datebox" name="ksrq" data-options="required:true" style="width: 130px" />
                 结束日期：<input id="jsrq" class="easyui-datebox" name="jsrq" data-options="required:true" style="width: 130px" />
                 <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="querybydate()">日期查询信息</a>
@@ -79,37 +85,30 @@
                 ajaxLoading();
                 $.ajax({
                     type: 'GET',
-                    url: '/Sever/Info_handler.ashx?mode=qry&code=' + code + '& selectType=' + selectType,
+                    url: 'ShiBa/Info_handler.ashx?mode=qrycode&code=' + code + '& selectType=' + selectType,
                     onSubmit: function () { },
                     success: function (data) {
                         ajaxLoadEnd();
                         $('#code').textbox('setValue', '');
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
                         else {
-
                             $('#dd').window({
                                 title: '详细数据页面',
                                 width: 800,
                                 height: 500,
                                 modal: true,
-                                href: 'ShiBa/Info_info.aspx',
+                                href: 'OPListForSpecimen/OPListForSpecimen_info.aspx',
                                 onLoad: function () {
                                     var basedata = $.parseJSON(data);
-                                    if (basedata.success == true) {
-                                        var resultdata = basedata.result;
-                                        //var age = 0;
-                                        //if (resultdata.DateOfBirth != "") {
-                                        //    var old = new Date(resultdata.DateOfBirth);
-                                        //    var now = new Date();
-                                        //    var age = 0
-                                        //    if (now.getTime() > old.getTime()) {
-                                        //        age = now.getFullYear() - old.getFullYear();
-                                        //    }
-                                        //    resultdata.DateOfAge = age.toString();
-                                        //}
-                                        $("#frmAjax").form("load", basedata.result);
-                                    } else {
-                                        ShowMsg(basedata.result);
+                                    if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
+                                    else {
+                                        var loaddata = $.parseJSON(data);
+                                        if (loaddata.success) {
+                                            PagePaging(loaddata.result);
+                                        } else {
+                                            ShowMsg(loaddata.result)
+                                        }
+                                        PagePaging(loaddata);
                                     }
                                 }
                             });
@@ -119,40 +118,6 @@
                 ajaxLoadEnd();
             }
         }
-
-        ////绑定数据日期
-        //function querybydate() {
-        //    var ksdate = $('#ksrq').textbox('getValue');
-        //    var jsdate = $('#jsrq').textbox('getValue');
-        //    if (dateSearch(ksdate, jsdate) == false) {return;}
-        //    if (!CheckDate(ksdate) || !CheckDate(jsdate)) { $.messager.alert('提示', '日期格式不正确', 'error'); return;}
-        //   // if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error');  return; }
-        //    if (isEmptyStr(ksdate) || isEmptyStr(jsdate)) { $.messager.alert('提示', '日期不能为空', 'error'); return; }
-        //    else {
-        //        ajaxLoading();
-        //        $.ajax({
-        //            type: 'GET',
-        //            url: '../Sever/OPListForSpecimen_handler.ashx?mode=qrydate&ksdate=' + ksdate + '&jsdate=' + jsdate,
-        //            onSubmit: function () { },
-        //            success: function (data) {
-        //                ajaxLoadEnd();
-        //                if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
-        //                else {
-        //                    var loaddata = $.parseJSON(data);
-        //                    if (loaddata.success) {
-
-        //                            PagePaging(loaddata.result);
-        //                    } else {
-        //                        ShowMsg(loaddata.result)
-        //                    }
-        //                   // PagePaging(loaddata);
-        //                }
-        //            }
-        //        });
-        //        ajaxLoadEnd();
-        //    }
-        //}
-
         function CheckDate(checkdate) {
             var result = checkdate.match(/((^((1[8-9]\d{2})|([2-9]\d{3}))(-)(10|12|0?[13578])(-)(3[01]|[12][0-9]|0?[1-9])$)|(^((1[8-9]\d{2})|([2-9]\d{3}))(-)(11|0?[469])(-)(30|[12][0-9]|0?[1-9])$)|(^((1[8-9]\d{2})|([2-9]\d{3}))(-)(0?2)(-)(2[0-8]|1[0-9]|0?[1-9])$)|(^([2468][048]00)(-)(0?2)(-)(29)$)|(^([3579][26]00)(-)(0?2)(-)(29)$)|(^([1][89][0][48])(-)(0?2)(-)(29)$)|(^([2-9][0-9][0][48])(-)(0?2)(-)(29)$)|(^([1][89][2468][048])(-)(0?2)(-)(29)$)|(^([2-9][0-9][2468][048])(-)(0?2)(-)(29)$)|(^([1][89][13579][26])(-)(0?2)(-)(29)$)|(^([2-9][0-9][13579][26])(-)(0?2)(-)(29)$))/);
             if (result == null) {
