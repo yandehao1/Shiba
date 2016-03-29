@@ -679,7 +679,6 @@
     <Content Include="Pages\ShiBa\Info_info.aspx" />
     <Content Include="Pages\ShiBa\Info_list.aspx" />
     <Content Include="Fp_Ajax\getData.ashx" />
-    <Content Include="Pages\ShiBa\Handler1.ashx" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -752,9 +751,6 @@
     </Compile>
     <Compile Include="MasterPage.master.designer.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ShiBa\Handler1.ashx.cs">
-      <DependentUpon>Handler1.ashx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ShiBa\Info_handler.ashx.cs">
       <DependentUpon>Info_handler.ashx</DependentUpon>

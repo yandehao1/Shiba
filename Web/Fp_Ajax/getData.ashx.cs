@@ -161,66 +161,15 @@ namespace RuRo.Web.Fp_Ajax
         /// <param name="export">是否导出Excel文件</param>
         private static void QueryData(HttpContext context, bool export)
         {
-            #region 获取Jquery回传Server分页页码和每页行数
-            //int page,rows;
-            //if (context.Request["page"] != null)
-            //   page = int.Parse(context.Request["page"]);
-            //else
-            //   page = 1; 
-            //if (context.Request["rows"]!= null)
-            //    rows = int.Parse(context.Request["rows"]);
-            //else
-            //    rows = 10;
-            #endregion
-
-            #region 获取Jquery回传查询条件参数
-            //string strWhere = " 1=1 ";
-            //if (context.Request["so_keywords"] != null)
-            //{
-            //    string strKeywords = context.Request["so_keywords"];
-            //    if (strKeywords.Length > 0)
-            //    {
-            //        strWhere += " and (";
-            //        strWhere += " id like '%" + strKeywords + "%'";
-            //        strWhere += " or 部门 like '%" + strKeywords + "%'";
-            //        strWhere += " or 姓名 like '%" + strKeywords + "%'";
-            //        strWhere += " or 性别 like '%" + strKeywords + "%'";
-            //        strWhere += " or 年龄 like '%" + strKeywords + "%'";
-            //        strWhere += ")";
-            //    }
-            //}
-            #endregion
-
-            #region 字段排序
-            //string sort = "id";
-            //string order = "asc";
-            //if (context.Request["sort"] != null)
-            //    sort = context.Request["sort"];
-            //if (context.Request["order"] != null)
-            //    order = context.Request["order"];
-            #endregion
-
-            #region 分页数据
-            DataTable m_dtTable = new DataTable();
-            // PageAction pageAction = new PageAction();
-            //pageAction.CurPage = page;
-            //pageAction.PageSize = rows;
-            //pageAction.TabName = "Info";
-            //pageAction.Fields = "*";
-            //pageAction.PkField = "id";
-            //pageAction.Condition = strWhere;
-            //pageAction.Sort = sort + " " + order;
-            // DbHelper.FillDataTable(pageAction, m_dtTable); 
-            #endregion
             string mes = "";
-            string code = context.Request["code"].ToString();
+            string code = context.Request["getcode"].ToString();
             string StrCodeType = context.Request["type"].ToString();
             BLL.Info_BLL bll = new BLL.Info_BLL();
             //获取正式数据
             if (StrCodeType == "zhuyuan")
             {
                 //mes = bll.GetZhuYuanData(code);//正式获取
-                mes = bll.GetZhuYuanData(code);//测试
+                mes = bll.GetZhuYuanTest(code);//测试
                 context.Response.Write(mes);
             }
             if (StrCodeType == "kahao")
@@ -230,13 +179,6 @@ namespace RuRo.Web.Fp_Ajax
                 context.Response.Write(mes);
             }
             //获取测试数据
-
-            #region 根据下拉列表编码设置datagrid显示值
-            for (int i = 0; i < m_dtTable.Rows.Count; i++)
-            {
-            }
-
-            #endregion
 
         }
         public bool IsReusable
