@@ -47,55 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bll_test.cs" />
     <Compile Include="Error\ErrorLog.cs" />
-    <Compile Include="FpRelated\ImportDataToFp.cs" />
-    <Compile Include="FpRelated\Samples.cs" />
-    <Compile Include="FpRelated\SampleSocrce.cs" />
-    <Compile Include="GetDataFromHospital.cs" />
-    <Compile Include="HospitalXmlStrHelper.cs" />
-    <Compile Include="ImpSampleSource.cs" />
-    <Compile Include="LabTestMaster.cs" />
-    <Compile Include="LabTestResult.cs" />
+    <Compile Include="ShiBa\Info_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Respond.cs" />
     <Compile Include="UnameAndPwd.cs" />
     <Compile Include="ValidationData.cs" />
-    <Compile Include="Web References\WebService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog.cs" />
-    <Compile Include="ZSSY\LabTestMaster.cs" />
-    <Compile Include="ZSSY\LabTestResult.cs" />
-    <Compile Include="ZSSY\OPListForSpecimen.cs" />
-    <Compile Include="ZSSY\SpecimenRt.cs" />
-    <Compile Include="ZSSY\SpecimenRtLog.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="http://10.21.15.143:57772/csp/ensdemo/WS.ForCenterLabService.cls%3fWSDL">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\WebService\</RelPath>
-      <UpdateFromURL>http://10.21.15.143:57772/csp/ensdemo/WS.ForCenterLabService.cls%3fWSDL</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>BLL_WebReference_ForCenterLabService</CachedSettingsPropName>
-    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -103,11 +64,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\WebService\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\WebService\WS.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
@@ -118,7 +74,7 @@
       <Project>{306f6f45-4df3-468f-8c3a-2e172e132265}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FreezerProUtility\FpUtility.csproj">
+    <ProjectReference Include="..\FpUtility\FpUtility.csproj">
       <Project>{8f8a2679-a4e7-4f84-8306-74c7bc8cd24c}</Project>
       <Name>FpUtility</Name>
     </ProjectReference>

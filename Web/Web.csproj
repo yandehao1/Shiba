@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,7 +81,6 @@
     <Content Include="configXML\GetLabTestResult.xml" />
     <Content Include="Controls\checkright.ascx" />
     <Content Include="Controls\copyright.ascx" />
-    <Content Include="default-old.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Error\AppError\150823.txt" />
     <Content Include="Error\AppError\150824.txt" />
@@ -104,7 +104,6 @@
     <Content Include="Error\AppExError\150917.txt" />
     <Content Include="Fp_Ajax\Fp_Ajax.txt" />
     <Content Include="Fp_Ajax\getjson.aspx" />
-    <Content Include="Fp_Ajax\PageConData.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Images\about16.gif" />
     <Content Include="Images\Images\add16.gif" />
@@ -678,52 +677,20 @@
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
     <Content Include="Login.aspx" />
-    <Content Include="Pages\LabTest.aspx" />
-    <Content Include="Pages\LabTestMaster\LabTestMaster_info.aspx" />
-    <Content Include="Pages\LabTestMaster\LabTestMaster_list.aspx" />
-    <Content Include="Pages\LabTestResult\LabTestResult_info.aspx" />
-    <Content Include="Pages\LabTestResult\LabTestResult_list.aspx" />
-    <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx" />
-    <Content Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx" />
+    <Content Include="Pages\ShiBa\Info_info.aspx" />
+    <Content Include="Pages\ShiBa\Info_list.aspx" />
     <Content Include="Test\TestEnum.aspx" />
-    <Content Include="ZSSY\SpecimenRtLog\ResHis.aspx" />
     <Content Include="Pages\Search.aspx" />
-    <Content Include="Pages\SpecimenRt\SpecimenRtLog_list.aspx" />
-    <Content Include="Pages\SpecimenRt\SpecimenRt_list.aspx" />
     <Content Include="Scripts\easyuicontrols.js" />
     <Content Include="Style.css" />
     <Content Include="ValidateCode.aspx" />
-    <Content Include="ZSSY\ImportSampleSourceLog\Add.aspx" />
-    <Content Include="ZSSY\ImportSampleSourceLog\List.aspx" />
-    <Content Include="ZSSY\ImportSampleSourceLog\Modify.aspx" />
-    <Content Include="ZSSY\ImportSampleSourceLog\Show.aspx" />
-    <Content Include="ZSSY\LabTestMaster\Add.aspx" />
-    <Content Include="ZSSY\LabTestMaster\List.aspx" />
-    <Content Include="ZSSY\LabTestMaster\Modify.aspx" />
-    <Content Include="ZSSY\LabTestMaster\Show.aspx" />
-    <Content Include="ZSSY\LabTestResult\Add.aspx" />
-    <Content Include="ZSSY\LabTestResult\List.aspx" />
-    <Content Include="ZSSY\LabTestResult\Modify.aspx" />
-    <Content Include="ZSSY\LabTestResult\Show.aspx" />
-    <Content Include="ZSSY\OPListForSpecimen\Add.aspx" />
-    <Content Include="ZSSY\OPListForSpecimen\List.aspx" />
-    <Content Include="ZSSY\OPListForSpecimen\Modify.aspx" />
-    <Content Include="ZSSY\OPListForSpecimen\Show.aspx" />
-    <Content Include="ZSSY\SpecimenRtLog\Add.aspx" />
-    <Content Include="ZSSY\SpecimenRtLog\List.aspx" />
-    <Content Include="ZSSY\SpecimenRtLog\Modify.aspx" />
-    <Content Include="ZSSY\SpecimenRtLog\Show.aspx" />
-    <Content Include="ZSSY\SpecimenRt\Add.aspx" />
-    <Content Include="ZSSY\SpecimenRt\List.aspx" />
-    <Content Include="ZSSY\SpecimenRt\Modify.aspx" />
-    <Content Include="ZSSY\SpecimenRt\Show.aspx" />
     <Content Include="MasterPage.master" />
+    <Content Include="Pages\ShiBa\Info_handler.ashx" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\nugetexample.js" />
-    <Content Include="TestPage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -743,13 +710,6 @@
     <Compile Include="Controls\CopyRight.ascx.designer.cs">
       <DependentUpon>copyright.ascx</DependentUpon>
     </Compile>
-    <Compile Include="default-old.aspx.cs">
-      <DependentUpon>default-old.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="default-old.aspx.designer.cs">
-      <DependentUpon>default-old.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -764,21 +724,8 @@
     <Compile Include="Fp_Ajax\getjson.aspx.designer.cs">
       <DependentUpon>getjson.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Fp_Ajax\PageConData.aspx.cs">
-      <DependentUpon>PageConData.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Fp_Ajax\PageConData.aspx.designer.cs">
-      <DependentUpon>PageConData.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GetData.ashx.cs">
-      <DependentUpon>GetData.ashx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="ImportData.ashx.cs">
-      <DependentUpon>ImportData.ashx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -801,54 +748,22 @@
     <Compile Include="MasterPage.master.designer.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\LabTest.aspx.cs">
-      <DependentUpon>LabTest.aspx</DependentUpon>
+    <Compile Include="Pages\ShiBa\Info_handler.ashx.cs">
+      <DependentUpon>Info_handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShiBa\Info_info.aspx.cs">
+      <DependentUpon>Info_info.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\LabTest.aspx.designer.cs">
-      <DependentUpon>LabTest.aspx</DependentUpon>
+    <Compile Include="Pages\ShiBa\Info_info.aspx.designer.cs">
+      <DependentUpon>Info_info.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\LabTestMaster\LabTestMaster_info.aspx.cs">
-      <DependentUpon>LabTestMaster_info.aspx</DependentUpon>
+    <Compile Include="Pages\ShiBa\Info_list.aspx.cs">
+      <DependentUpon>Info_list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\LabTestMaster\LabTestMaster_info.aspx.designer.cs">
-      <DependentUpon>LabTestMaster_info.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\LabTestMaster\LabTestMaster_list.aspx.cs">
-      <DependentUpon>LabTestMaster_list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\LabTestMaster\LabTestMaster_list.aspx.designer.cs">
-      <DependentUpon>LabTestMaster_list.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\LabTestResult\LabTestResult_info.aspx.cs">
-      <DependentUpon>LabTestResult_info.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\LabTestResult\LabTestResult_info.aspx.designer.cs">
-      <DependentUpon>LabTestResult_info.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\LabTestResult\LabTestResult_list.aspx.cs">
-      <DependentUpon>LabTestResult_list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\LabTestResult\LabTestResult_list.aspx.designer.cs">
-      <DependentUpon>LabTestResult_list.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx.cs">
-      <DependentUpon>OPListForSpecimen_info.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_info.aspx.designer.cs">
-      <DependentUpon>OPListForSpecimen_info.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx.cs">
-      <DependentUpon>OPListForSpecimen_list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\OPListForSpecimen\OPListForSpecimen_list.aspx.designer.cs">
-      <DependentUpon>OPListForSpecimen_list.aspx</DependentUpon>
+    <Compile Include="Pages\ShiBa\Info_list.aspx.designer.cs">
+      <DependentUpon>Info_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test\TestEnum.aspx.cs">
       <DependentUpon>TestEnum.aspx</DependentUpon>
@@ -857,13 +772,6 @@
     <Compile Include="Test\TestEnum.aspx.designer.cs">
       <DependentUpon>TestEnum.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\ResHis.aspx.cs">
-      <DependentUpon>ResHis.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\ResHis.aspx.designer.cs">
-      <DependentUpon>ResHis.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -871,40 +779,7 @@
     <Compile Include="Pages\Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SpecimenRt\SpecimenRtLog_list.aspx.cs">
-      <DependentUpon>SpecimenRtLog_list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\SpecimenRt\SpecimenRtLog_list.aspx.designer.cs">
-      <DependentUpon>SpecimenRtLog_list.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SpecimenRt\SpecimenRt_list.aspx.cs">
-      <DependentUpon>SpecimenRt_list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\SpecimenRt\SpecimenRt_list.aspx.designer.cs">
-      <DependentUpon>SpecimenRt_list.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RespondHis.ashx.cs">
-      <DependentUpon>RespondHis.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="Sever\LabTest.ashx.cs">
-      <DependentUpon>LabTest.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="Sever\OPListForSpecimen_handler.ashx.cs">
-      <DependentUpon>OPListForSpecimen_handler.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="Sever\SpecimenRtLog_handler.ashx.cs">
-      <DependentUpon>SpecimenRtLog_handler.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="TestPage.aspx.cs">
-      <DependentUpon>TestPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TestPage.aspx.designer.cs">
-      <DependentUpon>TestPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ValidateCode.aspx.cs">
       <DependentUpon>ValidateCode.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -912,183 +787,9 @@
     <Compile Include="ValidateCode.aspx.designer.cs">
       <DependentUpon>ValidateCode.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\ImportSampleSourceLog\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\LabTestMaster\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\LabTestMaster\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\LabTestMaster\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\LabTestMaster\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\LabTestMaster\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\LabTestMaster\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\LabTestMaster\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\LabTestMaster\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\LabTestResult\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\LabTestResult\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\LabTestResult\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\LabTestResult\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\LabTestResult\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\LabTestResult\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\LabTestResult\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\LabTestResult\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\OPListForSpecimen\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\OPListForSpecimen\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\OPListForSpecimen\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\OPListForSpecimen\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\OPListForSpecimen\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\OPListForSpecimen\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\OPListForSpecimen\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\OPListForSpecimen\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRtLog\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRt\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRt\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRt\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRt\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRt\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRt\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRt\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ZSSY\SpecimenRt\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GetData.ashx" />
-    <Content Include="ImportData.ashx" />
-    <Content Include="RespondHis.ashx" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
-    <Content Include="Sever\OPListForSpecimen_handler.ashx" />
-    <Content Include="Sever\SpecimenRtLog_handler.ashx" />
-    <Content Include="Sever\LabTest.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1105,7 +806,7 @@
       <Project>{b2640b6a-73a0-48f0-86e4-9d0d50e58467}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FreezerProUtility\FpUtility.csproj">
+    <ProjectReference Include="..\FpUtility\FpUtility.csproj">
       <Project>{8f8a2679-a4e7-4f84-8306-74c7bc8cd24c}</Project>
       <Name>FpUtility</Name>
     </ProjectReference>
@@ -1116,6 +817,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Sever\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

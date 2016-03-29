@@ -28,7 +28,7 @@
         </span>
     </div>
     <div region="south" split="true" style="height: 30px; background: #D2E0F2;">
-        <div class="footer">中山三院临床样本资源库</div>
+        <div class="footer"><%=hospitalName;%></div>
     </div>
     <div region="west" split="true" title="导航菜单" style="width: 180px;" id="nav">
         <div id="nav" class="easyui-accordion" fit="false" border="false">
@@ -38,12 +38,12 @@
                     <li>
                         <div><a target="mainFrame" rel="Pages/Search.aspx"><span></span>查询信息</a></div>
                     </li>
-                    <li>
+<%--                    <li>
                         <div><a target="mainFrame" rel="ZSSY/SpecimenRtLog/ResHis.aspx"><span></span>回发数据</a></div>
                     </li>
                     <li>
                         <div><a target="mainFrame" rel="Pages/LabTest.aspx"><span></span>查看检测信息</a></div>
-                    </li>
+                    </li>--%>
                 </ul>
             </div>
         </div>

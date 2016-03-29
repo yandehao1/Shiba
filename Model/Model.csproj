@@ -68,15 +68,9 @@
     <Compile Include="FpObjiectModel\useefieldsinfo.cs" />
     <Compile Include="FpObjiectModel\User.cs" />
     <Compile Include="FpObjiectModel\UserFields.cs" />
+    <Compile Include="ShiBa\Info.cs" />
     <Compile Include="ResPondData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RespondHisOtherInfo.cs" />
-    <Compile Include="ZSSY\ImportSampleSourceLog.cs" />
-    <Compile Include="ZSSY\LabTestMaster.cs" />
-    <Compile Include="ZSSY\LabTestResult.cs" />
-    <Compile Include="ZSSY\OPListForSpecimen.cs" />
-    <Compile Include="ZSSY\SpecimenRt.cs" />
-    <Compile Include="ZSSY\SpecimenRtLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

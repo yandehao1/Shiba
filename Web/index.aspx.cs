@@ -4,6 +4,7 @@ namespace RuRo.Web
 {
     public partial class index : System.Web.UI.Page
     {
+        public string hospitalName = System.Configuration.ConfigurationManager.AppSettings["hospitalName"];
         protected void Page_Load(object sender, EventArgs e)
         {
             string username = Common.CookieHelper.GetCookieValue("username");

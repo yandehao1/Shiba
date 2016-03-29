@@ -52,16 +52,10 @@
   <ItemGroup>
     <Compile Include="AccountHelper.cs" />
     <Compile Include="DateWithFP.cs" />
-    <Compile Include="FpExtendDatabaseHelper.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="HttpProc.cs" />
+    <Compile Include="ShiBa\Info_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZSSY\ImportSampleSourceLog.cs" />
-    <Compile Include="ZSSY\LabTestMaster.cs" />
-    <Compile Include="ZSSY\LabTestResult.cs" />
-    <Compile Include="ZSSY\OPListForSpecimen.cs" />
-    <Compile Include="ZSSY\SpecimenRt.cs" />
-    <Compile Include="ZSSY\SpecimenRtLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -75,7 +69,7 @@
       <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
       <Name>DBUtility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FreezerProUtility\FpUtility.csproj">
+    <ProjectReference Include="..\FpUtility\FpUtility.csproj">
       <Project>{8f8a2679-a4e7-4f84-8306-74c7bc8cd24c}</Project>
       <Name>FpUtility</Name>
     </ProjectReference>
