@@ -679,15 +679,19 @@
     <Content Include="Login.aspx" />
     <Content Include="Pages\ShiBa\Info_info.aspx" />
     <Content Include="Pages\ShiBa\Info_list.aspx" />
+    <Content Include="Fp_Ajax\getData.ashx" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Test\TestEnum.aspx" />
     <Content Include="Pages\Search.aspx" />
     <Content Include="Scripts\easyuicontrols.js" />
     <Content Include="Style.css" />
     <Content Include="ValidateCode.aspx" />
     <Content Include="MasterPage.master" />
-    <Content Include="Pages\ShiBa\Info_handler.ashx" />
     <Content Include="Fp_Ajax\PageConData.ashx" />
     <Content Include="packages.config" />
+    <Content Include="Pages\ShiBa\Info_handler.ashx" />
     <None Include="Properties\PublishProfiles\fp4.0.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -718,6 +722,9 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fp_Ajax\getData.ashx.cs">
+      <DependentUpon>getData.ashx</DependentUpon>
     </Compile>
     <Compile Include="Fp_Ajax\getjson.aspx.cs">
       <DependentUpon>getjson.aspx</DependentUpon>

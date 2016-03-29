@@ -9,8 +9,6 @@ using System.Collections.Generic;
 using System.Text;
 namespace RuRo.Web
 {
-    [WebService(Namespace = "http://tempuri.org/")]
-    [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     public class Info_handler : IHttpHandler
     {
         public void ProcessRequest(HttpContext context)
@@ -33,7 +31,7 @@ namespace RuRo.Web
                     case "del":/*删除*/
                         DeleteData(context);  
                         break;
-                    case "qry":/*查询*/
+                    case "qrycode":/*查询*/
                         QueryData(context,false);
                         break;
                     case "exp":/*导出*/
@@ -215,11 +213,19 @@ namespace RuRo.Web
            // DbHelper.FillDataTable(pageAction, m_dtTable); 
             #endregion 
             string mes = "";
-            string code = context.Request["code"].ToString();
+            string code = context.Request["getcode"].ToString();
             string StrCodeType = context.Request["selectType"].ToString();
             BLL.Info_BLL bll = new BLL.Info_BLL();
-            mes=bll.GetMenZhenData(code);
-            
+            if (StrCodeType == "zhuyuan")
+            {
+                mes = bll.GetZhuYuanData(code);
+                context.Response.Write(mes);
+            }
+            if (StrCodeType == "kahao")
+            {
+                mes = bll.GetMenZhenData(code);
+                context.Response.Write(mes);
+            }
             #region 根据下拉列表编码设置datagrid显示值
             for (int i = 0; i < m_dtTable.Rows.Count; i++)
             {

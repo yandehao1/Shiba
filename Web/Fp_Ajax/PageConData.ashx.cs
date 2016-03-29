@@ -35,15 +35,7 @@ namespace RuRo.Web.Fp_Ajax
             string mark = context.Request.Params["conMarc"];
             switch (mark)
             {
-                //case "SexFlag": Response.Write(ReturnGender()); break;
-                //// case "Mzzybz": Response.Write(ReturnIn_CodeType()); break;
-                //case "BloodTypeFlag": Response.Write(ReturnBloodTypeFlag()); break;
-                //case "SamplingMethod": Response.Write(ReturnSamplingMethodData()); break;
-                //case "DiagnoseTypeFlag": Response.Write(ReturnDiagnoseTypeFlag()); break;
-                //case "departments": Response.Write(ReturnDepartments()); break;
-                //case "SampleType": Response.Write(ReturnSampleType(up)); break;
                 case "ssType": context.Response.Write(ReturnSampleSocrceType(up)); break;
-                //case "SampleGroups": Response.Write(ReturnSampleGroups(up)); break;
                 default:
                     break;
             }
