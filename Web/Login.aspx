@@ -86,7 +86,7 @@
                                 </td>
                             </tr>--%>
                             <tr>
-                                <img src="../Images/szy_Logo.jpg" style="width: 450px; height: 70px; z-index: 100; float: left; padding-left: 40px"></img>
+                               <%-- <img src="../Images/shiba_Logo.jpg" style="width: 450px; height: 70px; z-index: 100; float: left; padding-left: 40px"></img>--%>
                                 <td>
                                     <img src="Images/Images/a_te01.gif" width="570" height="3">
                                 </td>
@@ -129,7 +129,7 @@
                                 <td>
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tr>
-                                            <td height="80" align="center">广东省中山三院</td>
+                                            <td height="80" align="center">市八医院</td>
                                         </tr>
                                     </table>
                                 </td>
