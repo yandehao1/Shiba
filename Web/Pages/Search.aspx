@@ -58,7 +58,6 @@
             modal: true,
             href: 'ShiBa/Info_info.aspx',
             onLoad: function () {
-               
             }
         });
         ////给日期框设置值
@@ -105,7 +104,6 @@
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); return; }
                         else
                         {
-
                             var dsData = JSON.parse(data);
                             if (dsData.ds.length>0) {
                                 var loadData = dsData.ds;
