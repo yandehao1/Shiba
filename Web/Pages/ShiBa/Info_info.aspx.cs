@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-namespace RuRo.Web
+namespace RuRo.Web.Pages.ShiBa
 {
     public partial class Info_info : System.Web.UI.Page
     {

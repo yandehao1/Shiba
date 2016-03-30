@@ -41,5 +41,22 @@ namespace RuRo.DAL
                 + "from bydata.view_lis_outpatient c where  usercard='"+code+"'";
             return DbHelperOra.Query(sqlstr);
         }
+
+        //≤‚ ‘ ˝æ›
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public DataSet GetTestzhuyuan() 
+        {
+            string sqlstr = "SELECT * FROM zhuyuan";
+            return DbHelperSQL.Query(sqlstr);
+        }
+        public DataSet GetTestmenzhen()
+        {
+            string sqlstr = "SELECT * FROM menzhen";
+            return DbHelperSQL.Query(sqlstr);
+        }
     }
 }

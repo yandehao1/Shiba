@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace RuRo.Web {
+namespace RuRo.Web.Pages.ShiBa {
     
     
     public partial class Info_list {

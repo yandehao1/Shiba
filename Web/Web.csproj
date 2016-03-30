@@ -71,14 +71,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="configXML\MatchFields.xml" />
-    <Content Include="configXML\UriConfigXml.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="configXML\WS.ForCenterLabServiceByBarcode.xml" />
-    <Content Include="configXML\WS.ForCenterLabServiceByDate.xml" />
-    <Content Include="configXML\GetPatientLabMaster.xml" />
-    <Content Include="configXML\GetLabTestResult.xml" />
     <Content Include="Controls\checkright.ascx" />
     <Content Include="Controls\copyright.ascx" />
     <Content Include="Default.aspx" />
@@ -284,7 +276,7 @@
     <Content Include="Images\Images\yw16.gif" />
     <Content Include="Images\Images\zhut16.gif" />
     <Content Include="Images\Images\zjsp16.gif" />
-    <Content Include="Images\szy_Logo.jpg" />
+    <Content Include="Images\zzsy_Logo.jpg" />
     <Content Include="include\css\base.css" />
     <Content Include="include\css\default.css" />
     <Content Include="include\css\defaultOLD.css" />
@@ -724,6 +716,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Fp_Ajax\getData.ashx.cs">
+      <DependentUpon>getData.ashx</DependentUpon>
+    </Compile>
+>>>>>>> c3c9c7bfed83244b3af206971b8d01eb1e04e576
     <Compile Include="Fp_Ajax\PageConData.ashx.cs">
       <DependentUpon>PageConData.ashx</DependentUpon>
     </Compile>
@@ -827,6 +825,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="configXML\" />
     <Folder Include="Sever\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
