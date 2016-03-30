@@ -679,8 +679,8 @@
     <Content Include="Pages\QueryData.aspx" />
     <Content Include="Pages\ShiBa\Info_info.aspx" />
     <Content Include="Pages\ShiBa\Info_list.aspx" />
-    <Content Include="Pages\ShiBa\Info_handler2.ashx" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="Fp_Ajax\getData.ashx" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -757,9 +757,6 @@
     </Compile>
     <Compile Include="Pages\QueryData.aspx.designer.cs">
       <DependentUpon>QueryData.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ShiBa\Info_handler2.ashx.cs">
-      <DependentUpon>Info_handler2.ashx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ShiBa\Info_handler.ashx.cs">
       <DependentUpon>Info_handler.ashx</DependentUpon>
