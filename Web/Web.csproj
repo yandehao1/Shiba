@@ -71,14 +71,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="configXML\MatchFields.xml" />
-    <Content Include="configXML\UriConfigXml.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="configXML\WS.ForCenterLabServiceByBarcode.xml" />
-    <Content Include="configXML\WS.ForCenterLabServiceByDate.xml" />
-    <Content Include="configXML\GetPatientLabMaster.xml" />
-    <Content Include="configXML\GetLabTestResult.xml" />
     <Content Include="Controls\checkright.ascx" />
     <Content Include="Controls\copyright.ascx" />
     <Content Include="Default.aspx" />
@@ -821,6 +813,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="configXML\" />
     <Folder Include="Sever\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>

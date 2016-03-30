@@ -168,14 +168,14 @@ namespace RuRo.Web.Fp_Ajax
             //获取正式数据
             if (StrCodeType == "zhuyuan")
             {
-                //mes = bll.GetZhuYuanData(code);//正式获取
-                mes = bll.GetZhuYuanTest(code);//测试
+                mes = bll.GetZhuYuanData(code);//正式获取
+               // mes = bll.GetZhuYuanTest(code);//测试
                 context.Response.Write(mes);
             }
             if (StrCodeType == "kahao")
             {
-                //mes = bll.GetMenZhenData(code);//正式获取
-                mes = bll.GetmenzhenTest(code);//测试
+                mes = bll.GetMenZhenData(code);//正式获取
+                //mes = bll.GetmenzhenTest(code);//测试
                 context.Response.Write(mes);
             }
             //获取测试数据

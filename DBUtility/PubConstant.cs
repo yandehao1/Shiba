@@ -12,7 +12,7 @@ namespace Maticsoft.DBUtility
         {           
             get 
             {
-                string _connectionString = ConfigurationManager.AppSettings["ConnectionStringAccounts"];       
+                string _connectionString = ConfigurationManager.AppSettings["ConnectionString"];       
                 string ConStringEncrypt = ConfigurationManager.AppSettings["ConStringEncrypt"];
                 if (ConStringEncrypt == "true")
                 {

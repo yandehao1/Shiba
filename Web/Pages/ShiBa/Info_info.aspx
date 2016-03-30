@@ -166,7 +166,7 @@
             ajaxLoading();
             //$.ajax({
             //    type: "POST",
-            //    url: "../../Sever/OPListForSpecimen_handler.ashx" + "?count" + count,
+            //    url: "../../Sever/Info_handler.ashx" + "?count" + count,
             //    data: {
             //        "mode": "ins",
             //        //"Parm": Parm,

@@ -51,16 +51,16 @@
     <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'ShiBa/Info_list.aspx'"></div>
     <div id="dd"></div>
     <script type="text/javascript">
-        $('#dd').window({
-            title: '详细数据页面',
-            width: 800,
-            height: 500,
-            modal: true,
-            href: 'ShiBa/Info_info.aspx',
-            onLoad: function () {
+        //$('#dd').window({
+        //    title: '详细数据页面',
+        //    width: 800,
+        //    height: 500,
+        //    modal: true,
+        //    href: 'ShiBa/Info_info.aspx',
+        //    onLoad: function () {
                
-            }
-        });
+        //    }
+        //});
         ////给日期框设置值
         //function SetDate() {
         //    var begindate = new Date();
