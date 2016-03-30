@@ -54,7 +54,7 @@
         $('#dd').window({
             title: '详细数据页面',
             width: 800,
-            height: 500,
+            height: 400,
             modal: true,
             href: 'ShiBa/Info_info.aspx',
             onLoad: function () {

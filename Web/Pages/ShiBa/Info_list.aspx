@@ -28,8 +28,8 @@
                 <th field="id" width="100" sortable="true" hidden="true">id</th>
                 <th field="部门" width="100" sortable="true">部门</th>
                 <th field="姓名" width="100" sortable="true">姓名</th>
-                <th field="性别" width="100" sortable="true">性别</th>
-                <th field="年龄" width="100" sortable="true">年龄</th>
+                <th field="性别" width="50" sortable="true">性别</th>
+                <th field="年龄" width="50" sortable="true">年龄</th>
                 <th field="医生" width="100" sortable="true" hidden="true">医生</th>
                 <th field="流水号" width="100" sortable="true">流水号</th>
                 <th field="卡号" width="100" sortable="true">卡号</th>
@@ -113,7 +113,7 @@
                 $('#dd').window({
                     title: '详细数据页面',
                     width: 800,
-                    height: 500,
+                    height: 400,
                     modal: true,
                     href: '../ShiBa/Info_info.aspx',
                     onLoad: function () {
@@ -131,7 +131,7 @@
                     $('#dlg').dialog({
                         title: '查看数据',
                         width: 650,
-                        height: 450,
+                        height: 400,
                         closed: false,
                         cache: true,
                         href: 'Info_info.aspx?mode=inf&pk=' + row.id
@@ -153,7 +153,7 @@
                     $('#dlg').dialog({
                         title: 'Info-修改数据',
                         width: 650,
-                        height: 450,
+                        height: 400,
                         closed: false,
                         cache: true,
                         href: 'Info_info.aspx?mode=upd&pk=' + row.id

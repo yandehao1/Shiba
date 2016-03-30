@@ -15,8 +15,8 @@
     <script type="text/javascript">
         //初始化win弹窗在显示器中央
         function doimport() {
-            var width = 850;
-            var height = 700;
+            var width = 960;
+            var height = 640;
             var l = Math.round((window.screen.width - width) / 2);
             var t = Math.round((window.screen.height - height) / 2);
             window.open('Login.aspx', 'newwindow', 'height=' + height + ', width=' + width + ', top=' + t + ',left=' + l + ',toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no')
