@@ -103,7 +103,6 @@
     <Content Include="Error\AppExError\150916.txt" />
     <Content Include="Error\AppExError\150917.txt" />
     <Content Include="Fp_Ajax\Fp_Ajax.txt" />
-    <Content Include="Fp_Ajax\getjson.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Images\about16.gif" />
     <Content Include="Images\Images\add16.gif" />
@@ -677,9 +676,11 @@
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\QueryData.aspx" />
     <Content Include="Pages\ShiBa\Info_info.aspx" />
     <Content Include="Pages\ShiBa\Info_list.aspx" />
-    <Content Include="Fp_Ajax\getData.ashx" />
+    <Content Include="Pages\ShiBa\Info_handler2.ashx" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -723,16 +724,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Fp_Ajax\getData.ashx.cs">
-      <DependentUpon>getData.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="Fp_Ajax\getjson.aspx.cs">
-      <DependentUpon>getjson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Fp_Ajax\getjson.aspx.designer.cs">
-      <DependentUpon>getjson.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Fp_Ajax\PageConData.ashx.cs">
       <DependentUpon>PageConData.ashx</DependentUpon>
     </Compile>
@@ -759,6 +750,16 @@
     </Compile>
     <Compile Include="MasterPage.master.designer.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QueryData.aspx.cs">
+      <DependentUpon>QueryData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\QueryData.aspx.designer.cs">
+      <DependentUpon>QueryData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShiBa\Info_handler2.ashx.cs">
+      <DependentUpon>Info_handler2.ashx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ShiBa\Info_handler.ashx.cs">
       <DependentUpon>Info_handler.ashx</DependentUpon>

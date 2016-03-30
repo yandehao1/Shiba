@@ -130,12 +130,12 @@
                 if (rows.length == 1) {
                     var row = $('#datagrid').datagrid('getSelected');
                     $('#dlg').dialog({
-                        title: 'OPListForSpecimen-查看数据',
+                        title: '数据详情页',
                         width: 650,
                         height: 450,
                         closed: false,
                         cache: true,
-                        href: 'OPListForSpecimen_info.aspx?mode=inf&pk=' + row.id
+                        href: 'Info_info.aspx?mode=inf&pk=' + row.id
                     });
                 } else {
                     $.messager.alert('警告', '查看操作只能选择一条数据', 'warning');
@@ -152,12 +152,12 @@
                 if (rows.length == 1) {
                     var row = $('#datagrid').datagrid('getSelected');
                     $('#dlg').dialog({
-                        title: 'OPListForSpecimen-修改数据',
+                        title: 'Info-修改数据',
                         width: 650,
                         height: 450,
                         closed: false,
                         cache: true,
-                        href: 'OPListForSpecimen_info.aspx?mode=upd&pk=' + row.id
+                        href: 'Info_info.aspx?mode=upd&pk=' + row.id
                     });
                 } else {
                     $.messager.alert('警告', '修改操作只能选择一条数据', 'warning');
@@ -182,7 +182,7 @@
                 }
                 $.messager.confirm('提示', '是否确认删除数据？', function (r) {
                     if (r) {
-                        $.post('OPListForSpecimen_handler.ashx?mode=del&pk=' + pkSelect, function (result) {
+                        $.post('Info_handler.ashx?mode=del&pk=' + pkSelect, function (result) {
                             if (result.success) {
                                 $.messager.alert('提示', result.msg, 'info', function () {
                                     $('#datagrid').datagrid('reload');    //重新加载载数据
@@ -213,7 +213,7 @@
         function searchData() {
             /*兼顾导出Excel公用条件，在这里datagrid不用load函数加载参数，直接用URL传递参数*/
             var Parm = getSearchParm();//获得查询条件参数构建，用URL传递查询参数
-            var QryUrl = 'OPListForSpecimen_handler.ashx?mode=qry&' + Parm;
+            var QryUrl = 'Info_handler.ashx?mode=qry&' + Parm;
             $('#datagrid').datagrid({ url: QryUrl });
         }
         /*关闭dialog重新加载datagrid数据*/
@@ -222,7 +222,6 @@
                 $('#datagrid').datagrid('reload'); //重新加载载数据
             }
         });
-
     </script>
 </body>
 </html>
