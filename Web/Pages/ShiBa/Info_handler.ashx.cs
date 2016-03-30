@@ -232,8 +232,6 @@ namespace RuRo.Web.Pages.ShiBa
 
             #endregion 
 
-            context.Response.Write(" <script type=\"text/javascript\"> alert('1213')</script>");
-
         }
         /// <summary>
         /// FusionChart统计图格式化字符串
