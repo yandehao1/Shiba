@@ -42,7 +42,7 @@
                     <option value="kahao">病历号</option>
                     <option value="zhuyuan">住院号</option>
                 </select>
-                <input id="Name" class="easyui-textbox" name="Name" data-options="prompt:'请输入姓名',required:true" />
+                <input id="Name" class="easyui-textbox" name="Name" style="width: 130px;" data-options="prompt:'请输入姓名',required:true" />
                 <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGetName" name="btnGetName" plain="false" onclick="querybyName()">姓名查询信息</a>
             </div>
             <div id="getcode" style="float: left">
