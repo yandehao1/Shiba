@@ -1,0 +1,7 @@
+
+Log Entry : 
+08/25/2015 23:17:20
+Ip【::1】
+Error in【http://localhost:3448/Test/PostTestData.aspx】
+Error Message【无法从其“Width”属性的字符串表示形式“auto”创建“System.Web.UI.WebControls.Unit”类型的对象。】Error TargetSite【System.Object ObjectFromString(System.Type, System.Reflection.MemberInfo, System.String)】Error Source【System.Web】
+________________________________________________________

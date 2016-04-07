@@ -1,0 +1,14 @@
+
+Log Entry : 
+08/26/2015 01:56:53
+Ip【::1】
+Error in【http://localhost:3448/Sever/NormalLisReport.ashx】
+Error Message【SqlDateTime 溢出。必须介于 1/1/1753 12:00:00 AM 和 12/31/9999 11:59:59 PM 之间。】Error TargetSite【System.Threading.Tasks.Task TdsExecuteRPC(System.Data.SqlClient.SqlCommand, System.Data.SqlClient._SqlRPC[], Int32, Boolean, System.Data.Sql.SqlNotificationRequest, System.Data.SqlClient.TdsParserStateObject, Boolean, Boolean, System.Threading.Tasks.TaskCompletionSource`1[System.Object], Int32, Int32)】Error Source【System.Data】
+________________________________________________________
+
+Log Entry : 
+08/26/2015 01:57:15
+Ip【::1】
+Error in【http://localhost:3448/Sever/NormalLisReport.ashx】
+Error Message【SqlDateTime 溢出。必须介于 1/1/1753 12:00:00 AM 和 12/31/9999 11:59:59 PM 之间。】Error TargetSite【System.Threading.Tasks.Task TdsExecuteRPC(System.Data.SqlClient.SqlCommand, System.Data.SqlClient._SqlRPC[], Int32, Boolean, System.Data.Sql.SqlNotificationRequest, System.Data.SqlClient.TdsParserStateObject, Boolean, Boolean, System.Threading.Tasks.TaskCompletionSource`1[System.Object], Int32, Int32)】Error Source【System.Data】
+________________________________________________________

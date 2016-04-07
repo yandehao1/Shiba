@@ -1,0 +1,61 @@
+
+Log Entry : 
+08/23/2015 22:33:08
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:33:08
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:34:19
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:34:19
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:34:54
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:34:54
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:37:19
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:37:19
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:52:48
+Ip【::1】
+Error in【http://localhost:3448/NormalLisReport_handler.ashx?mode=del&pk=undefined】
+Error Message【文件“/NormalLisReport_handler.ashx”不存在。】Error TargetSite【Void CheckVirtualFileExists(System.Web.VirtualPath)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:52:57
+Ip【::1】
+Error in【http://localhost:3448/NormalLisReport_handler.ashx?mode=del&pk=undefined】
+Error Message【文件“/NormalLisReport_handler.ashx”不存在。】Error TargetSite【Void CheckVirtualFileExists(System.Web.VirtualPath)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+08/23/2015 22:54:40
+Ip【::1】
+Error in【http://localhost:3448/NormalLisReport_handler.ashx?mode=del&pk=undefined】
+Error Message【文件“/NormalLisReport_handler.ashx”不存在。】Error TargetSite【Void CheckVirtualFileExists(System.Web.VirtualPath)】Error Source【System.Web】
+________________________________________________________

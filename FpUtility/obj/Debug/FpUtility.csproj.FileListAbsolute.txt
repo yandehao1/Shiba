@@ -1,0 +1,6 @@
+D:\ShiBa\FpUtility\bin\Debug\FpUtility.dll
+D:\ShiBa\FpUtility\bin\Debug\FpUtility.pdb
+D:\ShiBa\FpUtility\bin\Debug\Newtonsoft.Json.dll
+D:\ShiBa\FpUtility\obj\Debug\FpUtility.csprojResolveAssemblyReference.cache
+D:\ShiBa\FpUtility\obj\Debug\FpUtility.dll
+D:\ShiBa\FpUtility\obj\Debug\FpUtility.pdb

@@ -1,0 +1,795 @@
+
+Log Entry : 
+09/01/2015 14:18:56
+LineNumber：【1】
+LinePosition：【159】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 159。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 14:19:23
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 14:40:51
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 14:52:39
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:05:33
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:05:59
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:05:59
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:05:59
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:12:52
+LineNumber：【1】
+LinePosition：【159】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 159。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:13:02
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:18:33
+LineNumber：【1】
+LinePosition：【159】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 159。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:18:38
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:18:54
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:18:54
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:18:54
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:25:34
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:28:39
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:28:39
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:28:39
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:29:55
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:30:01
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:30:01
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:30:01
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:38:46
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:39:00
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:39:00
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:39:01
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:41:19
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:41:23
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:41:29
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:41:29
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:41:29
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:42:41
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:42:47
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:42:47
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:42:47
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:43:14
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:43:14
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:43:14
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:43:51
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:43:52
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:43:52
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 e:\FP\扩展开发\20150901SZY\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:56:44
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 15:58:58
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 16:04:42
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 16:06:07
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 16:06:20
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 16:06:32
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 16:06:46
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 16:07:12
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 16:09:19
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 e:\FP\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/01/2015 16:51:04
+LineNumber：【1】
+LinePosition：【104】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 104。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 d:\扩展开发\20150901SZY\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 26】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________

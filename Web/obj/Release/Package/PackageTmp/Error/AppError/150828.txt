@@ -1,0 +1,7 @@
+
+Log Entry : 
+08/28/2015 16:11:33
+Ip【::1】
+Error in【http://localhost:3448/Sever/QueryRecoder_handler.ashx】
+Error Message【空对象不能转换为值类型。】Error TargetSite【System.Object ChangeType(System.Object, System.Type, System.IFormatProvider)】Error Source【mscorlib】
+________________________________________________________

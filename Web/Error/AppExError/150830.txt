@@ -1,0 +1,210 @@
+
+Log Entry : 
+08/30/2015 13:54:50
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:54:50
+Message：【该字符串未被识别为有效的 DateTime。】
+StackTrace：【   在 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   在 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 65
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【mscorlib】
+HResult：【-2146233033】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:54:50
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:54:50
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:58:56
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:58:56
+Message：【该字符串未被识别为有效的 DateTime。】
+StackTrace：【   在 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   在 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 65
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【mscorlib】
+HResult：【-2146233033】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:58:56
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:58:56
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:11
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:11
+Message：【该字符串未被识别为有效的 DateTime。】
+StackTrace：【   在 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   在 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 65
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【mscorlib】
+HResult：【-2146233033】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:11
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:11
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:16
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:16
+Message：【该字符串未被识别为有效的 DateTime。】
+StackTrace：【   在 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   在 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 65
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【mscorlib】
+HResult：【-2146233033】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:16
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:17
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:21
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 23
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:21
+Message：【该字符串未被识别为有效的 DateTime。】
+StackTrace：【   在 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   在 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   在 RuRo.Common.ReflectHelper.SetValue(Object entity, String fieldName, String fieldValue) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 65
+   在 RuRo.BLL.FormToDic.GetFromInfo[T](List`1 dicList) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 65】
+Source：【mscorlib】
+HResult：【-2146233033】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:21
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+08/30/2015 13:59:21
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 h:\Repository\SZY\Common\ReflectHelper.cs:行号 124
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 h:\Repository\SZY\BLL\FormToDic.cs:行号 26】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________

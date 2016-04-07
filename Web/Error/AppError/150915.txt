@@ -1,0 +1,339 @@
+
+Log Entry : 
+09/15/2015 07:50:28
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+文件“H:\Repository\SZY\Web\Error\AppError\150915.txt”正由另一进程使用，因此该进程无法访问此文件。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+文件“H:\Repository\SZY\Web\Error\AppError\150915.txt”正由另一进程使用，因此该进程无法访问此文件。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:41
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:42
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:42
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:50:42
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:53:52
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:53:53
+Ip【::1】
+Error in【http://localhost:3448/Images/Images/extra.css】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:53:59
+Ip【::1】
+Error in【http://localhost:3448/Images/IndexImg/directory.png】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+文件“H:\Repository\SZY\Web\Error\AppError\150915.txt”正由另一进程使用，因此该进程无法访问此文件。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:54:18
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:57:00
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:57:01
+Ip【::1】
+Error in【http://localhost:3448/Images/Images/extra.css】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:57:02
+Ip【::1】
+Error in【http://localhost:3448/Images/IndexImg/directory.png】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:57:57
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:57:57
+未将对象引用设置到对象的实例。
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:59:01
+Ip【::1】
+Error in【http://localhost:3448/Images/Images/extra.css】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 07:59:03
+Ip【::1】
+Error in【http://localhost:3448/Images/IndexImg/directory.png】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 08:36:39
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 08:36:44
+Ip【::1】
+Error in【http://localhost:3448/Images/Images/extra.css】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 08:36:46
+Ip【::1】
+Error in【http://localhost:3448/Images/IndexImg/directory.png】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:44:22
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:44:38
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:46:45
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:47:29
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:48:06
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:48:18
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:49:29
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:49:48
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:50:00
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:51:57
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:52:31
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:52:47
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:54:56
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:56:48
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________
+
+Log Entry : 
+09/15/2015 23:57:04
+Ip【::1】
+Error in【http://localhost:3448/favicon.ico】
+Error Message【文件不存在。】Error TargetSite【System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)】Error Source【System.Web】
+________________________________________________________

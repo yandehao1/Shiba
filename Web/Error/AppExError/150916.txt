@@ -1,0 +1,409 @@
+
+Log Entry : 
+09/16/2015 13:43:13
+LineNumber：【1】
+LinePosition：【159】
+Message：【出现意外的文件结尾。以下元素未封闭: Response. 第 1 行，位置 159。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 25】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 13:47:18
+LineNumber：【31】
+LinePosition：【35】
+Message：【出现意外的文件结尾。以下元素未封闭: Response, Response. 第 31 行，位置 35。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 25】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 13:47:43
+LineNumber：【31】
+LinePosition：【35】
+Message：【出现意外的文件结尾。以下元素未封闭: Response, Response. 第 31 行，位置 35。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 25】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 14:00:34
+LineNumber：【2】
+LinePosition：【64】
+Message：【名称不能以“ ”字符(十六进制值 0x20)开头。 第 2 行，位置 64。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   在 System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   在 System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   在 System.Xml.XmlTextReaderImpl.ParseEndElement()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 25】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 14:01:34
+LineNumber：【2】
+LinePosition：【64】
+Message：【名称不能以“ ”字符(十六进制值 0x20)开头。 第 2 行，位置 64。】
+StackTrace：【   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   在 System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   在 System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   在 System.Xml.XmlTextReaderImpl.ParseEndElement()
+   在 System.Xml.XmlTextReaderImpl.ParseElementContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   在 System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 RuRo.BLL.HospitalXmlStrHelper.HospitalXmlStrToXmlDoc(String xmlStr) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\SZY\HospitalXmlStrHelper.cs:行号 25】
+Source：【System.Xml】
+HResult：【-2146232000】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:13:31
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
+
+Log Entry : 
+09/16/2015 16:20:05
+Message：【未将对象引用设置到对象的实例。】
+StackTrace：【   在 RuRo.Common.ReflectHelper.GetValue(Object entity, String fieldName) 位置 d:\扩展开发\2015年9月16日095100\SZY\Common\ReflectHelper.cs:行号 100
+   在 RuRo.BLL.FormToDic.ConvertModelToDic(Object obj) 位置 d:\扩展开发\2015年9月16日095100\SZY\BLL\FormToDic.cs:行号 25】
+Source：【RuRo.Common】
+HResult：【-2147467261】
+
+________________________________________________________
