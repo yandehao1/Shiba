@@ -26,19 +26,41 @@ namespace RuRo.BLL
             ds=g_DAL.GetZhuYuanDataForCode(code);
             return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
         }
+        /// <summary>
+        /// 返回姓名查询住院信息
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public string GetZhuYuanDataForName(string name)
+        {
+            DataSet ds = new DataSet();
+            ds = g_DAL.GetZhuYuanDataForName(name);
+            return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
+        }
 
         /// <summary>
         /// 返回门诊信息
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
-        public  string GetMenZhenData(string code) 
+        public string GetMenZhenData(string code) 
         {
             DataSet ds = new DataSet();
             ds = g_DAL.GetMenZhenDataForCode(code);
             return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
         }
 
+        /// <summary>
+        /// 返回姓名查询门诊信息
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public string GetMenZhenDataForName(string name)
+        {
+            DataSet ds = new DataSet();
+            ds = g_DAL.GetMenZhenDataForName(name);
+            return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
+        }
         /// <summary>
         /// 返回测试住院信息
         /// </summary>

@@ -31,12 +31,12 @@
                 <th field="性别" width="100" sortable="true">性别</th>
                 <th field="年龄" width="100" sortable="true">年龄</th>
                 <th field="医生" width="100" sortable="true" hidden="true">医生</th>
+                <th field="日期" width="100" sortable="true">日期</th>
                 <th field="流水号" width="100" sortable="true">流水号</th>
                 <th field="卡号" width="100" sortable="true">卡号</th>
                 <th field="PATIENT_NO" width="100" sortable="true">住院号</th>
                 <th field="病历号" width="100" sortable="true">病历号</th>
                 <th field="诊断" width="100" sortable="true">诊断</th>
-                <th field="日期" width="100" sortable="true" hidden="true">日期</th>
             </tr>
         </thead>
     </table>

@@ -26,58 +26,55 @@
     </style>
 </head>
 <body style="width: 940px">
-    <div class="easyui-panel">  
+    <div class="easyui-panel">
         <form id="SearchForm" runat="server">
             <div style="float: left">
                 查询方式：
                     <select id="selectType" class="easyui-combobox" name="dept" style="width: 130px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
-                        <option value="zhuyuan">住院号</option>
                         <option value="kahao">病历号</option>
-                        <%-- <option value="3">批量扫码</option>--%>
+                        <option value="zhuyuan">住院号</option>
+                        <option value="xingming">姓名</option>
+                        <!-- 姓名显示隐藏域-->
                     </select>
+            </div>
+            <div id="getname" style="display: none; float: left">
+                <select id="NameType" class="easyui-combobox" name="dept" hidden="true" style="width: 130px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
+                    <option value="kahao">病历号</option>
+                    <option value="zhuyuan">住院号</option>
+                </select>
+                <input id="Name" class="easyui-textbox" name="Name" data-options="prompt:'请输入姓名',required:true" />
+                <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGetName" name="btnGetName" plain="false" onclick="querybyName()">姓名查询信息</a>
             </div>
             <div id="getcode" style="float: left">
                 <input id="code" class="easyui-textbox" name="code" data-options="prompt:'请输入条码',required:true" />
                 <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="querybycodeData()">条码查询信息</a>
             </div>
-            <%--  <div id="getdate" style="display: none; float: left">
-                开始日期：<input id="ksrq" class="easyui-datebox" name="ksrq" data-options="required:true" style="width: 130px" />
-                结束日期：<input id="jsrq" class="easyui-datebox" name="jsrq" data-options="required:true" style="width: 130px" />
-                <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGet" name="btnGet" plain="false" onclick="querybydate()">日期查询信息</a>
-            </div>--%>
             <!--Search end-->
         </form>
     </div>
     <div class="easyui-panel" style="float: left; margin-top: 10px;" data-options="href:'ShiBa/Info_list.aspx'"></div>
     <div id="dd"></div>
     <script type="text/javascript">
-        ////给日期框设置值
-        //function SetDate() {
-        //    var begindate = new Date();
-        //    $('#ksrq').textbox('setValue', myformatter(begindate))
-        //    $('#jsrq').textbox('setValue', myformatter(begindate))
-        //}
-        //var getdatageid;
-        ////样品数据绑定
-        //$(function () {
-        //    $('#ss').combobox({
-        //        onChange: function (newValue) {
-        //            if (newValue == 2) {
-        //                //日期
-        //                $("#getdate").show();
-        //                $("#getcode").hide();
-        //                SetDate();
-        //            }
-        //            else {
-        //                $("#getdate").hide();
-        //                $("#getcode").show();
-        //            }
-        //        }
-        //    });
-        //})
-
-        function querybycodeData()
-        {
+        $(function () {
+            $('#code').textbox('setValue', "0000");
+        })
+        //查询方式切换
+        $(function () {
+            $('#selectType').combobox({
+                onChange: function (newValue) {
+                    if (newValue == "xingming") {
+                        //日期
+                        $("#getcode").hide();
+                        $("#getname").show();
+                    }
+                    else {
+                        $("#getcode").show();
+                        $("#getname").hide();
+                    }
+                }
+            });
+        })
+        function querybycodeData() {
             var code = $('#code').textbox('getValue');//获取数据源
             var Type = $('#selectType').textbox('getValue');//获取查询方式
             if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#code').textbox('clear'); return; }
@@ -89,27 +86,58 @@
                     type: 'GET',
                     url: '../Fp_Ajax/getData.ashx?mode=qrycode',
                     data: { "type": Type, "getcode": code },
-                    success: function (data)
-                    {
+                    success: function (data) {
                         ajaxLoadEnd();
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); return; }
                         else
                         {
                             var dsData = JSON.parse(data);
-                            if (dsData.ds.length>0) {
+                            if (dsData.ds.length > 0) {
                                 var loadData = dsData.ds;
                                 PagePaging(loadData);
                             }
                             else {
                                 $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error');
                             }
-                            
+
                         }
                     }
                 })
             }
         }
 
+        //按照姓名查询
+        function querybyName() {
+            var name = $('#Name').textbox('getValue');//获取数据源
+            var URname = encodeURI(name);
+            var NameType = $('#NameType').textbox('getValue');//获取查询方式
+            if (name == "") { $.messager.alert('提示', '姓名不能为空', 'error'); }
+            else
+            {
+                ajaxLoading();
+                $.ajax({
+                    type: 'GET',
+                    url: '../Fp_Ajax/getData.ashx?mode=qryName',
+                    data: { "nametype": NameType, "getname": URname },
+                    success: function (data) {
+                        ajaxLoadEnd();
+                        if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); return; }
+                        else
+                        {
+                            var dsData = JSON.parse(data);
+                            if (dsData.ds.length > 0) {
+                                var loadData = dsData.ds;
+                                PagePaging(loadData);
+                            }
+                            else {
+                                $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error');
+                            }
+
+                        }
+                    }
+                })
+            }
+        }
         //绑定数据 条码
         //function querybycode() {
         //    var code = $('#code').textbox('getValue');//获取数据源

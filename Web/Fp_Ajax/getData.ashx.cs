@@ -36,6 +36,9 @@ namespace RuRo.Web.Fp_Ajax
                     case "qrycode":/*查询*/
                         QueryData(context, false);
                         break;
+                    case "qryName":/*姓名查询*/
+                        QueryNameData(context, false);
+                        break;
                     case "exp":/*导出*/
                         QueryData(context, true);
                         break;
@@ -43,6 +46,28 @@ namespace RuRo.Web.Fp_Ajax
             }
             else
                 QueryData(context, false);
+        }
+        /// <summary>
+        /// 姓名查询方式
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="p"></param>
+        private void QueryNameData(HttpContext context, bool p)
+        {
+            string mes = "";
+            string strName = context.Request["getname"].ToString();
+            string StrType = context.Request["nametype"].ToString();
+            BLL.Info_BLL bll = new BLL.Info_BLL();
+            if (StrType=="kahao")
+            {
+                mes = bll.GetMenZhenDataForName(strName);//正式获取
+                context.Response.Write(mes);
+            }
+            else if (StrType=="zhuyuan")
+            {
+                mes = bll.GetZhuYuanDataForName(strName);//正式获取
+                context.Response.Write(mes);
+            }
         }
 
         /// <summary>
@@ -62,8 +87,8 @@ namespace RuRo.Web.Fp_Ajax
             try
             {
                 string ssType = string.Empty,
-        ssName = string.Empty,
-        ssDecription = string.Empty;
+                       ssName = string.Empty,
+                       ssDecription = string.Empty;
                 //获取保存方式
                 BLL.Info_BLL bll_Info = new BLL.Info_BLL();
                 Model.Info model_Info = new Model.Info();
@@ -156,8 +181,6 @@ namespace RuRo.Web.Fp_Ajax
                 //mes = bll.GetmenzhenTest(code);//测试
                 context.Response.Write(mes);
             }
-            //获取测试数据
-
         }
         #region JSON实体返回类定义
         /// <summary>

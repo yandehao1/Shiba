@@ -1,6 +1,0 @@
-D:\ShiBa\Common\bin\Debug\RuRo.Common.dll
-D:\ShiBa\Common\bin\Debug\RuRo.Common.pdb
-D:\ShiBa\Common\bin\Debug\Newtonsoft.Json.6.0.0.0.Fakes.fakesconfig
-D:\ShiBa\Common\bin\Debug\Newtonsoft.Json.dll
-D:\ShiBa\Common\obj\Debug\RuRo.Common.dll
-D:\ShiBa\Common\obj\Debug\RuRo.Common.pdb
