@@ -55,10 +55,10 @@ namespace RuRo.BLL
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
-        public string GetMenZhenDataForName(string name)
+        public string GetMenZhenDataForName(string name,string ksrq,string jsrq)
         {
             DataSet ds = new DataSet();
-            ds = g_DAL.GetMenZhenDataForName(name);
+            ds = g_DAL.GetMenZhenDataForName(name, ksrq, jsrq);
             return FpUtility.Fp_Common.FpJsonHelper.ObjectToJsonStr(ds);
         }
         /// <summary>

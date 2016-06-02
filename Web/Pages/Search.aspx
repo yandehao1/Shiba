@@ -18,6 +18,7 @@
     <style type="text/css">
         #SearchForm {
             margin: 5px;
+            width:800px;
         }
 
             #SearchForm div {
@@ -30,20 +31,24 @@
         <form id="SearchForm" runat="server">
             <div style="float: left">
                 查询方式：
-                    <select id="selectType" class="easyui-combobox" name="dept" style="width: 130px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
+                    <select id="selectType" class="easyui-combobox" name="dept" style="width: 80px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
                         <option value="kahao">病历号</option>
                         <option value="zhuyuan">住院号</option>
                         <option value="xingming">姓名</option>
                         <!-- 姓名显示隐藏域-->
                     </select>
             </div>
-            <div id="getname" style="display: none; float: left">
-                <select id="NameType" class="easyui-combobox" name="dept" hidden="true" style="width: 130px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
-                    <option value="kahao">病历号</option>
+            <div id="getname" style="display: none; float: left;">
+                姓名：<input id="Name" class="easyui-textbox" name="Name" style="width: 80px;" data-options="prompt:'请输入姓名',required:true" />
+                &nbsp;查询范围：<select id="NameType" class="easyui-combobox" name="dept" hidden="true" style="width: 80px;" data-options="required:true,multiple:false,panelHeight: 'auto',prompt:'请选择查询方式'">
                     <option value="zhuyuan">住院号</option>
-                </select>
-                <input id="Name" class="easyui-textbox" name="Name" style="width: 130px;" data-options="prompt:'请输入姓名',required:true" />
+                    <option value="kahao">病历号</option>
+                </select>&nbsp;
                 <a href="javascript:void(0)" class="easyui-linkbutton" id="btnGetName" name="btnGetName" plain="false" onclick="querybyName()">姓名查询信息</a>
+                <div id="fwdate" style="display: none;">
+                    开始日期：<input id="ksrq" class="easyui-datebox" name="ksrq" data-options="required:true" style="width: 100px" />
+                    &nbsp;结束日期：<input id="jsrq" class="easyui-datebox" name="jsrq" data-options="required:true" style="width: 100px" />
+                </div>
             </div>
             <div id="getcode" style="float: left">
                 <input id="code" class="easyui-textbox" name="code" data-options="prompt:'请输入条码',required:true" />
@@ -74,6 +79,22 @@
                 }
             });
         })
+
+        $(function () {
+            $('#NameType').combobox({
+                onChange: function (newValue) {
+                    if (newValue == "kahao") {
+                        //日期
+                        $("#fwdate").show();
+                    }
+                    else {
+                        $("#fwdate").hide();
+                    }
+                }
+            });
+        })
+
+
         function querybycodeData() {
             var code = $('#code').textbox('getValue');//获取数据源
             var Type = $('#selectType').textbox('getValue');//获取查询方式
@@ -102,23 +123,30 @@
 
                         }
                     }
-                })
+                });
             }
         }
 
         //按照姓名查询
         function querybyName() {
             var name = $('#Name').textbox('getValue');//获取数据源
-            var URname = encodeURI(name);
+            //var URname = encodeURI(name);
             var NameType = $('#NameType').textbox('getValue');//获取查询方式
-            if (name == "") { $.messager.alert('提示', '姓名不能为空', 'error'); }
+            var ksdate = "";
+            var jsdate = "";
+            if (NameType == "kahao")
+            {
+                ksdate = $('#ksrq').textbox('getValue');
+                jsdate = $('#jsrq').textbox('getValue');
+            }
+            if (name == "") { $.messager.alert('提示', '姓名不能为空', 'error'); return; }
             else
             {
                 ajaxLoading();
                 $.ajax({
                     type: 'GET',
-                    url: '../Fp_Ajax/getData.ashx?mode=qryName',
-                    data: { "nametype": NameType, "getname": URname },
+                    url: '../Fp_Ajax/getData.ashx?mode=qryname',
+                    data: { "nametype": NameType, "getname": name, "ksdate": ksdate, "jsdate": jsdate },
                     success: function (data) {
                         ajaxLoadEnd();
                         if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); return; }
@@ -135,52 +163,9 @@
 
                         }
                     }
-                })
+                });
             }
         }
-        //绑定数据 条码
-        //function querybycode() {
-        //    var code = $('#code').textbox('getValue');//获取数据源
-        //    var selectType = $('#selectType').textbox('getValue');//获取查询方式
-        //    if (/.*[\u4e00-\u9fa5]+.*$/.test(code)) { $.messager.alert('错误', '不能输入中文', 'error'); $('#code').textbox('clear'); return; }
-        //    if (code == "") { $.messager.alert('提示', '条码不能为空', 'error'); }
-        //    else {
-        //        ajaxLoading();
-        //        $.ajax({
-        //            type: 'GET',
-        //            url: '/ShiBa/Info_handler.ashx?mode=qrycode&code=' + code,
-        //            onSubmit: function () { },
-        //            success: function (data) {
-        //                ajaxLoadEnd();
-        //                $('#code').textbox('setValue', '');
-        //                if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
-        //                else {
-        //                    //$('#dd').window({
-        //                    //    title: '详细数据页面',
-        //                    //    width: 800,
-        //                    //    height: 500,
-        //                    //    modal: true,
-        //                    //    href: 'ShiBa/Info_info.aspx',
-        //                    //    onLoad: function () {
-        //                    //        var basedata = $.parseJSON(data);
-        //                    //        if (!data) { $.messager.alert('提示', '查询不到数据,请检查数据是否存在！', 'error'); }
-        //                    //        else {
-        //                    //            var loaddata = $.parseJSON(data);
-        //                    //            if (loaddata.success) {
-        //                    //                PagePaging(loaddata.result);
-        //                    //            } else {
-        //                    //                ShowMsg(loaddata.result)
-        //                    //            }
-        //                    //            PagePaging(loaddata);
-        //                    //        }
-        //                    //    }
-        //                    //});
-        //                }
-        //            }
-        //        });
-        //        ajaxLoadEnd();
-        //    }
-        //}
         function CheckDate(checkdate) {
             var result = checkdate.match(/((^((1[8-9]\d{2})|([2-9]\d{3}))(-)(10|12|0?[13578])(-)(3[01]|[12][0-9]|0?[1-9])$)|(^((1[8-9]\d{2})|([2-9]\d{3}))(-)(11|0?[469])(-)(30|[12][0-9]|0?[1-9])$)|(^((1[8-9]\d{2})|([2-9]\d{3}))(-)(0?2)(-)(2[0-8]|1[0-9]|0?[1-9])$)|(^([2468][048]00)(-)(0?2)(-)(29)$)|(^([3579][26]00)(-)(0?2)(-)(29)$)|(^([1][89][0][48])(-)(0?2)(-)(29)$)|(^([2-9][0-9][0][48])(-)(0?2)(-)(29)$)|(^([1][89][2468][048])(-)(0?2)(-)(29)$)|(^([2-9][0-9][2468][048])(-)(0?2)(-)(29)$)|(^([1][89][13579][26])(-)(0?2)(-)(29)$)|(^([2-9][0-9][13579][26])(-)(0?2)(-)(29)$))/);
             if (result == null) {

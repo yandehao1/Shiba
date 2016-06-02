@@ -36,7 +36,7 @@ namespace RuRo.Web.Fp_Ajax
                     case "qrycode":/*查询*/
                         QueryData(context, false);
                         break;
-                    case "qryName":/*姓名查询*/
+                    case "qryname":/*姓名查询*/
                         QueryNameData(context, false);
                         break;
                     case "exp":/*导出*/
@@ -55,12 +55,15 @@ namespace RuRo.Web.Fp_Ajax
         private void QueryNameData(HttpContext context, bool p)
         {
             string mes = "";
+            //string strName = HttpUtility.UrlDecode(context.Request["getname"].ToString());
             string strName = context.Request["getname"].ToString();
             string StrType = context.Request["nametype"].ToString();
+            string Strksrq = context.Request["ksdate"].ToString();
+            string Strjsrq = context.Request["jsdate"].ToString();
             BLL.Info_BLL bll = new BLL.Info_BLL();
             if (StrType=="kahao")
             {
-                mes = bll.GetMenZhenDataForName(strName);//正式获取
+                mes = bll.GetMenZhenDataForName(strName, Strksrq, Strjsrq);//正式获取
                 context.Response.Write(mes);
             }
             else if (StrType=="zhuyuan")
